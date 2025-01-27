@@ -3,8 +3,10 @@ from geoseg.losses import *
 from geoseg.models.PyramidMamba import PyramidMamba
 from tools.utils import Lookahead
 from tools.utils import process_model_params
+from pathlib import Path
 import source
 import random
+import os
 
 CLASSES = (
     "bareland",
@@ -26,7 +28,9 @@ backbone_lr = 6e-5
 backbone_weight_decay = 0.01
 num_classes = len(CLASSES)
 classes = CLASSES
+classes_wt = np.ones([num_classes], dtype=np.float32)
 
+name = "pyramid-mamba"
 weights_name = "pyramid_mamba-r8-512crop-ms-epoch30-rep"
 weights_path = "model_weights/oem/{}".format(weights_name)
 test_weights_name = "last"
@@ -43,35 +47,14 @@ resume_ckpt_path = None  # whether continue training with the checkpoint, defaul
 #  define the network
 net = PyramidMamba(num_classes=num_classes)
 
-# define the loss
-loss = UnetFormerLoss(ignore_index=ignore_index)
-use_aux_loss = True
-
-
-def get_training_transform():
-    train_transform = [albu.HorizontalFlip(p=0.5), albu.Normalize()]
-    return albu.Compose(train_transform)
-
-
-def train_aug(img, mask):
-    crop_aug = Compose(
-        [
-            RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode="value"),
-            SmartCropV1(
-                crop_size=512, max_ratio=0.75, ignore_index=ignore_index, nopad=False
-            ),
-        ]
-    )
-    img, mask = crop_aug(img, mask)
-    img, mask = np.array(img), np.array(mask)
-    aug = get_training_transform()(image=img.copy(), mask=mask.copy())
-    img, mask = aug["image"], aug["mask"]
-    return img, mask
-
-
+OEM_ROOT = "./demo/"
 OEM_DATA_DIR = "OpenEarthMap/"
 TRAIN_TEST_LIST = OEM_DATA_DIR + "train.txt"
 VAL_LIST = OEM_DATA_DIR + "val.txt"
+WEIGHT_DIR = OEM_ROOT+"weight" # path to save weights
+OUT_DIR = OEM_ROOT+"result/" # path to save prediction images
+os.makedirs(WEIGHT_DIR, exist_ok=True)
+
 batch_size = 4
 
 img_pths = [f for f in Path(OEM_DATA_DIR).rglob("*.tif") if "/labels/" in str(f)]
@@ -81,6 +64,10 @@ train_test_pths = [
 ]
 val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
 
+print("Total samples      :", len(img_pths))
+print("Training samples   :", len(train_test_pths))
+print("Validation samples :", len(val_pths))
+
 random.shuffle(train_test_pths)
 
 training_pths = train_test_pths[:2500]
@@ -88,19 +75,6 @@ testing_pths = train_test_pths[2500:]
 
 trainset = source.dataset.Dataset(training_pths, classes=classes, size=1024, train=True)
 validset = source.dataset.Dataset(val_pths, classes=classes, train=False)
-testset = source.dataset.Dataset(testing_pths, classes=classes, train=False)
 
 train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=0)
 val_loader = DataLoader(validset, batch_size=batch_size, shuffle=False, num_workers=0)
-test_loader = DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=0)
-
-# define the optimizer
-layerwise_params = {
-    "backbone.*": dict(lr=backbone_lr, weight_decay=backbone_weight_decay)
-}
-net_params = process_model_params(net, layerwise_params=layerwise_params)
-base_optimizer = torch.optim.AdamW(net_params, lr=lr, weight_decay=weight_decay)
-optimizer = Lookahead(base_optimizer)
-lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-    optimizer, T_max=max_epoch, eta_min=1e-6
-)

@@ -12,3 +12,4 @@ einops
 addict
 ftfy
 regex
+rasterio

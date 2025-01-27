@@ -27,7 +27,7 @@ weight_decay = 0.01
 backbone_lr = 6e-5
 backbone_weight_decay = 0.01
 num_classes = len(CLASSES)
-classes = CLASSES
+classes = [1, 2, 3, 4, 5, 6, 7, 8]
 classes_wt = np.ones([num_classes], dtype=np.float32)
 
 name = "pyramid-mamba"
@@ -51,8 +51,8 @@ OEM_ROOT = "./demo/"
 OEM_DATA_DIR = "OpenEarthMap/"
 TRAIN_TEST_LIST = OEM_DATA_DIR + "train.txt"
 VAL_LIST = OEM_DATA_DIR + "val.txt"
-WEIGHT_DIR = OEM_ROOT+"weight" # path to save weights
-OUT_DIR = OEM_ROOT+"result/" # path to save prediction images
+WEIGHT_DIR = OEM_ROOT + "weight"  # path to save weights
+OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
 os.makedirs(WEIGHT_DIR, exist_ok=True)
 
 batch_size = 4

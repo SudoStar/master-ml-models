@@ -1,10 +1,21 @@
 from torch.utils.data import DataLoader
 from geoseg.losses import *
-from geoseg.datasets.oem_dataset import *
 from geoseg.models.PyramidMamba import PyramidMamba
 from tools.utils import Lookahead
 from tools.utils import process_model_params
 import source
+import random
+
+CLASSES = (
+    "bareland",
+    "grass",
+    "pavement",
+    "road",
+    "tree",
+    "water",
+    "cropland",
+    "buildings",
+)
 
 # training hparam
 max_epoch = 30
@@ -58,22 +69,19 @@ def train_aug(img, mask):
     return img, mask
 
 
-OEM_ROOT = "./demo/"
 OEM_DATA_DIR = "OpenEarthMap/"
-TRAIN_LIST = OEM_DATA_DIR + "train.txt"
+TRAIN_TEST_LIST = OEM_DATA_DIR + "train.txt"
 VAL_LIST = OEM_DATA_DIR + "val.txt"
-TEST_LIST = OEM_DATA_DIR + "test.txt"
-WEIGHT_DIR = OEM_ROOT + "weight"  # path to save weights
-OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
-os.makedirs(WEIGHT_DIR, exist_ok=True)
 batch_size = 4
 
 img_pths = [f for f in Path(OEM_DATA_DIR).rglob("*.tif") if "/labels/" in str(f)]
 
 train_test_pths = [
-    str(f) for f in img_pths if f.name in np.loadtxt(TRAIN_LIST, dtype=str)
+    str(f) for f in img_pths if f.name in np.loadtxt(TRAIN_TEST_LIST, dtype=str)
 ]
 val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
+
+random.shuffle(train_test_pths)
 
 training_pths = train_test_pths[:2500]
 testing_pths = train_test_pths[2500:]

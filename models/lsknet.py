@@ -187,6 +187,10 @@ class LSKNet(nn.Module, EncoderMixin):
     ):
         super().__init__(init_cfg=init_cfg)
 
+        self._out_channels = embed_dims
+        self._depth = num_stages
+        self._in_channels = in_chans
+
         assert not (
             init_cfg and pretrained
         ), "init_cfg and pretrained cannot be set at the same time"
@@ -313,22 +317,3 @@ def _conv_filter(state_dict, patch_size=16):
         out_dict[k] = v
 
     return out_dict
-
-
-smp.encoders.encoders["lsk_net"] = {
-    "encoder": LSKNet,
-    "params": {
-        "img_size": 224,
-        "in_chans": 3,
-        "embed_dims": [64, 128, 256, 512],
-        "mlp_ratios": [8, 8, 4, 4],
-        "drop_rate": 0.0,
-        "drop_path_rate": 0.0,
-        "norm_layer": partial(nn.LayerNorm, eps=1e-6),
-        "depths": [3, 4, 6, 3],
-        "num_stages": 4,
-        "pretrained": None,
-        "init_cfg": None,
-        "norm_cfg": None,
-    },
-}

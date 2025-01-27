@@ -67,7 +67,7 @@ def main():
     train_hist = []
     valid_hist = []
 
-    for epoch in range(config.max_epoch):
+    for epoch in range(config.n_epochs):
         print(f"\nEpoch: {epoch + 1}")
 
         logs_train = source.runner.train_epoch(

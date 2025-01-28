@@ -46,35 +46,6 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 img_size = 1024
 name = "pyramid-mamba"
 
-
-def get_segmentation_augmentations(img_size=512):
-    return A.Compose(
-        [
-            A.HorizontalFlip(p=0.5),
-            A.VerticalFlip(p=0.5),
-            A.RandomRotate90(p=0.5),
-            A.ShiftScaleRotate(
-                shift_limit=0.0625, scale_limit=0.1, rotate_limit=20, p=0.5
-            ),
-            A.Resize(img_size, img_size),
-            ToTensorV2(),
-        ]
-    )
-
-
-def get_validation_augmentations(img_size=512):
-    return A.Compose(
-        [
-            A.Resize(img_size, img_size),
-            ToTensorV2(),
-        ]
-    )
-
-
-# Example usage:
-augm = get_segmentation_augmentations(img_size=img_size)
-val_augm = get_validation_augmentations(img_size=img_size)
-
 #  define the network
 net = EfficientPyramidMamba(num_classes=n_classes)
 
@@ -95,10 +66,10 @@ training_pths = train_test_pths[:2500]
 testing_pths = train_test_pths[2500:]
 
 trainset = source.dataset_bruno.OpenEarthMapDataset(
-    img_list=training_pths, classes=classes, augm=augm
+    img_list=training_pths, classes=classes, img_size=img_size, augm=source.transforms_bruno.train_augm
 )
 validset = source.dataset_bruno.OpenEarthMapDataset(
-    img_list=val_pths, classes=classes, augm=val_augm
+    img_list=val_pths, classes=classes, img_size=img_size, augm=source.transforms_bruno.valid_augm
 )
 
 train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=True)

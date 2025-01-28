@@ -1,6 +1,6 @@
 from torch.utils.data import DataLoader
 from geoseg.losses import *
-from geoseg.models.PyramidMamba import EfficientPyramidMamba
+from geoseg.models.UNetFormer_lsk import UNetFormer_lsk_t
 from pathlib import Path
 import source
 import random
@@ -42,10 +42,10 @@ torch.backends.cudnn.benchmark = False
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 img_size = 1024
-name = "pyramid-mamba"
+name = "unet-former-lsknet"
 
 #  define the network
-net = EfficientPyramidMamba(num_classes=n_classes)
+net = UNetFormer_lsk_t(num_classes=n_classes)
 
 img_pths = [f for f in Path(OEM_DATA_DIR).rglob("*.tif") if "/labels/" in str(f)]
 

@@ -95,10 +95,10 @@ training_pths = train_test_pths[:2500]
 testing_pths = train_test_pths[2500:]
 
 trainset = source.dataset_bruno.OpenEarthMapDataset(
-    img_list=training_pths, classes=classes, img_size=img_size, augm=augm
+    img_list=training_pths, classes=classes, augm=augm
 )
 validset = source.dataset_bruno.OpenEarthMapDataset(
-    img_list=val_pths, classes=classes, img_size=img_size, augm=val_augm
+    img_list=val_pths, classes=classes, augm=val_augm
 )
 
 train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=True)

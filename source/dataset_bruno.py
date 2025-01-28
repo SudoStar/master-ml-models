@@ -133,7 +133,6 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
     Args:
         fn_list (str): List containing images paths
         classes (int): list of of class-code
-        img_size (int): image size
         augm (albumentations): transfromation pipeline (e.g. flip, cut, etc.)
     """
 
@@ -141,7 +140,6 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
         self,
         img_list,
         classes,
-        img_size=512,
         augm=None,
         mu=None,
         sig=None,
@@ -154,7 +152,6 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
             if mu is None
             else transforms.ToTensorNorm(classes=classes, mu=mu, sig=sig)
         )
-        self.size = img_size
         self.load_multiband = load_multiband
         self.load_grayscale = load_grayscale
 
@@ -162,7 +159,7 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
         img = self.load_multiband(self.fn_imgs[idx])
         msk = self.load_grayscale(self.fn_msks[idx])
 
-        data = self.to_tensor(self.augm({"image": img, "mask": msk}, self.size))
+        data = self.to_tensor(self.augm(image=img, mask=msk))
         return data["image"], data["mask"], self.fn_imgs[idx]
 
     def __len__(self):

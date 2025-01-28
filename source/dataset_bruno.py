@@ -5,6 +5,7 @@ import rasterio
 from . import tools_bruno as tools
 from . import transforms_bruno as transforms
 
+
 def load_multiband(path):
     src = rasterio.open(path, "r")
     return (np.moveaxis(src.read(), 0, -1)).astype(np.uint8)
@@ -16,9 +17,8 @@ def load_grayscale(path):
 
 
 class DeepGlobeDataset(torch.utils.data.Dataset):
-
     """
-    DeepGlobe Land Cover Classification Challenge Dataset. Read images, apply 
+    DeepGlobe Land Cover Classification Challenge Dataset. Read images, apply
     augmentation and preprocessing transformations.
 
     Args:
@@ -29,7 +29,14 @@ class DeepGlobeDataset(torch.utils.data.Dataset):
     """
 
     def __init__(
-        self, fn_list, classes, img_size=512, augm=None, test=False, mu=None, sig=None,
+        self,
+        fn_list,
+        classes,
+        img_size=512,
+        augm=None,
+        test=False,
+        mu=None,
+        sig=None,
     ):
         self.img_paths = fn_list
         self.msk_paths = [x.replace("/images/", "/masks/") for x in self.img_paths]
@@ -67,7 +74,6 @@ class DeepGlobeDataset(torch.utils.data.Dataset):
 
 
 class LoveDADataset(torch.utils.data.Dataset):
-
     """
     LoveDA: A Remote Sensing Land-Cover Dataset for Domain Adaptive Semantic Segmentation
     https://github.com/Junjue-Wang/LoveDA?ref=pythonawesome.com
@@ -80,7 +86,14 @@ class LoveDADataset(torch.utils.data.Dataset):
     """
 
     def __init__(
-        self, fn_list, classes, img_size=512, augm=None, test=False, mu=None, sig=None,
+        self,
+        fn_list,
+        classes,
+        img_size=512,
+        augm=None,
+        test=False,
+        mu=None,
+        sig=None,
     ):
         self.img_paths = fn_list
         self.msk_paths = [x.replace("images_", "masks_") for x in self.img_paths]
@@ -105,7 +118,7 @@ class LoveDADataset(torch.utils.data.Dataset):
 
         # apply augmentations
         data = self.to_tensor(self.augm({"image": img, "mask": msk}, self.size))
-        return {"x":data["image"], "y":data["mask"], "fn":self.img_paths[i]}
+        return {"x": data["image"], "y": data["mask"], "fn": self.img_paths[i]}
 
     def __len__(self):
         # return length of
@@ -113,7 +126,6 @@ class LoveDADataset(torch.utils.data.Dataset):
 
 
 class OpenEarthMapDataset(torch.utils.data.Dataset):
-
     """
     OpenEarthMap dataset
     Geoinformatics Unit, RIKEN AIP
@@ -126,10 +138,16 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
     """
 
     def __init__(
-        self, img_list, classes, img_size=512, augm=None, mu=None, sig=None,
+        self,
+        img_list,
+        classes,
+        img_size=512,
+        augm=None,
+        mu=None,
+        sig=None,
     ):
-        self.fn_imgs = [str(f) for f in img_list]
-        self.fn_msks = [f.replace("/images/", "/labels/") for f in self.fn_imgs]
+        self.fn_msks = [str(f) for f in img_list]
+        self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_imgs]
         self.augm = augm
         self.to_tensor = (
             transforms.ToTensor(classes=classes)
@@ -149,4 +167,3 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
 
     def __len__(self):
         return len(self.fn_imgs)
-

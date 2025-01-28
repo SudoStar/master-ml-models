@@ -3,21 +3,8 @@ import source
 from tools.cfg import py2cfg
 import os
 import torch
-import numpy as np
 import argparse
 from pathlib import Path
-from tools.metric import Evaluator
-import random
-
-
-def seed_everything(seed):
-    random.seed(seed)
-    os.environ["PYTHONHASHSEED"] = str(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = True
 
 
 def get_args():
@@ -31,7 +18,6 @@ def get_args():
 def main():
     args = get_args()
     config = py2cfg(args.config_path)
-    seed_everything(42)
 
     network = config.net
 

@@ -147,7 +147,7 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
         sig=None,
     ):
         self.fn_msks = [str(f) for f in img_list]
-        self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_imgs]
+        self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_msks]
         self.augm = augm
         self.to_tensor = (
             transforms.ToTensor(classes=classes)

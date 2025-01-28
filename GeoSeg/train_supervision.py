@@ -28,7 +28,7 @@ def main():
 
     criterion = source.losses.CEWithLogitsLoss(weights=config.classes_wt)
     metric = source.metrics.IoU2()
-    optimizer = torch.optim.Adam(network.parameters(), lr=config.lr)
+    optimizer = torch.optim.Adam(network.parameters())
     network_fout = f"{config.name}_s0_{criterion.name}"
 
     OUT_DIR = config.OUT_DIR
@@ -37,13 +37,6 @@ def main():
 
     print("Model output name  :", network_fout)
     print("Number of parameters: ", params)
-
-    if torch.cuda.device_count() > 1:
-        print("Number of GPUs :", torch.cuda.device_count())
-        network = torch.nn.DataParallel(network)
-        optimizer = torch.optim.Adam(
-            [dict(params=network.module.parameters(), lr=config.lr)]
-        )
 
     start = time.time()
 

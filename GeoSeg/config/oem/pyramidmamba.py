@@ -30,7 +30,7 @@ os.makedirs(WEIGHT_DIR, exist_ok=True)
 seed = 0
 lr = 0.0001
 batch_size = 1
-n_epochs = 5
+n_epochs = 15
 classes = [1, 2, 3, 4, 5, 6, 7, 8]
 n_classes = len(classes) + 1
 classes_wt = np.ones([n_classes], dtype=np.float32)
@@ -64,13 +64,13 @@ training_pths = train_test_pths[:2500]
 testing_pths = train_test_pths[2500:]
 
 trainset = source.dataset.OpenEarthMapDataset(
-    img_list=training_pths,
+    msk_list=training_pths,
     classes=classes,
     img_size=img_size,
     augm=source.transforms.train_augm,
 )
 validset = source.dataset.OpenEarthMapDataset(
-    img_list=val_pths,
+    msk_list=val_pths,
     classes=classes,
     img_size=img_size,
     augm=source.transforms.valid_augm,

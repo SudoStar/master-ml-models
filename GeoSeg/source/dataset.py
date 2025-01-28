@@ -15,26 +15,16 @@ def load_grayscale(path):
 
 
 class OpenEarthMapDataset(torch.utils.data.Dataset):
-    """
-    OpenEarthMap dataset
-    Geoinformatics Unit, RIKEN AIP
-
-    Args:
-        fn_list (str): List containing images paths
-        classes (int): list of of class-code
-        augm (albumentations): transfromation pipeline (e.g. flip, cut, etc.)
-    """
-
     def __init__(
         self,
-        img_list,
+        msk_list,
         classes,
         img_size=512,
         augm=None,
         mu=None,
         sig=None,
     ):
-        self.fn_msks = [str(f) for f in img_list]
+        self.fn_msks = [str(f) for f in msk_list]
         self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_msks]
         self.size = img_size
         self.augm = augm

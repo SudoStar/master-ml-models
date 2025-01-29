@@ -8,6 +8,7 @@ import random
 from pathlib import Path
 import albumentations as albu
 import cv2
+from geoseg.datasets.transform import SmartCropV1
 
 CLASSES = (
     "bareland",
@@ -70,7 +71,11 @@ use_aux_loss = True
 
 
 def get_training_transform():
-    train_transform = [albu.HorizontalFlip(p=0.5), albu.Normalize()]
+    train_transform = [
+        albu.Resize(height=img_size, width=img_size, interpolation=cv2.INTER_CUBIC),
+        albu.HorizontalFlip(p=0.5),
+        albu.Normalize(),
+    ]
     return albu.Compose(train_transform)
 
 
@@ -86,7 +91,7 @@ def train_aug(img, mask):
     crop_aug = albu.Compose(
         [
             albu.RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode="value"),
-            albu.SmartCropV1(
+            SmartCropV1(
                 crop_size=img_size,
                 max_ratio=0.75,
                 ignore_index=ignore_index,

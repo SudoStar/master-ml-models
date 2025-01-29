@@ -34,7 +34,7 @@ num_classes = len(CLASSES)
 classes = CLASSES
 img_size = 512
 
-weights_name = "pyramidmamba-r18-1024crop-ms-epoch30-rep"
+weights_name = "pyramidmamba-r18-512crop-ms-epoch30-rep"
 weights_path = "model_weights/pyramidmamba/{}".format(weights_name)
 test_weights_name = "last"
 log_name = "pyramidmamba/{}".format(weights_name)
@@ -72,6 +72,7 @@ use_aux_loss = True
 
 def get_training_transform():
     train_transform = [
+        albu.Resize(height=img_size, width=img_size),
         albu.HorizontalFlip(p=0.5),
         albu.Normalize(),
     ]
@@ -80,7 +81,7 @@ def get_training_transform():
 
 def get_val_transform():
     val_transform = [
-        albu.Resize(height=img_size, width=img_size, interpolation=cv2.INTER_CUBIC),
+        albu.Resize(height=img_size, width=img_size),
         albu.Normalize(),
     ]
     return albu.Compose(val_transform)

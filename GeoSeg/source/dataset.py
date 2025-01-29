@@ -30,11 +30,6 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
         self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_msks]
         self.size = img_size
         self.augm = augm
-        self.to_tensor = (
-            transforms.ToTensor(classes=classes)
-            if mu is None
-            else transforms.ToTensorNorm(classes=classes, mu=mu, sig=sig)
-        )
         self.load_multiband = load_multiband
         self.load_grayscale = load_grayscale
 
@@ -63,11 +58,6 @@ class OpenEarthMapDatasetAlt(torch.utils.data.Dataset):
         self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_msks]
         self.size = img_size
         self.augm = augm
-        self.to_tensor = (
-            transforms.ToTensor(classes=classes)
-            if mu is None
-            else transforms.ToTensorNorm(classes=classes, mu=mu, sig=sig)
-        )
         self.load_multiband = load_multiband
         self.load_grayscale = load_grayscale
 

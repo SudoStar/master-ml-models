@@ -7,6 +7,7 @@ from source.dataset import OpenEarthMapDatasetAlt
 import random
 from pathlib import Path
 import albumentations as albu
+import cv2
 
 CLASSES = (
     "bareland",

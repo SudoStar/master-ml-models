@@ -1,6 +1,6 @@
 from torch.utils.data import DataLoader
 from geoseg.losses import *
-from geoseg.models.PyramidMamba import EfficientPyramidMamba
+from geoseg.models.PyramidMamba import PyramidMamba
 from tools.utils import Lookahead
 from tools.utils import process_model_params
 from source.dataset import OpenEarthMapDatasetAlt
@@ -22,7 +22,7 @@ CLASSES = (
 )
 
 # training hparam
-max_epoch = 30
+max_epoch = 45
 ignore_index = len(CLASSES)
 train_batch_size = 2
 val_batch_size = 2
@@ -34,7 +34,7 @@ num_classes = len(CLASSES)
 classes = CLASSES
 img_size = 512
 
-weights_name = "pyramidmamba-r18-512crop-ms-epoch30-rep"
+weights_name = "pyramidmamba-r18-512crop-ms-epoch45-rep"
 weights_path = "model_weights/pyramidmamba/{}".format(weights_name)
 test_weights_name = "last"
 log_name = "pyramidmamba/{}".format(weights_name)
@@ -56,7 +56,7 @@ WEIGHT_DIR = OEM_ROOT + "weight"  # path to save weights
 OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
 
 #  define the network
-net = EfficientPyramidMamba(num_classes=num_classes)
+net = PyramidMamba(num_classes=num_classes)
 
 # define the loss
 loss = JointLoss(

@@ -66,25 +66,8 @@ class Supervision_Train(pl.LightningModule):
         return {"loss": loss}
 
     def on_train_epoch_end(self):
-        if "vaihingen" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_train.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_train.F1()[:-1])
-        elif "potsdam" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_train.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_train.F1()[:-1])
-        elif "whubuilding" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_train.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_train.F1()[:-1])
-        elif "massbuilding" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_train.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_train.F1()[:-1])
-        elif "cropland" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_train.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_train.F1()[:-1])
-        else:
-            mIoU = np.nanmean(self.metrics_train.Intersection_over_Union())
-            F1 = np.nanmean(self.metrics_train.F1())
-
+        mIoU = np.nanmean(self.metrics_train.Intersection_over_Union())
+        F1 = np.nanmean(self.metrics_train.F1())
         OA = np.nanmean(self.metrics_train.OA())
         iou_per_class = self.metrics_train.Intersection_over_Union()
         eval_value = {"mIoU": mIoU, "F1": F1, "OA": OA}
@@ -110,25 +93,8 @@ class Supervision_Train(pl.LightningModule):
         return {"loss_val": loss_val}
 
     def on_validation_epoch_end(self):
-        if "vaihingen" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_val.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_val.F1()[:-1])
-        elif "potsdam" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_val.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_val.F1()[:-1])
-        elif "whubuilding" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_val.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_val.F1()[:-1])
-        elif "massbuilding" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_val.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_val.F1()[:-1])
-        elif "cropland" in self.config.log_name:
-            mIoU = np.nanmean(self.metrics_val.Intersection_over_Union()[:-1])
-            F1 = np.nanmean(self.metrics_val.F1()[:-1])
-        else:
-            mIoU = np.nanmean(self.metrics_val.Intersection_over_Union())
-            F1 = np.nanmean(self.metrics_val.F1())
-
+        mIoU = np.nanmean(self.metrics_val.Intersection_over_Union())
+        F1 = np.nanmean(self.metrics_val.F1())
         OA = np.nanmean(self.metrics_val.OA())
         iou_per_class = self.metrics_val.Intersection_over_Union()
 
@@ -150,11 +116,9 @@ class Supervision_Train(pl.LightningModule):
         return [optimizer], [lr_scheduler]
 
     def train_dataloader(self):
-
         return self.config.train_loader
 
     def val_dataloader(self):
-
         return self.config.val_loader
 
 

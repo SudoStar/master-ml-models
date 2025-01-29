@@ -346,7 +346,7 @@ class EfficientPyramidMamba(nn.Module):
 class PyramidMamba(nn.Module):
     def __init__(
         self,
-        backbone_name="swsl_resnet18",
+        backbone_name="swin_base_patch4_window12_384.ms_in22k_ft_in1k",
         pretrained=True,
         num_classes=6,
         decoder_channels=128,

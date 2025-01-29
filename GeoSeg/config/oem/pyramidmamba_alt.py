@@ -65,7 +65,7 @@ loss = JointLoss(
     1.0,
     1.0,
 )
-use_aux_loss = True
+use_aux_loss = False
 
 # define the dataloader
 

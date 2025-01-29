@@ -83,10 +83,10 @@ def get_val_transform():
 
 
 def train_aug(img, mask):
-    crop_aug = Compose(
+    crop_aug = albu.Compose(
         [
-            RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode="value"),
-            SmartCropV1(
+            albu.RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode="value"),
+            albu.SmartCropV1(
                 crop_size=img_size,
                 max_ratio=0.75,
                 ignore_index=ignore_index,

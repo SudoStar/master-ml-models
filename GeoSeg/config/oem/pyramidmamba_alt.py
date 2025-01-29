@@ -6,6 +6,7 @@ from tools.utils import process_model_params
 from source.dataset import OpenEarthMapDatasetAlt
 import random
 from pathlib import Path
+import albumentations as albu
 
 CLASSES = (
     "bareland",
@@ -72,6 +73,14 @@ def get_training_transform():
     return albu.Compose(train_transform)
 
 
+def get_val_transform():
+    val_transform = [
+        albu.Resize(height=img_size, width=img_size, interpolation=cv2.INTER_CUBIC),
+        albu.Normalize(),
+    ]
+    return albu.Compose(val_transform)
+
+
 def train_aug(img, mask):
     crop_aug = Compose(
         [
@@ -116,14 +125,10 @@ testing_pths = train_test_pths[2500:]
 
 train_set = OpenEarthMapDatasetAlt(
     msk_list=training_pths,
-    classes=classes,
-    img_size=img_size,
     augm=train_aug,
 )
 valid_set = OpenEarthMapDatasetAlt(
     msk_list=val_pths,
-    classes=classes,
-    img_size=img_size,
     augm=val_aug,
 )
 

@@ -5,6 +5,7 @@ import os
 import torch
 import argparse
 from pathlib import Path
+from geoseg.losses.useful_loss import UnetFormerLoss
 
 
 def get_args():
@@ -26,7 +27,7 @@ def main():
         if p.requires_grad:
             params += p.numel()
 
-    criterion = source.losses.CEWithLogitsLoss(weights=config.classes_wt)
+    criterion = UnetFormerLoss()
     metric = source.metrics.IoU2()
     optimizer = torch.optim.Adam(network.parameters())
     network_fout = f"{config.name}_s0_{criterion.name}"

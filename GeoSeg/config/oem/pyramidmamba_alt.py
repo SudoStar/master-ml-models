@@ -8,7 +8,7 @@ import random
 from pathlib import Path
 import albumentations as albu
 import cv2
-from geoseg.datasets.transform import SmartCropV1
+from geoseg.datasets.transform import *
 
 CLASSES = (
     "bareland",
@@ -32,7 +32,7 @@ backbone_lr = 6e-5
 backbone_weight_decay = 0.01
 num_classes = len(CLASSES)
 classes = CLASSES
-img_size = 1024
+img_size = 512
 
 weights_name = "pyramidmamba-r18-1024crop-ms-epoch30-rep"
 weights_path = "model_weights/pyramidmamba/{}".format(weights_name)
@@ -72,7 +72,6 @@ use_aux_loss = True
 
 def get_training_transform():
     train_transform = [
-        albu.Resize(height=img_size, width=img_size, interpolation=cv2.INTER_CUBIC),
         albu.HorizontalFlip(p=0.5),
         albu.Normalize(),
     ]
@@ -88,9 +87,9 @@ def get_val_transform():
 
 
 def train_aug(img, mask):
-    crop_aug = albu.Compose(
+    crop_aug = Compose(
         [
-            albu.RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode="value"),
+            RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode="value"),
             SmartCropV1(
                 crop_size=img_size,
                 max_ratio=0.75,

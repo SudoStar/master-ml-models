@@ -4,7 +4,6 @@ from geoseg.models.PyramidMamba import EfficientPyramidMamba
 from tools.utils import Lookahead
 from tools.utils import process_model_params
 from source.dataset import OpenEarthMapDatasetAlt
-import source
 import random
 from pathlib import Path
 
@@ -92,6 +91,13 @@ def train_aug(img, mask):
     return img, mask
 
 
+def val_aug(img, mask):
+    img, mask = np.array(img), np.array(mask)
+    aug = get_val_transform()(image=img.copy(), mask=mask.copy())
+    img, mask = aug["image"], aug["mask"]
+    return img, mask
+
+
 img_pths = [f for f in Path(OEM_DATA_DIR).rglob("*.tif") if "/labels/" in str(f)]
 
 train_test_pths = [
@@ -118,7 +124,7 @@ valid_set = OpenEarthMapDatasetAlt(
     msk_list=val_pths,
     classes=classes,
     img_size=img_size,
-    augm=source.transforms.valid_augm,
+    augm=val_aug,
 )
 
 train_loader = DataLoader(

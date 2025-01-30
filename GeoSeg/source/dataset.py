@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 from . import transforms as transforms
+import torchvision.transforms.functional as TF
 from PIL import Image
 from pathlib import Path
 import rasterio
@@ -46,14 +47,23 @@ class OpenEarthMapDataset(torch.utils.data.Dataset):
         return len(self.fn_imgs)
 
 
+def to_tensor(sample, classes):
+    masks = [(sample["mask"] == v) * 1 for v in classes]
+    sample["mask"] = TF.to_tensor(np.stack(masks, axis=-1))
+    sample["img"] = TF.to_tensor(sample["img"])
+    return sample
+
+
 class OpenEarthMapDatasetAlt(torch.utils.data.Dataset):
     def __init__(
         self,
         msk_list,
+        classes,
         augm=None,
     ):
         self.fn_msks = [str(f) for f in msk_list]
         self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_msks]
+        self.classes = classes
         self.augm = augm
         self.load_multiband = load_multiband
         self.load_grayscale = load_grayscale
@@ -64,10 +74,17 @@ class OpenEarthMapDatasetAlt(torch.utils.data.Dataset):
 
         # data = self.to_tensor(self.augm({"image": img, "mask": msk}, self.size))
         img, mask = self.augm(img, mask)
-        img = torch.from_numpy(img).permute(2, 0, 1).float()
-        mask = torch.from_numpy(mask).long()
+        # img = torch.from_numpy(img).permute(2, 0, 1).float()
+        # mask = torch.from_numpy(mask).long()
+        data = to_tensor(
+            sample={
+                "img": np.array(data["image"], dtype="uint8"),
+                "mask": np.array(data["mask"], dtype="uint8"),
+            },
+            classes=self.classes,
+        )
         img_id = Path(self.fn_msks[idx]).name
-        return {"img": img, "gt_semantic_seg": mask, "img_id": img_id}
+        return {"img": data["img"], "gt_semantic_seg": data["mask"], "img_id": img_id}
 
     def __len__(self):
         return len(self.fn_imgs)

@@ -124,14 +124,17 @@ test_pths = [str(f) for f in img_pths if f.name in np.loadtxt(TEST_LIST, dtype=s
 
 train_set = OpenEarthMapDatasetAlt(
     msk_list=training_pths,
+    num_classes=num_classes,
     augm=train_aug,
 )
 valid_set = OpenEarthMapDatasetAlt(
     msk_list=val_pths,
+    num_classes=num_classes,
     augm=val_aug,
 )
 test_set = OpenEarthMapDatasetAlt(
     msk_list=test_pths,
+    num_classes=num_classes,
     augm=val_aug,
 )
 

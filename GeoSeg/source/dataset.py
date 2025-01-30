@@ -58,12 +58,12 @@ class OpenEarthMapDatasetAlt(torch.utils.data.Dataset):
     def __init__(
         self,
         msk_list,
-        classes,
+        num_classes,
         augm=None,
     ):
         self.fn_msks = [str(f) for f in msk_list]
         self.fn_imgs = [f.replace("/labels/", "/images/") for f in self.fn_msks]
-        self.classes = classes
+        self.classes = np.arange(num_classes).tolist()
         self.augm = augm
         self.load_multiband = load_multiband
         self.load_grayscale = load_grayscale

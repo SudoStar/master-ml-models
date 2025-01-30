@@ -14,27 +14,27 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 class_rgb = {
-    "Unknown": [0, 0, 0],
-    "Bareland": [128, 0, 0],
-    "Grass": [0, 255, 36],
-    "Pavement": [148, 148, 148],
-    "Road": [255, 255, 255],
-    "Tree": [34, 97, 38],
-    "Water": [0, 69, 255],
-    "Cropland": [75, 181, 73],
-    "Buildings": [222, 31, 7],
+    "unknown": [0, 0, 0],
+    "bareland": [128, 0, 0],
+    "grass": [0, 255, 36],
+    "pavement": [148, 148, 148],
+    "road": [255, 255, 255],
+    "tree": [34, 97, 38],
+    "water": [0, 69, 255],
+    "cropland": [75, 181, 73],
+    "buildings": [222, 31, 7],
 }
 
 class_gray = {
-    "Unknown": 0,
-    "Bareland": 1,
-    "Grass": 2,
-    "Pavement": 3,
-    "Road": 4,
-    "Tree": 5,
-    "Water": 6,
-    "Cropland": 7,
-    "Buildings": 8,
+    "unknown": 0,
+    "bareland": 1,
+    "grass": 2,
+    "pavement": 3,
+    "road": 4,
+    "tree": 5,
+    "water": 6,
+    "cropland": 7,
+    "buildings": 8,
 }
 
 

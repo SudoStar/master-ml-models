@@ -3,18 +3,19 @@ import torch
 from . import transforms as transforms
 from PIL import Image
 from pathlib import Path
+import rasterio
 
 
 def load_multiband(path):
-    # src = rasterio.open(path, "r")
-    # return (np.moveaxis(src.read(), 0, -1)).astype(np.uint8)
-    return Image.open(path).convert("RGB")
+    src = rasterio.open(path, "r")
+    return (np.moveaxis(src.read(), 0, -1)).astype(np.uint8)
+    # return Image.open(path).convert("RGB")
 
 
 def load_grayscale(path):
-    # src = rasterio.open(path, "r")
-    # return (src.read(1)).astype(np.uint8)
-    return Image.open(path).convert("L")
+    src = rasterio.open(path, "r")
+    return (src.read(1)).astype(np.uint8)
+    # return Image.open(path).convert("L")
 
 
 class OpenEarthMapDataset(torch.utils.data.Dataset):
@@ -58,8 +59,8 @@ class OpenEarthMapDatasetAlt(torch.utils.data.Dataset):
         self.load_grayscale = load_grayscale
 
     def __getitem__(self, idx):
-        img = self.load_multiband(self.fn_imgs[idx])
-        mask = self.load_grayscale(self.fn_msks[idx])
+        img = Image.fromarray(self.load_multiband(self.fn_imgs[idx]))
+        mask = Image.fromarray(self.load_grayscale(self.fn_msks[idx]))
 
         # data = self.to_tensor(self.augm({"image": img, "mask": msk}, self.size))
         img, mask = self.augm(img, mask)

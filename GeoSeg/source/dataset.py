@@ -2,6 +2,7 @@ import numpy as np
 import torch
 from . import transforms as transforms
 from PIL import Image
+from pathlib import Path
 
 
 def load_multiband(path):
@@ -64,7 +65,7 @@ class OpenEarthMapDatasetAlt(torch.utils.data.Dataset):
         img, mask = self.augm(img, mask)
         img = torch.from_numpy(img).permute(2, 0, 1).float()
         mask = torch.from_numpy(mask).long()
-        img_id = self.fn_msks[idx]
+        img_id = Path(self.fn_msks[idx]).name
         return {"img": img, "gt_semantic_seg": mask, "img_id": img_id}
 
     def __len__(self):

@@ -49,9 +49,9 @@ resume_ckpt_path = None  # whether continue training with the checkpoint, defaul
 
 OEM_ROOT = "./demo/"
 OEM_DATA_DIR = "OpenEarthMap/"
-TRAIN_TEST_LIST = OEM_DATA_DIR + "train.txt"
+TRAIN_LIST = OEM_DATA_DIR + "train_new.txt"
 VAL_LIST = OEM_DATA_DIR + "val.txt"
-TEST_LIST = OEM_DATA_DIR + "test.txt"
+TEST_LIST = OEM_DATA_DIR + "test_new.txt"
 WEIGHT_DIR = OEM_ROOT + "weight"  # path to save weights
 OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
 
@@ -115,19 +115,11 @@ def val_aug(img, mask):
 
 img_pths = [f for f in Path(OEM_DATA_DIR).rglob("*.tif") if "/labels/" in str(f)]
 
-train_test_pths = [
-    str(f) for f in img_pths if f.name in np.loadtxt(TRAIN_TEST_LIST, dtype=str)
+training_pths = [
+    str(f) for f in img_pths if f.name in np.loadtxt(TRAIN_LIST, dtype=str)
 ]
 val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
-
-print("Total samples      :", len(img_pths))
-print("Training samples   :", len(train_test_pths))
-print("Validation samples :", len(val_pths))
-
-random.shuffle(train_test_pths)
-
-training_pths = train_test_pths[:2500]
-testing_pths = train_test_pths[2500:]
+test_pths = [str(f) for f in img_pths if f.name in np.loadtxt(TEST_LIST, dtype=str)]
 
 train_set = OpenEarthMapDatasetAlt(
     msk_list=training_pths,
@@ -135,6 +127,10 @@ train_set = OpenEarthMapDatasetAlt(
 )
 valid_set = OpenEarthMapDatasetAlt(
     msk_list=val_pths,
+    augm=val_aug,
+)
+test_set = OpenEarthMapDatasetAlt(
+    msk_list=test_pths,
     augm=val_aug,
 )
 

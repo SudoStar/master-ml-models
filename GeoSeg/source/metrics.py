@@ -111,5 +111,8 @@ class IoU2(nn.Module):
 
     @torch.no_grad()
     def forward(self, input, target):
+        if isinstance(input, tuple):
+            input = input[0]  # Use the main output for metric computation
+        
         score = mIoU(input, target, n_classes=input.shape[1])
         return torch.tensor(score)

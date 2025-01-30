@@ -74,17 +74,23 @@ class UnetFormerLoss(nn.Module):
         self.main_loss = JointLoss(SoftCrossEntropyLoss(smooth_factor=0.05, ignore_index=ignore_index),
                                    DiceLoss(smooth=0.05, ignore_index=ignore_index), 1.0, 1.0)
         self.aux_loss = SoftCrossEntropyLoss(smooth_factor=0.05, ignore_index=ignore_index)
+        self.name = "UNetFormerLoss"
 
     def forward(self, logits, labels):
-        if self.training and len(logits) == 2:
+        # Convert one-hot labels to class indices
+        target = labels.argmax(dim=1)
+        
+        # Handle training vs. inference outputs
+        if self.training and isinstance(logits, tuple) and len(logits) == 2:
             logit_main, logit_aux = logits
-            loss = self.main_loss(logit_main, labels) + 0.4 * self.aux_loss(logit_aux, labels)
+            loss = self.main_loss(logit_main, target) + 0.4 * self.aux_loss(logit_aux, target)
         else:
-            loss = self.main_loss(logits, labels)
+            # If logits is a tuple during inference, use the first output
+            logit_main = logits[0] if isinstance(logits, tuple) else logits
+            loss = self.main_loss(logit_main, target)
 
         return loss
-
-
+        
 if __name__ == '__main__':
     targets = torch.randint(low=0, high=2, size=(2, 16, 16))
     logits = torch.randn((2, 2, 16, 16))

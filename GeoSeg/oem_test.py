@@ -44,6 +44,13 @@ def img_writer(inp):
         mask_tif = label2rgb(mask)
         cv2.imwrite(mask_name_tif, mask_tif)
     else:
+        if mask.dtype == np.float32 or mask.dtype == np.float64:
+            mask = (mask * 255).astype(np.uint8)
+            # - For integer class labels: directly cast to uint8
+        elif mask.dtype != np.uint8:
+            mask = mask.astype(np.uint8)
+
+        # Save the mask as a TIFF file
         cv2.imwrite(mask_id, mask)
 
 

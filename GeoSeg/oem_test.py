@@ -13,6 +13,40 @@ from torch import nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
+class_rgb = {
+    "Bareland": [128, 0, 0],
+    "Grass": [0, 255, 36],
+    "Pavement": [148, 148, 148],
+    "Road": [255, 255, 255],
+    "Tree": [34, 97, 38],
+    "Water": [0, 69, 255],
+    "Cropland": [75, 181, 73],
+    "Buildings": [222, 31, 7],
+}
+
+class_gray = {
+    "Bareland": 1,
+    "Grass": 2,
+    "Pavement": 3,
+    "Road": 4,
+    "Tree": 5,
+    "Water": 6,
+    "Cropland": 7,
+    "Buildings": 8,
+}
+
+
+def label2rgb(a):
+    """
+    a: labels (HxW)
+    """
+    out = np.zeros(shape=a.shape + (3,), dtype="uint8")
+    for k, v in class_gray.items():
+        out[a == v, 0] = class_rgb[k][0]
+        out[a == v, 1] = class_rgb[k][1]
+        out[a == v, 2] = class_rgb[k][2]
+    return out
+
 
 def seed_everything(seed):
     random.seed(seed)
@@ -24,19 +58,6 @@ def seed_everything(seed):
     torch.backends.cudnn.benchmark = True
 
 
-def label2rgb(mask):
-    h, w = mask.shape[0], mask.shape[1]
-    mask_rgb = np.zeros(shape=(h, w, 3), dtype=np.uint8)
-    mask_convert = mask[np.newaxis, :, :]
-    mask_rgb[np.all(mask_convert == 3, axis=0)] = [0, 255, 0]
-    mask_rgb[np.all(mask_convert == 0, axis=0)] = [255, 255, 255]
-    mask_rgb[np.all(mask_convert == 1, axis=0)] = [255, 0, 0]
-    mask_rgb[np.all(mask_convert == 2, axis=0)] = [255, 255, 0]
-    mask_rgb[np.all(mask_convert == 4, axis=0)] = [0, 204, 255]
-    mask_rgb[np.all(mask_convert == 5, axis=0)] = [0, 0, 255]
-    return mask_rgb
-
-
 def img_writer(inp):
     (mask, mask_id, rgb) = inp
     if rgb:
@@ -44,14 +65,9 @@ def img_writer(inp):
         mask_tif = label2rgb(mask)
         cv2.imwrite(mask_name_tif, mask_tif)
     else:
-        if mask.dtype == np.float32 or mask.dtype == np.float64:
-            mask = (mask * 255).astype(np.uint8)
-            # - For integer class labels: directly cast to uint8
-        elif mask.dtype != np.uint8:
-            mask = mask.astype(np.uint8)
-
-        # Save the mask as a TIFF file
-        cv2.imwrite(mask_id, mask)
+        mask_png = mask.astype(np.uint8)
+        mask_name_png = mask_id + ".png"
+        cv2.imwrite(mask_name_png, mask_png)
 
 
 def get_args():

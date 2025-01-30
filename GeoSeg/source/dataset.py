@@ -8,15 +8,15 @@ import rasterio
 
 
 def load_multiband(path):
-    src = rasterio.open(path, "r")
-    return (np.moveaxis(src.read(), 0, -1)).astype(np.uint8)
-    # return Image.open(path).convert("RGB")
+    # src = rasterio.open(path, "r")
+    # return (np.moveaxis(src.read(), 0, -1)).astype(np.uint8)
+    return Image.open(path).convert("RGB")
 
 
 def load_grayscale(path):
-    src = rasterio.open(path, "r")
-    return (src.read(1)).astype(np.uint8)
-    # return Image.open(path).convert("L")
+    # src = rasterio.open(path, "r")
+    # return (src.read(1)).astype(np.uint8)
+    return Image.open(path).convert("L")
 
 
 class OpenEarthMapDataset(torch.utils.data.Dataset):
@@ -69,22 +69,22 @@ class OpenEarthMapDatasetAlt(torch.utils.data.Dataset):
         self.load_grayscale = load_grayscale
 
     def __getitem__(self, idx):
-        img = Image.fromarray(self.load_multiband(self.fn_imgs[idx]))
-        mask = Image.fromarray(self.load_grayscale(self.fn_msks[idx]))
+        img = self.load_multiband(self.fn_imgs[idx])
+        mask = self.load_grayscale(self.fn_msks[idx])
 
         # data = self.to_tensor(self.augm({"image": img, "mask": msk}, self.size))
         img, mask = self.augm(img, mask)
-        # img = torch.from_numpy(img).permute(2, 0, 1).float()
-        # mask = torch.from_numpy(mask).long()
-        data = to_tensor(
+        img = torch.from_numpy(img).permute(2, 0, 1).float()
+        mask = torch.from_numpy(mask).long()
+        """ data = to_tensor(
             sample={
                 "img": np.array(data["image"], dtype="uint8"),
                 "mask": np.array(data["mask"], dtype="uint8"),
             },
             classes=self.classes,
-        )
+        ) """
         img_id = Path(self.fn_msks[idx]).name
-        return {"img": data["img"], "gt_semantic_seg": data["mask"], "img_id": img_id}
+        return {"img": img, "gt_semantic_seg": mask, "img_id": img_id}
 
     def __len__(self):
         return len(self.fn_imgs)

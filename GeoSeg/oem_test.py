@@ -38,16 +38,23 @@ class_gray = {
 }
 
 
-def label2rgb(a):
+def label2rgb(mask):
     """
-    a: labels (HxW)
+    mask: labels (HxW)
     """
-    out = np.zeros(shape=a.shape + (3,), dtype="uint8")
-    for k, v in class_gray.items():
-        out[a == v, 0] = class_rgb[k][0]
-        out[a == v, 1] = class_rgb[k][1]
-        out[a == v, 2] = class_rgb[k][2]
-    return out
+    h, w = mask.shape[0], mask.shape[1]
+    mask_rgb = np.zeros(shape=(h, w, 3), dtype=np.uint8)
+    mask_convert = mask[np.newaxis, :, :]
+    mask_rgb[np.all(mask_convert == 0, axis=0)] = [0, 0, 0]
+    mask_rgb[np.all(mask_convert == 1, axis=0)] = [128, 0, 0]
+    mask_rgb[np.all(mask_convert == 2, axis=0)] = [0, 255, 36]
+    mask_rgb[np.all(mask_convert == 3, axis=0)] = [148, 148, 148]
+    mask_rgb[np.all(mask_convert == 4, axis=0)] = [255, 255, 255]
+    mask_rgb[np.all(mask_convert == 5, axis=0)] = [34, 97, 38]
+    mask_rgb[np.all(mask_convert == 6, axis=0)] = [0, 69, 255]
+    mask_rgb[np.all(mask_convert == 7, axis=0)] = [75, 181, 73]
+    mask_rgb[np.all(mask_convert == 8, axis=0)] = [222, 31, 7]
+    return mask_rgb
 
 
 def seed_everything(seed):

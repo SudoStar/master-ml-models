@@ -4,10 +4,8 @@ from geoseg.models.PyramidMamba import PyramidMamba
 from tools.utils import Lookahead
 from tools.utils import process_model_params
 from source.dataset import OpenEarthMapDatasetAlt
-import random
 from pathlib import Path
 import albumentations as albu
-import cv2
 from geoseg.datasets.transform import *
 
 CLASSES = (

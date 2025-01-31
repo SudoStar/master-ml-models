@@ -154,6 +154,7 @@ def main():
             np.nanmean(f1_per_class[:-1]), np.nanmean(iou_per_class[:-1]), OA
         )
     )
+    print(f"alt mIoU: {np.sum(iou_per_class[:-1])/(config.num_classes-1)}")
     t0 = time.time()
     mpp.Pool(processes=mp.cpu_count()).map(img_writer, results)
     t1 = time.time()

@@ -1,10 +1,9 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from einops import rearrange, repeat
+from einops import rearrange
 
-from timm.models.layers import DropPath, to_2tuple, trunc_normal_
-import timm
+from timm.models.layers import DropPath, trunc_normal_
 from .lsknet import lsknet_b0, lsknet_b1
 
 

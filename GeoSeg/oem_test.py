@@ -2,7 +2,7 @@ import ttach as tta
 import multiprocessing.pool as mpp
 import multiprocessing as mp
 import time
-from train_supervision_orig import *
+from train_supervision import *
 import argparse
 from pathlib import Path
 import cv2
@@ -12,30 +12,6 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-
-class_rgb = {
-    "unknown": [0, 0, 0],
-    "bareland": [128, 0, 0],
-    "grass": [0, 255, 36],
-    "pavement": [148, 148, 148],
-    "road": [255, 255, 255],
-    "tree": [34, 97, 38],
-    "water": [0, 69, 255],
-    "cropland": [75, 181, 73],
-    "buildings": [222, 31, 7],
-}
-
-class_gray = {
-    "unknown": 0,
-    "bareland": 1,
-    "grass": 2,
-    "pavement": 3,
-    "road": 4,
-    "tree": 5,
-    "water": 6,
-    "cropland": 7,
-    "buildings": 8,
-}
 
 
 def label2rgb(mask):
@@ -115,7 +91,7 @@ def main():
 
     total_params = sum(p.numel() for p in model.parameters())
     print(f"Number of parameters: {total_params}")
-    
+
     model.cuda()
     model.eval()
     evaluator = Evaluator(num_class=config.num_classes)

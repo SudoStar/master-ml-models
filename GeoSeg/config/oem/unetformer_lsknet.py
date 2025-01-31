@@ -1,6 +1,5 @@
 from torch.utils.data import DataLoader
 from geoseg.losses import *
-from geoseg.datasets.loveda_dataset import *
 from geoseg.models.UNetFormer_lsk import UNetFormer_lsk_t
 from tools.utils import Lookahead
 from tools.utils import process_model_params

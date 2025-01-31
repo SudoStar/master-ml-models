@@ -21,7 +21,7 @@ CLASSES = (
 )
 
 # training hparam
-max_epoch = 45
+max_epoch = 100
 ignore_index = 0
 train_batch_size = 4
 val_batch_size = 4

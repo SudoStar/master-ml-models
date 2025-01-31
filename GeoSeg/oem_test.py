@@ -51,9 +51,9 @@ def label2rgb(mask):
     mask_rgb[np.all(mask_convert == 3, axis=0)] = [148, 148, 148]
     mask_rgb[np.all(mask_convert == 4, axis=0)] = [255, 255, 255]
     mask_rgb[np.all(mask_convert == 5, axis=0)] = [34, 97, 38]
-    mask_rgb[np.all(mask_convert == 6, axis=0)] = [0, 69, 255]
+    mask_rgb[np.all(mask_convert == 6, axis=0)] = [222, 31, 7]
     mask_rgb[np.all(mask_convert == 7, axis=0)] = [75, 181, 73]
-    mask_rgb[np.all(mask_convert == 8, axis=0)] = [222, 31, 7]
+    mask_rgb[np.all(mask_convert == 8, axis=0)] = [0, 69, 255]
     return mask_rgb
 
 
@@ -112,6 +112,10 @@ def main():
         os.path.join(config.weights_path, config.test_weights_name + ".ckpt"),
         config=config,
     )
+
+    total_params = sum(p.numel() for p in model.parameters())
+    print(f"Number of parameters: {total_params}")
+    
     model.cuda()
     model.eval()
     evaluator = Evaluator(num_class=config.num_classes)

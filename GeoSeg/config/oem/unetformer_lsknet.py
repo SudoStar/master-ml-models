@@ -1,7 +1,7 @@
 from torch.utils.data import DataLoader
 from geoseg.losses import *
 from geoseg.datasets.loveda_dataset import *
-from geoseg.models.UNetFormer_lsk import UNetFormer_lsk_s
+from geoseg.models.UNetFormer_lsk import UNetFormer_lsk_t
 from tools.utils import Lookahead
 from tools.utils import process_model_params
 from source.dataset import OpenEarthMapDatasetAlt
@@ -56,7 +56,7 @@ WEIGHT_DIR = OEM_ROOT + "weight"  # path to save weights
 OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
 
 #  define the network
-net = UNetFormer_lsk_s(num_classes=num_classes)
+net = UNetFormer_lsk_t(num_classes=num_classes)
 
 # define the loss
 loss = UnetFormerLoss(ignore_index=ignore_index)

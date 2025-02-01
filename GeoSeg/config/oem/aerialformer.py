@@ -3,7 +3,7 @@ from geoseg.losses import *
 from geoseg.models.aerialformer_alt import AerialFormer
 from tools.utils import Lookahead
 from tools.utils import process_model_params
-from source.dataset import OpenEarthMapDatasetAlt
+from source.dataset import OpenEarthMapDataset
 from pathlib import Path
 import albumentations as albu
 from geoseg.datasets.transform import *
@@ -120,19 +120,16 @@ training_pths = [
 val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
 test_pths = [str(f) for f in img_pths if f.name in np.loadtxt(TEST_LIST, dtype=str)]
 
-train_set = OpenEarthMapDatasetAlt(
+train_set = OpenEarthMapDataset(
     msk_list=training_pths,
-    num_classes=num_classes,
     augm=train_aug,
 )
-valid_set = OpenEarthMapDatasetAlt(
+valid_set = OpenEarthMapDataset(
     msk_list=val_pths,
-    num_classes=num_classes,
     augm=val_aug,
 )
-test_set = OpenEarthMapDatasetAlt(
+test_set = OpenEarthMapDataset(
     msk_list=test_pths,
-    num_classes=num_classes,
     augm=val_aug,
 )
 

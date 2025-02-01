@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from einops import rearrange
 
 from timm.models.layers import DropPath, trunc_normal_
-from .lsknet import lsknet_b0, lsknet_b1
+from .lsknet import lsknet_b4, lsknet_b1
 
 
 class ConvBNReLU(nn.Sequential):
@@ -505,9 +505,9 @@ class UNetFormer_lsk_t(nn.Module):
     def __init__(self, decode_channels=64, dropout=0.1, window_size=8, num_classes=6):
         super().__init__()
 
-        self.backbone = lsknet_b0()  # pass parameters here.
+        self.backbone = lsknet_b4()  # pass parameters here.
         # timm.create_model(backbone_name, features_only=True, output_stride=32, out_indices=(1, 2, 3, 4), pretrained=pretrained)
-        encoder_channels = [32, 64, 160, 256]
+        encoder_channels = [64, 128, 320, 512]
 
         self.decoder = Decoder(
             encoder_channels, decode_channels, dropout, window_size, num_classes

@@ -21,10 +21,10 @@ CLASSES = (
 )
 
 # training hparam
-max_epoch = 100
-ignore_index = 0
-train_batch_size = 4
-val_batch_size = 4
+max_epoch = 45
+ignore_index = len(CLASSES)
+train_batch_size = 2
+val_batch_size = 2
 lr = 6e-4
 weight_decay = 0.01
 backbone_lr = 6e-5

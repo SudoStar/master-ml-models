@@ -125,27 +125,22 @@ class MDCDecoder(nn.Module):
 
 
 class AerialFormer(nn.Module):
-    def __init__(self, num_classes=7):
+    def __init__(self, num_classes=7, decoder_channels=128, img_size=512):
         super().__init__()
         # Backbone configuration (simplified Swin Transformer)
         self.backbone = timm.create_model(
-            "swin_base_patch4_window12_384",
+            "swin_base_patch4_window12_384.ms_in22k_ft_in1k",
             features_only=True,
             pretrained=True,
             output_stride=32,
-            out_indices=(0, 1, 2, 3),
+            img_size=img_size,
+            out_indices=(-4, -1),
         )
 
         # Decoder configuration
         self.decoder = MDCDecoder(
-            in_channels=[
-                48,
-                96,
-                192,
-                384,
-                768,
-            ],  # Match your backbone's actual output channels
-            channels=96,
+            in_channels=[64, 128, 256, 512, 1024],
+            channels=128,
             num_classes=num_classes,
         )
 

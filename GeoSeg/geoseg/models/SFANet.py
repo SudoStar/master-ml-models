@@ -597,9 +597,9 @@ class Decoder(nn.Module):
 class SFANet(nn.Module):
     def __init__(
         self,
-        decode_channels=128,
+        decode_channels=64,
         dropout=0.1,
-        backbone_name="swin_base_patch4_window12_384.ms_in22k_ft_in1k",
+        backbone_name="efficientnet_b3",
         pretrained=True,
         window_size=8,
         num_classes=6,
@@ -610,7 +610,7 @@ class SFANet(nn.Module):
             backbone_name,
             features_only=True,
             output_stride=32,
-            out_indices=(-4, -1),
+            out_indices=(1, 2, 3, 4),
             pretrained=pretrained,
         )
         encoder_channels = self.backbone.feature_info.channels()

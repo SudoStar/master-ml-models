@@ -63,7 +63,7 @@ class MDCBlock(nn.Module):
 
 
 class MDCDecoder(nn.Module):
-    def __init__(self, in_channels, channels=96, num_classes=7):
+    def __init__(self, in_channels=(64, 128, 256, 512), channels=128, num_classes=7):
         super().__init__()
         self.in_channels = list(reversed(in_channels))
 
@@ -152,14 +152,14 @@ class AerialFormer(nn.Module):
             features_only=True,
             output_stride=32,
             img_size=512,
-            out_indices=(0, 1, 2, 3, 4),  # Get all 5 stages
+            out_indices=(-4, -1),  # Get all 5 stages
             pretrained=True,
         )
 
         # MDCDecoder with correct channel specification
         self.decoder = MDCDecoder(
             in_channels=self.backbone.feature_info.channels(),  # Must match backbone outputs
-            channels=96,
+            channels=128,
             num_classes=num_classes,
         )
 

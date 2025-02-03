@@ -21,7 +21,7 @@ CLASSES = (
 )
 
 # training hparam
-max_epoch = 30
+max_epoch = 45
 ignore_index = 0
 train_batch_size = 2
 val_batch_size = 2
@@ -58,22 +58,18 @@ OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
 net = SFANet(num_classes=num_classes)
 
 # define the loss
-loss = JointLoss(
-    SoftCrossEntropyLoss(smooth_factor=0.05, ignore_index=ignore_index),
-    DiceLoss(smooth=0.05, ignore_index=ignore_index),
-    1.0,
-    1.0,
-)
-use_aux_loss = False
+loss = UnetFormerLoss(ignore_index=ignore_index)
+use_aux_loss = True
 
 # define the dataloader
 
 
 def get_training_transform():
     train_transform = [
-        albu.Resize(height=img_size, width=img_size),
+        albu.RandomRotate90(p=0.5),
         albu.HorizontalFlip(p=0.5),
-        albu.Normalize(),
+        albu.VerticalFlip(p=0.5),
+        albu.Normalize()
     ]
     return albu.Compose(train_transform)
 

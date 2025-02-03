@@ -1,165 +1,163 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
+import timm
 
 
 class ConvBNReLU(nn.Sequential):
-    def __init__(self, in_channels, out_channels, kernel_size=3, dilation=1, stride=1):
+    def __init__(self, in_channels, out_channels, kernel_size=3, stride=1, padding=1):
         super().__init__(
-            nn.Conv2d(
-                in_channels,
-                out_channels,
-                kernel_size,
-                stride=stride,
-                padding=(dilation * (kernel_size - 1)) // 2,
-                dilation=dilation,
-                bias=False,
-            ),
+            nn.Conv2d(in_channels, out_channels, kernel_size, stride, padding),
             nn.BatchNorm2d(out_channels),
-            nn.ReLU6(),
+            nn.ReLU(inplace=True),
         )
 
 
 class MDCBlock(nn.Module):
-    def __init__(self, in_channels, out_channels, custom_params):
+    def __init__(self, in_channels, out_channels, norm_cfg=None, act_cfg=None):
         super().__init__()
-        self.split_num = 3
-        self.pre_conv = ConvBNReLU(in_channels, in_channels, kernel_size=1)
+        norm_cfg = norm_cfg or dict(type="BN")
+        act_cfg = act_cfg or dict(type="ReLU")
 
-        # Calculate split channels
-        quotient, reminder = divmod(in_channels, self.split_num)
-        self.split_channels = [
-            quotient + (1 if i < reminder else 0) for i in range(self.split_num)
+        self.pre_conv = nn.Conv2d(in_channels, in_channels, kernel_size=1, bias=False)
+
+        # Split input into 3 parts
+        self.layers = nn.ModuleList()
+        quotient = in_channels // 3
+        reminder = in_channels % 3
+
+        split_channels = [quotient] * 3
+        if reminder == 1:
+            split_channels[0] += 1
+        elif reminder == 2:
+            split_channels[0] += 1
+            split_channels[1] += 1
+
+        # Custom dilated convolutions with different kernel sizes and dilations
+        custom_params = [
+            {"kernel": (3, 3, 3), "padding": (1, 2, 3), "dilation": (1, 2, 3)},
+            {"kernel": (3, 3, 3), "padding": (1, 2, 3), "dilation": (1, 2, 3)},
+            {"kernel": (3, 3, 3), "padding": (1, 2, 3), "dilation": (1, 2, 3)},
         ]
 
-        # Create convolution layers for each split
-        self.conv_layers = nn.ModuleList()
-        for i in range(self.split_num):
-            self.conv_layers.append(
+        for kernel, padding, dilation, channels in zip(
+            custom_params[0]["kernel"],
+            custom_params[0]["padding"],
+            custom_params[0]["dilation"],
+            split_channels,
+        ):
+            self.layers.append(
                 nn.Conv2d(
-                    self.split_channels[i],
-                    self.split_channels[i],
-                    kernel_size=custom_params["kernel"][i],
-                    padding=custom_params["padding"][i],
-                    dilation=custom_params["dilation"][i],
+                    channels,
+                    channels,
+                    kernel_size=kernel,
+                    padding=padding,
+                    dilation=dilation,
                     bias=False,
                 )
             )
 
-        # Fusion layer with proper channel alignment
-        self.fusion = nn.Sequential(
-            nn.Conv2d(in_channels, out_channels, 1, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU6(),
+        self.fusion_layer = nn.Conv2d(
+            in_channels, out_channels, kernel_size=1, bias=False
         )
+        self.norm = nn.BatchNorm2d(out_channels)
+        self.act = nn.ReLU(inplace=True)
 
     def forward(self, x):
         x = self.pre_conv(x)
-        split_x = torch.split(x, self.split_channels, dim=1)
-        processed = []
-        for conv, x_part in zip(self.conv_layers, split_x):
-            processed.append(conv(x_part))
-        x = torch.cat(processed, dim=1)
-        return self.fusion(x)
+        x1, x2, x3 = torch.chunk(x, 3, dim=1)
+
+        x1 = self.layers[0](x1)
+        x2 = self.layers[1](x2)
+        x3 = self.layers[2](x3)
+
+        x = torch.cat([x1, x2, x3], dim=1)
+        x = self.fusion_layer(x)
+
+        return self.act(self.norm(x))
 
 
-class MDCDecoder(nn.Module):
-    def __init__(self, in_channels=(64, 128, 256, 512), channels=128, num_classes=7):
+class Decoder(nn.Module):
+    def __init__(
+        self, encoder_channels=(48, 96, 192, 384), decoder_channels=96, num_classes=7
+    ):
         super().__init__()
-        self.in_channels = list(reversed(in_channels))
 
-        # Verify input channels match the backbone outputs
-        print(
-            f"MDCDecoder expects {len(self.in_channels)} input features with channels: {self.in_channels}"
-        )
+        # Reversed channels for top-down approach
+        self.in_channels = list(reversed(encoder_channels))
 
-        self.up_convs = nn.ModuleList([nn.Identity()])  # First element is Identity
+        # Up-convolution and dilated convolution layers
+        self.up_convs = nn.ModuleList()
         self.dilated_convs = nn.ModuleList()
 
-        # Configuration for multi-dilated convolutions
-        custom_params_list = [
-            {"kernel": (3, 3, 3), "padding": (1, 2, 3), "dilation": (1, 2, 3)},
-            {"kernel": (3, 3, 3), "padding": (1, 2, 3), "dilation": (1, 2, 3)},
-            {"kernel": (3, 3, 3), "padding": (1, 2, 3), "dilation": (1, 2, 3)},
-            {"kernel": (3, 3, 3), "padding": (1, 1, 1), "dilation": (1, 1, 1)},
-            {"kernel": (1, 3, 3), "padding": (0, 1, 1), "dilation": (1, 1, 1)},
-        ]
-
-        # Create upsampling and processing blocks
-        for idx in range(1, len(self.in_channels)):
-            # Upsampling layers
-            self.up_convs.append(
-                nn.Sequential(
+        for idx in range(len(self.in_channels)):
+            # Up-sampling convolution
+            if idx != 0:
+                self.up_convs.append(
                     nn.ConvTranspose2d(
                         self.in_channels[idx - 1],
                         self.in_channels[idx],
                         kernel_size=2,
                         stride=2,
-                        bias=False,
-                    ),
-                    nn.BatchNorm2d(self.in_channels[idx]),
-                    nn.ReLU6(),
+                    )
                 )
-            )
+            else:
+                self.up_convs.append(nn.Identity())
 
-            # Dilated convolution blocks
+            # Multi-dilated convolution block
             self.dilated_convs.append(
                 nn.Sequential(
                     MDCBlock(
-                        self.in_channels[idx] * 2,  # After concatenation
-                        self.in_channels[idx],
-                        custom_params_list[idx],
+                        in_channels=self.in_channels[idx] * (2 if idx != 0 else 1),
+                        out_channels=self.in_channels[idx],
                     ),
-                    ConvBNReLU(self.in_channels[idx], self.in_channels[idx]),
+                    ConvBNReLU(
+                        self.in_channels[idx],
+                        self.in_channels[idx],
+                        kernel_size=3,
+                        padding=1,
+                    ),
                 )
             )
 
-        # First layer processing without upsampling
-        self.dilated_convs.insert(
-            0,
-            nn.Sequential(
-                MDCBlock(
-                    self.in_channels[0], self.in_channels[0], custom_params_list[0]
-                ),
-                ConvBNReLU(self.in_channels[0], self.in_channels[0]),
-            ),
-        )
+        # Final classification layer
+        self.cls_seg = nn.Conv2d(self.in_channels[-1], num_classes, kernel_size=1)
 
-        # Final prediction layer
-        self.final_conv = nn.Conv2d(self.in_channels[-1], num_classes, kernel_size=1)
+    def forward(self, inputs):
+        # Reverse and transform inputs
+        inputs = list(reversed(inputs))
 
-    def forward(self, features):
-        features = list(reversed(features))
-        x = features[0]
-
-        # Process first feature
+        x = inputs[0]
         x = self.dilated_convs[0](x)
 
-        # Process subsequent features
-        for idx in range(1, len(self.in_channels)):
+        for idx in range(1, len(inputs)):
             x = self.up_convs[idx](x)
-            x = torch.cat([x, features[idx]], dim=1)
+            x = torch.cat([x, inputs[idx]], dim=1)
             x = self.dilated_convs[idx](x)
 
-        return self.final_conv(x)
+        return self.cls_seg(x)
 
 
 class AerialFormer(nn.Module):
-    def __init__(self, num_classes=7):
+    def __init__(
+        self,
+        backbone_name="swin_tiny_patch4_window7_224",
+        num_classes=7,
+        pretrained=True,
+    ):
         super().__init__()
-        # Initialize your actual backbone (SwinStemTransformer)
+
+        # Use timm for backbone to simplify loading
         self.backbone = timm.create_model(
-            "swin_base_patch4_window12_384.ms_in22k_ft_in1k",
+            backbone_name,
             features_only=True,
-            output_stride=32,
-            img_size=512,
-            out_indices=(-4, -1),  # Get all 5 stages
-            pretrained=True,
+            out_indices=(0, 1, 2, 3),
+            pretrained=pretrained,
         )
 
-        # MDCDecoder with correct channel specification
-        self.decoder = MDCDecoder(
-            in_channels=self.backbone.feature_info.channels(),  # Must match backbone outputs
-            channels=128,
+        # Decoder
+        self.decoder = Decoder(
+            encoder_channels=self.backbone.feature_info.channels(),
             num_classes=num_classes,
         )
 

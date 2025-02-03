@@ -141,7 +141,7 @@ class Decoder(nn.Module):
 class AerialFormer(nn.Module):
     def __init__(
         self,
-        backbone_name="swin_tiny_patch4_window7_224",
+        backbone_name="swin_base_patch4_window12_384.ms_in22k_ft_in1k",
         num_classes=7,
         pretrained=True,
     ):
@@ -151,6 +151,7 @@ class AerialFormer(nn.Module):
         self.backbone = timm.create_model(
             backbone_name,
             features_only=True,
+            img_size=512,
             out_indices=(0, 1, 2, 3),
             pretrained=pretrained,
         )

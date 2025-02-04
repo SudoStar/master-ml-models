@@ -44,7 +44,7 @@ class MLP(nn.Module):
         out_features = out_features or in_features
         hidden_features = hidden_features or in_features
         self.fc1 = nn.Linear(in_features, hidden_features)
-        self.act = nn.GELU()
+        self.act = nn.GELU()  # Changed from act_layer parameter to direct GELU
         self.fc2 = nn.Linear(hidden_features, out_features)
         self.drop = nn.Dropout(drop)
 
@@ -230,7 +230,6 @@ class SwinTransformerBlock(nn.Module):
         drop=0.0,
         attn_drop=0.0,
         drop_path=0.0,
-        act_layer=nn.GELU,
         norm_layer=nn.LayerNorm,
     ):
         super().__init__()
@@ -256,7 +255,6 @@ class SwinTransformerBlock(nn.Module):
         self.mlp = MLP(
             in_features=dim,
             hidden_features=mlp_hidden_dim,
-            act_layer=act_layer,
             drop=drop,
         )
 

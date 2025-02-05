@@ -83,15 +83,9 @@ class Supervision_Train(pl.LightningModule):
 
     def validation_step(self, batch, batch_idx):
         img, mask = batch["img"], batch["gt_semantic_seg"]
-        print(f"Input image shape: {img.shape}")
-        print(f"Ground truth mask shape: {mask.shape}")
-        
         prediction = self.forward(img)
-        print(f"Prediction shape: {prediction.shape}")
-        
         pre_mask = nn.Softmax(dim=1)(prediction)
         pre_mask = pre_mask.argmax(dim=1)
-        print(f"Pre-mask shape: {pre_mask.shape}")
         
         for i in range(mask.shape[0]):
             self.metrics_val.add_batch(mask[i].cpu().numpy(), pre_mask[i].cpu().numpy())

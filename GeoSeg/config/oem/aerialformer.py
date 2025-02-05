@@ -1,6 +1,6 @@
 from torch.utils.data import DataLoader
 from geoseg.losses import *
-from geoseg.models.aerialformer_alt import AerialFormer
+from geoseg.models.aerialformer import AerialFormer
 from tools.utils import Lookahead
 from tools.utils import process_model_params
 from source.dataset import OpenEarthMapDataset
@@ -55,7 +55,7 @@ WEIGHT_DIR = OEM_ROOT + "weight"  # path to save weights
 OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
 
 #  define the network
-net = AerialFormer(num_classes=num_classes)
+net = AerialFormer()
 
 # define the loss
 loss = JointLoss(

@@ -1,5 +1,7 @@
 import torch
 import torch.nn as nn
+from .swin_stem import SwinStemTransformer
+
 from mmcv.cnn import ConvModule
 from mmcv.cnn.bricks.norm import build_norm_layer
 from mmcv.cnn.bricks.activation import build_activation_layer
@@ -7,10 +9,32 @@ from mmcv.cnn.bricks.activation import build_activation_layer
 from mmseg.models.builder import HEADS
 from mmseg.models.decode_heads.decode_head import BaseDecodeHead
 
-decoder_norm_cfg = dict(type="BN", requires_grad=True)
+backbone_norm_cfg = dict(type="LN", requires_grad=True)
+decoder_norm_cfg = dict(type="SyncBD", requires_grad=True)
 
 
-class MDCDecoder(nn.Module):
+class AerialFormer(nn.Module):
+    def __init__(self):
+        super().__init__()
+
+        self.backbone = SwinStemTransformer(
+            pretrain_img_size=384,
+            embed_dims=128,
+            window_size=12,
+            depths=[2, 2, 18, 2],
+            num_heads=[4, 8, 16, 32],
+            decoder_norm_cfg=decoder_norm_cfg,
+        )
+
+        self.decoder = MDCDecoder(in_channels=[64, 128, 256, 512, 1024], channels=128)
+
+    def forward(self, x):
+        features = self.backbone(x)
+        return self.decoder(features)
+
+
+@HEADS.register_module()
+class MDCDecoder(BaseDecodeHead):
     """
     Multi-scale decoder used in AerialFormer.
     """
@@ -20,11 +44,8 @@ class MDCDecoder(nn.Module):
         interpolate_mode="bilinear",
         in_channels=[48, 96, 192, 384, 768],
         in_index=[0, 1, 2, 3, 4],
-        channels=96,
-        dropout_ratio=0.1,
-        num_classes=9,
         norm_cfg=decoder_norm_cfg,
-        align_corners=False,
+        act_cfg=dict(type="GELU"),
     ):
         super().__init__()
 
@@ -79,7 +100,7 @@ class MDCDecoder(nn.Module):
                         in_channels=self.in_channels[idx] * 2 ** (idx != 0),
                         out_channels=self.in_channels[idx],
                         norm_cfg=norm_cfg,
-                        act_cfg=self.act_cfg,
+                        act_cfg=act_cfg,
                         custom_params=custom_params_list[idx],
                     ),
                     ConvModule(

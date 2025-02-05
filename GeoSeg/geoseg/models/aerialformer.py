@@ -14,7 +14,7 @@ decoder_norm_cfg = dict(type="SyncBD", requires_grad=True)
 
 
 class AerialFormer(nn.Module):
-    def __init__(self):
+    def __init__(self, num_classes):
         super().__init__()
 
         self.backbone = SwinStemTransformer(
@@ -23,10 +23,11 @@ class AerialFormer(nn.Module):
             window_size=12,
             depths=[2, 2, 18, 2],
             num_heads=[4, 8, 16, 32],
-            decoder_norm_cfg=decoder_norm_cfg,
         )
 
-        self.decoder = MDCDecoder(in_channels=[64, 128, 256, 512, 1024], channels=128)
+        self.decoder = MDCDecoder(
+            in_channels=[64, 128, 256, 512, 1024], channels=128, num_classes=num_classes
+        )
 
     def forward(self, x):
         features = self.backbone(x)

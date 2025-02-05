@@ -71,8 +71,9 @@ use_aux_loss = False
 
 def get_training_transform():
     train_transform = [
-        albu.Resize(height=img_size, width=img_size),
+        albu.RandomRotate90(p=0.5),
         albu.HorizontalFlip(p=0.5),
+        albu.VerticalFlip(p=0.5),
         albu.Normalize(),
     ]
     return albu.Compose(train_transform)

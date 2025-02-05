@@ -44,6 +44,8 @@ class MDCDecoder(BaseDecodeHead):
         self,
         interpolate_mode="bilinear",
         in_channels=[48, 96, 192, 384, 768],
+        channels=128,
+        num_classes=9,
         in_index=[0, 1, 2, 3, 4],
         norm_cfg=decoder_norm_cfg,
         act_cfg=dict(type="GELU"),

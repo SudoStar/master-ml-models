@@ -55,7 +55,7 @@ WEIGHT_DIR = OEM_ROOT + "weight"  # path to save weights
 OUT_DIR = OEM_ROOT + "result/"  # path to save prediction images
 
 #  define the network
-net = AerialFormer()
+net = AerialFormer(num_classes=num_classes)
 
 # define the loss
 loss = JointLoss(

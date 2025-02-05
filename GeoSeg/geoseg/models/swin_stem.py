@@ -2,6 +2,7 @@
 import warnings
 from collections import OrderedDict
 from copy import deepcopy
+import logging
 
 import torch
 import torch.nn as nn
@@ -10,13 +11,34 @@ import torch.utils.checkpoint as cp
 from mmcv.cnn import ConvModule
 from mmcv.cnn import build_norm_layer
 from mmcv.cnn.bricks.transformer import FFN, build_dropout
-from mmcv.cnn.utils.weight_init import constant_init, trunc_normal_, trunc_normal_init
-from mmcv.runner import BaseModule, CheckpointLoader, ModuleList, load_state_dict
-from mmcv.utils import to_2tuple
+from mmengine.model.weight_init import (constant_init, trunc_normal_, trunc_normal_init)
+from mmengine.model import BaseModule, ModuleList
+from mmengine.runner.checkpoint import CheckpointLoader, load_state_dict
+from mmengine.utils import to_2tuple
 from mmseg.models.backbones.swin import SwinBlockSequence
-from mmseg.utils import get_root_logger
+from mmengine.logging import MMLogger
 from mmseg.models.builder import BACKBONES
 from mmseg.models.utils.embed import PatchEmbed, PatchMerging
+
+def get_root_logger(log_file=None, log_level=logging.INFO):
+    """Use `MMLogger` class in mmengine to get the root logger.
+
+    The logger will be initialized if it has not been initialized. By default a
+    StreamHandler will be added. If `log_file` is specified, a FileHandler will
+    also be added. The name of the root logger is the top-level package name,
+    e.g., "mmpose".
+
+    Args:
+        log_file (str | None): The log filename. If specified, a FileHandler
+            will be added to the root logger.
+        log_level (int): The root logger level. Note that only the process of
+            rank 0 is affected, while other processes will set the level to
+            "Error" and be silent most of the time.
+
+    Returns:
+        logging.Logger: The root logger.
+    """
+    return MMLogger('MMLogger', __name__.split('.')[0], log_file, log_level)
 
 
 @BACKBONES.register_module()

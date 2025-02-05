@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from swin_stem import SwinStemTransformer
+from .swin_stem import SwinStemTransformer
 
 
 class AerialFormer(nn.Module):

@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from .swin_stem import SwinStemTransformer
 
 from mmcv.cnn import ConvModule
@@ -17,23 +18,37 @@ class AerialFormer(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
 
-        self.backbone = SwinStemTransformer(
-            pretrain_img_size=384,
-            embed_dims=128,
-            window_size=12,
-            depths=[2, 2, 18, 2],
-            num_heads=[4, 8, 16, 32],
-        )
+        self.backbone = SwinStemTransformer()
 
         self.decoder = MDCDecoder(
-            in_channels=[64, 128, 256, 512, 1024],
-            channels=128,
             num_classes=num_classes,
         )
 
+    """
     def forward(self, x):
+        print(f"x: {x.shape}")
         features = self.backbone(x)
-        return self.decoder(features)
+        for feature in features:
+            print(f"feature: {feature.shape}")
+            
+        outputs = self.decoder(features)
+        for output in outputs:
+            print(f"output: {output.shape}")
+
+        return outputs
+    """
+
+    def forward(self, x):
+        # Keep the original input size for later upsampling
+        input_size = x.shape[2:]
+        # Extract multi-scale features from the backbone
+        features = self.backbone(x)
+        # Decode the features to obtain segmentation logits (e.g., [B, num_classes, 256, 256])
+        seg_logits = self.decoder(features)
+        # Upsample the logits to match the original input resolution
+        seg_logits = F.interpolate(seg_logits, size=input_size, mode="bilinear", align_corners=False)
+        return seg_logits
+
 
 
 @HEADS.register_module()
@@ -46,7 +61,7 @@ class MDCDecoder(BaseDecodeHead):
         self,
         interpolate_mode="bilinear",
         in_channels=[48, 96, 192, 384, 768],
-        channels=128,
+        channels=96,
         num_classes=9,
         in_index=[0, 1, 2, 3, 4],
         norm_cfg=decoder_norm_cfg,

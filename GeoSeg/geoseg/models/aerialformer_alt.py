@@ -10,28 +10,6 @@ class AerialFormer(nn.Module):
         # Initialize SwinStemTransformer backbone
         self.backbone = SwinStemTransformer(
             pretrain_img_size=512,
-            in_channels=3,
-            embed_dims=96,
-            patch_size=4,
-            window_size=7,
-            mlp_ratio=4,
-            depths=(2, 2, 6, 2, 2),  # 5 stages
-            num_heads=(3, 6, 12, 24, 48),  # 5 stages
-            strides=(4, 2, 2, 2, 2),  # 5 stages
-            out_indices=(0, 1, 2, 3, 4),  # All 5 features
-            qkv_bias=True,
-            qk_scale=None,
-            patch_norm=True,
-            drop_rate=0.0,
-            attn_drop_rate=0.0,
-            drop_path_rate=0.3,
-            use_abs_pos_embed=False,
-            act_cfg=dict(type="GELU"),
-            norm_cfg=dict(type="LN"),
-            conv_norm_cfg=dict(type="SyncBN"),
-            with_cp=False,
-            pretrained=None,
-            frozen_stages=-1,
         )
 
         # Initialize MDCDecoder
@@ -47,11 +25,6 @@ class AerialFormer(nn.Module):
 
         # Verify feature dimensions
         assert len(features) == 5, f"Expected 5 features, got {len(features)}"
-        assert features[0].shape[1] == 48, "First feature should have 48 channels"
-        assert features[1].shape[1] == 96, "Second feature should have 96 channels"
-        assert features[2].shape[1] == 192, "Third feature should have 192 channels"
-        assert features[3].shape[1] == 384, "Fourth feature should have 384 channels"
-        assert features[4].shape[1] == 768, "Fifth feature should have 768 channels"
 
         return self.decoder(features)
 

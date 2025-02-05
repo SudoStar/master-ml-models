@@ -50,7 +50,11 @@ class MDCDecoder(BaseDecodeHead):
         norm_cfg=decoder_norm_cfg,
         act_cfg=dict(type="GELU"),
     ):
-        super().__init__()
+        super().__init__(
+            in_channels,
+            channels,
+            num_classes,
+        )
 
         self.interpolate_mode = interpolate_mode
         num_inputs = len(in_channels)

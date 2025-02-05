@@ -10,7 +10,7 @@ from mmseg.models.builder import HEADS
 from mmseg.models.decode_heads.decode_head import BaseDecodeHead
 
 backbone_norm_cfg = dict(type="LN", requires_grad=True)
-decoder_norm_cfg = dict(type="SyncBD", requires_grad=True)
+decoder_norm_cfg = dict(type="SyncBN", requires_grad=True)
 
 
 class AerialFormer(nn.Module):
@@ -26,7 +26,7 @@ class AerialFormer(nn.Module):
         )
 
         self.decoder = MDCDecoder(
-            in_channels=[64, 128, 256, 512, 1024], channels=128, num_classes=num_classes
+            in_channels=[64, 128, 256, 512, 1024], channels=128, num_classes=num_classes,
         )
 
     def forward(self, x):
@@ -53,7 +53,9 @@ class MDCDecoder(BaseDecodeHead):
         super().__init__(
             in_channels,
             channels,
-            num_classes,
+            num_classes=num_classes,
+            input_transform="multiple_select",
+            in_index=in_index
         )
 
         self.interpolate_mode = interpolate_mode
@@ -63,6 +65,7 @@ class MDCDecoder(BaseDecodeHead):
 
         self.up_convs = nn.ModuleList()
         self.dilated_convs = nn.ModuleList()
+        self.norm_cfg=norm_cfg
 
         custom_params_list = [
             {

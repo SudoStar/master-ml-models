@@ -18,9 +18,17 @@ class AerialFormer(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
 
-        self.backbone = SwinStemTransformer()
+        self.backbone = SwinStemTransformer(
+            pretrain_img_size=384,
+            embed_dims=128,
+            window_size=12,
+            depths=[2, 2, 18, 2],
+            num_heads=[4, 8, 16, 32],
+        )
 
         self.decoder = MDCDecoder(
+            in_channels=[64, 128, 256, 512, 1024],
+            channels=128,
             num_classes=num_classes,
         )
 
@@ -46,9 +54,10 @@ class AerialFormer(nn.Module):
         # Decode the features to obtain segmentation logits (e.g., [B, num_classes, 256, 256])
         seg_logits = self.decoder(features)
         # Upsample the logits to match the original input resolution
-        seg_logits = F.interpolate(seg_logits, size=input_size, mode="bilinear", align_corners=False)
+        seg_logits = F.interpolate(
+            seg_logits, size=input_size, mode="bilinear", align_corners=False
+        )
         return seg_logits
-
 
 
 @HEADS.register_module()

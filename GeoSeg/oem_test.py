@@ -151,8 +151,8 @@ def main():
         print("F1_{}:{}, IOU_{}:{}".format(class_name, class_f1, class_name, class_iou))
     print(
         "F1:{}, mIOU:{}, OA:{}".format(
-            np.sum(f1_per_class) / (config.num_classes - 1),
-            np.sum(iou_per_class) / (config.num_classes - 1),
+            np.nansum(f1_per_class) / (config.num_classes - 1),
+            np.nansum(iou_per_class) / (config.num_classes - 1),
             OA,
         )
     )

@@ -151,10 +151,11 @@ def main():
         print("F1_{}:{}, IOU_{}:{}".format(class_name, class_f1, class_name, class_iou))
     print(
         "F1:{}, mIOU:{}, OA:{}".format(
-            np.nanmean(f1_per_class[:-1]), np.nanmean(iou_per_class[:-1]), OA
+            np.sum(f1_per_class) / (config.num_classes - 1),
+            np.sum(iou_per_class) / (config.num_classes - 1),
+            OA,
         )
     )
-    print(f"alt mIoU: {np.sum(iou_per_class[:-1])/(config.num_classes-1)}")
     t0 = time.time()
     mpp.Pool(processes=mp.cpu_count()).map(img_writer, results)
     t1 = time.time()

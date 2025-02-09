@@ -120,6 +120,8 @@ training_pths = [
 val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
 test_pths = [str(f) for f in img_pths if f.name in np.loadtxt(TEST_LIST, dtype=str)]
 
+test_pths = [place for place in test_pths if "vienna" in place.lower()]
+
 train_set = OpenEarthMapDataset(
     msk_list=training_pths,
     augm=train_aug,

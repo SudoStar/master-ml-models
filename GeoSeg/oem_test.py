@@ -85,7 +85,7 @@ def main():
     args.output_path.mkdir(exist_ok=True, parents=True)
 
     model = Supervision_Train.load_from_checkpoint(
-        os.path.join(config.weights_path, "aerialformer-swin-512crop-ms-epoch30-rep-v4" + ".ckpt"),
+        os.path.join(config.weights_path, config.test_weights_name + ".ckpt"),
         config=config,
     )
 

@@ -85,7 +85,7 @@ def main():
     args.output_path.mkdir(exist_ok=True, parents=True)
 
     model = Supervision_Train.load_from_checkpoint(
-        os.path.join(config.weights_path, config.test_weights_name + ".ckpt"),
+        os.path.join(config.weights_path, "aerialformer-swin-512crop-ms-epoch30-rep-v4" + ".ckpt"),
         config=config,
     )
 
@@ -151,8 +151,8 @@ def main():
         print("F1_{}:{}, IOU_{}:{}".format(class_name, class_f1, class_name, class_iou))
     print(
         "F1:{}, mIOU:{}, OA:{}".format(
-            np.nansum(f1_per_class) / (config.num_classes - 1),
-            np.nansum(iou_per_class) / (config.num_classes - 1),
+            np.nansum(f1_per_class[1:]) / (config.num_classes - 1),
+            np.nansum(iou_per_class[1:]) / (config.num_classes - 1),
             OA,
         )
     )

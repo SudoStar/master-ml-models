@@ -89,7 +89,7 @@ def get_img_padded(image, patch_size):
     pad = albu.PadIfNeeded(
         min_height=h,
         min_width=w,
-        position="bottom_right",
+        position="top_left",
         border_mode=0,
         value=[0, 0, 0],
     )(image=image)

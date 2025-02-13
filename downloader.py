@@ -55,11 +55,11 @@ def main():
 
     download_images(start, end, year_from, year_to)
 
-    extract_images(year_from_folder)
-    extract_images(year_to_folder)
+    #extract_images(year_from_folder)
+    #extract_images(year_to_folder)
 
-    downscale_images(year_from_folder, scale_ratio)
-    downscale_images(year_to_folder, scale_ratio)
+    #downscale_images(year_from_folder, scale_ratio)
+    #downscale_images(year_to_folder, scale_ratio)
 
 
 def downscale_images(directory, scale_ratio):

@@ -33,7 +33,7 @@ num_classes = len(CLASSES)
 classes = CLASSES
 img_size = 512
 
-weights_name = "pyramidmamba-swin-512crop-ms-epoch30-rep"
+weights_name = "pyramidmamba-swin-512crop-ms-epoch45-rep"
 weights_path = "model_weights/pyramidmamba/{}".format(weights_name)
 test_weights_name = "last"
 log_name = "pyramidmamba/{}".format(weights_name)

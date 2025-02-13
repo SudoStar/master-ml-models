@@ -22,7 +22,7 @@ CLASSES = (
 
 # training hparam
 max_epoch = 30
-ignore_index = 0
+ignore_index = len(CLASSES)
 train_batch_size = 2
 val_batch_size = 2
 lr = 6e-4
@@ -119,8 +119,6 @@ training_pths = [
 ]
 val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
 test_pths = [str(f) for f in img_pths if f.name in np.loadtxt(TEST_LIST, dtype=str)]
-
-test_pths = [place for place in test_pths if "vienna" in place.lower()]
 
 train_set = OpenEarthMapDataset(
     msk_list=training_pths,

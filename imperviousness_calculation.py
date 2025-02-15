@@ -46,7 +46,7 @@ def main():
 
 
 def calculate_mean_width_sampling(polygon, num_directions=100):
-    centroid = polygon.centroid  # Get the polygon's centroid
+    centroid = polygon.centroid
     bounds = polygon.bounds
     max_radius = max(bounds[2] - bounds[0], bounds[3] - bounds[1]) / 2
 
@@ -54,37 +54,30 @@ def calculate_mean_width_sampling(polygon, num_directions=100):
     widths = []
 
     for angle in directions:
-        # Create a line extending outward from the centroid
         dx = np.cos(angle) * max_radius
         dy = np.sin(angle) * max_radius
         line = LineString(
             [(centroid.x, centroid.y), (centroid.x + dx, centroid.y + dy)]
         )
 
-        # Intersect the line with the polygon
         intersection = polygon.intersection(line)
 
         if intersection.is_empty:
             continue
 
-        # Calculate the distance (width) for this direction
         if intersection.geom_type == "MultiLineString":
-            # Sum lengths if multiple intersections
             width = sum(part.length for part in intersection.geoms)
         else:
             width = intersection.length
 
         widths.append(width)
 
-    # Calculate the mean width
     mean_width = np.mean(widths) if widths else 0
     return mean_width
 
 
-# Function to calculate buffer distance for a given ratio
 def calculate_buffer_distance(geometry, ratio, max_width):
     original_width = calculate_mean_width_sampling(geometry)
-    # 3rd quadrant width of tree crowns
     if original_width > max_width:
         original_width = max_width
 
@@ -93,78 +86,81 @@ def calculate_buffer_distance(geometry, ratio, max_width):
 
 
 def create_geometries(image_path, max_width):
-    image = cv2.imread(image_path)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    image_array = np.array(image)
+    with rasterio.open(image_path) as src:
+        # Read bands in BGR order (bands 3, 2, 1 for RGB images)
+        bgr_image = np.dstack([src.read(3), src.read(2), src.read(1)])
 
-    # Step 2: Define the target BGR color (from the hex value #226126)
-    lower_dark_green = np.array([0, 50, 0])
-    upper_dark_green = np.array([100, 150, 100])
+    lower_dark_green = np.array([0, 50, 0])  # BGR lower bound for dark green
+    upper_dark_green = np.array([100, 150, 100])  # BGR upper bound
 
-    # Step 3: Create a binary mask for the target color
-    binary_mask = cv2.inRange(image_array, lower_dark_green, upper_dark_green)
+    binary_mask = cv2.inRange(bgr_image, lower_dark_green, upper_dark_green)
 
-    # Step 4: Extract contours
     contours, _ = cv2.findContours(
         binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
     )
 
-    # Step 5: Convert contours to Shapely geometries
     differences = []
-
     ratio = 2.24
 
     for contour in contours:
-        # Approximate contour as a polygon
-        coords = contour.squeeze().tolist()  # Extract x, y coordinates
-        if len(coords) >= 3:  # Only consider valid polygons
+        coords = contour.squeeze().tolist()
+        if len(coords) >= 3:
             geom = Polygon(coords)
-
             distance = calculate_buffer_distance(geom, ratio, max_width)
             buffered_geom = geom.buffer(distance)
-            difference = buffered_geom.difference(geom)
-
-            differences.append(difference)
+            differences.append(buffered_geom.difference(geom))
 
     return differences
 
 
 def calculate_imperviousness(image_path, differences):
     with rasterio.open(image_path) as src:
-        raster_data = src.read((1, 2, 3))
+        # Read bands in BGR order (3, 2, 1)
+        raster_data = np.stack([src.read(3), src.read(2), src.read(1)], axis=0)
         transform = src.transform
 
-        # Create a mask for the difference geometries
         mask = geometry_mask(
-            [geom.__geo_interface__ for geom in differences],
+            differences,
             transform=transform,
             invert=True,
             out_shape=(src.height, src.width),
         )
 
-        # Apply the mask to the raster data
         masked_data = raster_data[:, mask]
 
-    # Define the color codes of interest in their corresponding raster values (BGR)
-    color_mapping = {
-        "#FFFFFF": (255, 255, 255),  # mapping for white
-        "#DE1F07": (222, 31, 7),  # mapping for red
-        "#949494": (148, 148, 148),  # mapping for gray
+    # Define color ranges instead of exact matches
+    color_ranges = {
+        "#FFFFFF": (  # White
+            np.array([210, 210, 210], dtype=np.uint8),  # Lower bound (B, G, R)
+            np.array([255, 255, 255], dtype=np.uint8),  # Upper bound (B, G, R)
+        ),
+        "#DE1F07": (  # Red
+            np.array([0, 60, 200], dtype=np.uint8),  # Lower bound (B, G, R)
+            np.array([50, 100, 255], dtype=np.uint8),  # Upper bound (B, G, R)
+        ),
+        "#949494": (  # Gray
+            np.array([130, 130, 130], dtype=np.uint8),  # Lower bound (B, G, R)
+            np.array([160, 160, 160], dtype=np.uint8),  # Upper bound (B, G, R)
+        ),
     }
 
-    # Count pixels for each color
-    total_pixels = masked_data.shape[1]
-    color_counts = {}
+    color_counts = {color: 0 for color in color_ranges}
 
-    for color, bgr in color_mapping.items():
-        # Count pixels where all bands match the target BGR
-        color_counts[color] = np.sum(
-            (masked_data[0] == bgr[0])
-            & (masked_data[1] == bgr[1])
-            & (masked_data[2] == bgr[2])
+    for color, (lower, upper) in color_ranges.items():
+        # Count pixels within the specified range
+        in_range = np.logical_and.reduce(
+            [
+                masked_data[0] >= lower[0],
+                masked_data[0] <= upper[0],
+                masked_data[1] >= lower[1],
+                masked_data[1] <= upper[1],
+                masked_data[2] >= lower[2],
+                masked_data[2] <= upper[2],
+            ]
         )
+        color_counts[color] = np.sum(in_range)
 
-    # Calculate percentages
+    total_pixels = masked_data.shape[1]
     percentages = {
         color: (count / total_pixels) * 100 for color, count in color_counts.items()
     }
@@ -174,35 +170,13 @@ def calculate_imperviousness(image_path, differences):
     for color, percentage in percentages.items():
         logger.info(f"{color}: {percentage:.2f} percent")
 
-    image_pixels = src.height * src.width
-
-    difference_other_pixels = total_pixels - sum(color_counts.values())
-
-    contribution_percentages = {
-        color: (count / image_pixels) * 100 for color, count in color_counts.items()
-    }
-    contribution_percentages["other"] = (difference_other_pixels / image_pixels) * 100
-
-    logger.info("Color contribution for total area")
-    for color, percentage in contribution_percentages.items():
-        logger.info(f"{color}: {percentage:.2f}% of the total image area")
-
-    total_imp = (
-        sum(contribution_percentages.values()) - contribution_percentages["other"]
-    )
-    logger.info(f"Total imperviousness: {total_imp}")
-
     return mask, raster_data
 
 
 def create_figure(mask, raster_data):
     bgr_masked = np.zeros_like(raster_data)
-
-    for i in range(3):  # Loop through B, G, R bands
-        band = raster_data[i]  # Extract each band
-        bgr_masked[i][mask] = band[mask]  # Apply the mask
-
-    # Transpose to (height, width, 3) for visualization
+    for i in range(3):
+        bgr_masked[i][mask] = raster_data[i][mask]
     return np.transpose(bgr_masked, (1, 2, 0))
 
 

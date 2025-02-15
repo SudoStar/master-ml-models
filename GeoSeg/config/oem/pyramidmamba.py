@@ -22,7 +22,7 @@ CLASSES = (
 
 # training hparam
 max_epoch = 30
-ignore_index = 0
+ignore_index = len(CLASSES)
 train_batch_size = 2
 val_batch_size = 2
 lr = 6e-4
@@ -33,7 +33,7 @@ num_classes = len(CLASSES)
 classes = CLASSES
 img_size = 512
 
-weights_name = "pyramidmamba-swin-512crop-ms-epoch30-rep"
+weights_name = "pyramidmamba-swin-512crop-ms-epoch45-rep"
 weights_path = "model_weights/pyramidmamba/{}".format(weights_name)
 test_weights_name = "last"
 log_name = "pyramidmamba/{}".format(weights_name)
@@ -119,8 +119,6 @@ training_pths = [
 ]
 val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
 test_pths = [str(f) for f in img_pths if f.name in np.loadtxt(TEST_LIST, dtype=str)]
-
-test_pths = [place for place in test_pths if "vienna" in place.lower()]
 
 train_set = OpenEarthMapDataset(
     msk_list=training_pths,

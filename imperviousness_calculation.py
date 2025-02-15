@@ -1,6 +1,5 @@
 import argparse
 import numpy as np
-from PIL import Image
 import cv2
 from shapely.geometry import Polygon, LineString
 import rasterio
@@ -94,14 +93,16 @@ def calculate_buffer_distance(geometry, ratio, max_width):
 
 
 def create_geometries(image_path, max_width):
-    image = Image.open(image_path)
+    image = cv2.imread(image_path)
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image_array = np.array(image)
 
-    # Step 2: Define the target RGB color (from the hex value #226126)
-    target_color = (34, 97, 38)
+    # Step 2: Define the target BGR color (from the hex value #226126)
+    lower_dark_green = np.array([0, 50, 0])
+    upper_dark_green = np.array([100, 150, 100])
 
     # Step 3: Create a binary mask for the target color
-    binary_mask = np.all(image_array == target_color, axis=-1).astype(np.uint8) * 255
+    binary_mask = cv2.inRange(image_array, lower_dark_green, upper_dark_green)
 
     # Step 4: Extract contours
     contours, _ = cv2.findContours(
@@ -144,7 +145,7 @@ def calculate_imperviousness(image_path, differences):
         # Apply the mask to the raster data
         masked_data = raster_data[:, mask]
 
-    # Define the color codes of interest in their corresponding raster values
+    # Define the color codes of interest in their corresponding raster values (BGR)
     color_mapping = {
         "#FFFFFF": (255, 255, 255),  # mapping for white
         "#DE1F07": (222, 31, 7),  # mapping for red
@@ -155,12 +156,12 @@ def calculate_imperviousness(image_path, differences):
     total_pixels = masked_data.shape[1]
     color_counts = {}
 
-    for color, rgb in color_mapping.items():
-        # Count pixels where all bands match the target RGB
+    for color, bgr in color_mapping.items():
+        # Count pixels where all bands match the target BGR
         color_counts[color] = np.sum(
-            (masked_data[0] == rgb[0])
-            & (masked_data[1] == rgb[1])
-            & (masked_data[2] == rgb[2])
+            (masked_data[0] == bgr[0])
+            & (masked_data[1] == bgr[1])
+            & (masked_data[2] == bgr[2])
         )
 
     # Calculate percentages
@@ -186,23 +187,23 @@ def calculate_imperviousness(image_path, differences):
     for color, percentage in contribution_percentages.items():
         logger.info(f"{color}: {percentage:.2f}% of the total image area")
 
-    logger.info(
-        "Total imperviousness: ",
-        sum(contribution_percentages.values()) - contribution_percentages["other"],
+    total_imp = (
+        sum(contribution_percentages.values()) - contribution_percentages["other"]
     )
+    logger.info(f"Total imperviousness: {total_imp}")
 
     return mask, raster_data
 
 
 def create_figure(mask, raster_data):
-    rgb_masked = np.zeros_like(raster_data)
+    bgr_masked = np.zeros_like(raster_data)
 
-    for i in range(3):  # Loop through R, G, B bands
+    for i in range(3):  # Loop through B, G, R bands
         band = raster_data[i]  # Extract each band
-        rgb_masked[i][mask] = band[mask]  # Apply the mask
+        bgr_masked[i][mask] = band[mask]  # Apply the mask
 
     # Transpose to (height, width, 3) for visualization
-    return np.transpose(rgb_masked, (1, 2, 0))
+    return np.transpose(bgr_masked, (1, 2, 0))
 
 
 if __name__ == "__main__":

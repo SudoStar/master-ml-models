@@ -75,7 +75,7 @@ def downscale_images(directory, scale_ratio):
                 None,
                 fx=scale_ratio,
                 fy=scale_ratio,
-                interpolation=cv2.INTER_LINEAR,
+                interpolation=cv2.INTER_AREA,
             )
 
             # Save the resized image under the original file name

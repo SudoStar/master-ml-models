@@ -34,15 +34,21 @@ def main():
     output = args.output
     max_width = args.max_width
 
+    imp_results = []
+
     for mask_name in os.listdir(masks):
         mask_path = os.path.join(masks, mask_name)
         differences = create_geometries(mask_path, max_width)
         logger.info(f"Imperviousness for: {mask_name}")
-        mask, raster_data = calculate_imperviousness(mask_path, differences)
+        mask, raster_data, imp = calculate_imperviousness(mask_path, differences)
+        imp_results.append(imp)
+
         figure = create_figure(mask, raster_data)
 
         output_path = os.path.join(output, mask_name)
         cv2.imwrite(output_path, figure)
+    avg_imp = sum(imp_results) / len(imp_results)
+    logger.info(f"Average imperviousness near trees: {avg_imp}")
 
 
 def calculate_mean_width_sampling(polygon, num_directions=100):
@@ -164,13 +170,13 @@ def calculate_imperviousness(image_path, differences):
     percentages = {
         color: (count / total_pixels) * 100 for color, count in color_counts.items()
     }
-    percentages["other"] = 100 - sum(percentages.values())
+    percentages["total"] = sum(percentages.values())
 
     logger.info("Color contribution for area near trees")
     for color, percentage in percentages.items():
         logger.info(f"{color}: {percentage:.2f} percent")
 
-    return mask, raster_data
+    return mask, raster_data, percentages["total"]
 
 
 def create_figure(mask, raster_data):

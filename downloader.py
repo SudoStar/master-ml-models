@@ -55,11 +55,11 @@ def main():
 
     download_images(start, end, year_from, year_to)
 
-    #extract_images(year_from_folder)
-    #extract_images(year_to_folder)
+    extract_images(year_from_folder)
+    extract_images(year_to_folder)
 
-    #downscale_images(year_from_folder, scale_ratio)
-    #downscale_images(year_to_folder, scale_ratio)
+    downscale_images(year_from_folder, scale_ratio)
+    downscale_images(year_to_folder, scale_ratio)
 
 
 def downscale_images(directory, scale_ratio):
@@ -68,18 +68,17 @@ def downscale_images(directory, scale_ratio):
 
             img_path = os.path.join(directory, filename)
 
-            img = cv2.imread(img_path, cv2.IMREAD_COLOR)
-            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            img = cv2.imread(img_path)
             img = cv2.resize(
                 img,
                 None,
                 fx=scale_ratio,
                 fy=scale_ratio,
-                interpolation=cv2.INTER_LINEAR,
+                interpolation=cv2.INTER_AREA,
             )
 
-            # Save the resized image under the original file name
-            cv2.imwrite(img_path, img)
+            new_path = os.path.join(directory, "s_" + filename)
+            cv2.imwrite(new_path, img)
 
     print("All JPEG images have been downscaled by 75 percent and saved.")
 

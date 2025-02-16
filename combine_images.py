@@ -16,21 +16,22 @@ def combine_images_cv2(image_path, output_path):
     heights = []
 
     for filename in os.listdir(image_path):
-        path = os.path.join(image_path, filename)
-        try:
-            img = cv2.imread(path)
-            if img is None:  # Check if image loaded successfully
-                raise ValueError(f"Could not read image: {path}")
-            images.append(img)
-            height, width, _ = img.shape  # Get height and width
-            widths.append(width)
-            heights.append(height)
-        except FileNotFoundError:
-            raise FileNotFoundError(f"Image not found: {path}")
-        except ValueError as e:  # Re-raise image reading errors
-            raise e
-        except Exception as e:
-            raise Exception(f"Error processing image {path}: {e}")
+        if filename.endswith(".jpg") or filename.endswith(".jpeg"):
+            path = os.path.join(image_path, filename)
+            try:
+                img = cv2.imread(path)
+                if img is None:  # Check if image loaded successfully
+                    raise ValueError(f"Could not read image: {path}")
+                images.append(img)
+                height, width, _ = img.shape  # Get height and width
+                widths.append(width)
+                heights.append(height)
+            except FileNotFoundError:
+                raise FileNotFoundError(f"Image not found: {path}")
+            except ValueError as e:  # Re-raise image reading errors
+                raise e
+            except Exception as e:
+                raise Exception(f"Error processing image {path}: {e}")
 
     # Ensure all images have the same dimensions (important for a clean grid)
     if not all(w == widths[0] for w in widths) or not all(
@@ -72,6 +73,6 @@ def combine_images_cv2(image_path, output_path):
 
 # Example usage:
 image_path = "poc_images"
-output_path = "combined_image.jpg"
+output_path = "large_mask/combined_image.jpg"
 
 combine_images_cv2(image_path, output_path)

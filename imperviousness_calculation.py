@@ -29,6 +29,13 @@ def get_args():
     arg(
         "--max_width", type=int, default=8, help="Max buffer distance calculation width"
     )
+    arg(
+        "-r",
+        "--ratio",
+        type=float,
+        default=2.24,
+        help="Root spread to crown spread ratio",
+    )
     return parser.parse_args()
 
 
@@ -37,19 +44,20 @@ def main():
     masks = args.masks
     output = args.output
     max_width = args.max_width
+    ratio = args.ratio
 
     imp_results = []
 
     for mask_name in os.listdir(masks):
         if mask_name.endswith(".jpg") or mask_name.endswith(".jpeg"):
             mask_path = os.path.join(masks, mask_name)
-            differences = create_geometries(mask_path, max_width)
+            differences = create_geometries(mask_path, max_width, ratio)
             logger.info(f"Imperviousness for: {mask_name}")
             mask, raster_data, imp = calculate_imperviousness(mask_path, differences)
             imp_results.append(imp)
-    
+
             figure = create_figure(mask, raster_data)
-    
+
             output_path = os.path.join(output, mask_name)
             cv2.imwrite(output_path, figure)
     avg_imp = sum(imp_results) / len(imp_results)
@@ -96,7 +104,7 @@ def calculate_buffer_distance(geometry, ratio, max_width):
     return (scaled_width - original_width) / 2
 
 
-def create_geometries(image_path, max_width):
+def create_geometries(image_path, max_width, ratio):
     with rasterio.open(image_path) as src:
         # Read bands in BGR order (bands 3, 2, 1 for RGB images)
         bgr_image = np.dstack([src.read(3), src.read(2), src.read(1)])
@@ -111,7 +119,6 @@ def create_geometries(image_path, max_width):
     )
 
     differences = []
-    ratio = 2.24
 
     for contour in contours:
         coords = contour.squeeze().tolist()

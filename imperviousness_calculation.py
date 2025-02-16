@@ -8,7 +8,12 @@ import os
 import logging
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename="calc.log", encoding="utf-8", level=logging.INFO)
+logging.basicConfig(
+    filename="calc.log",
+    encoding="utf-8",
+    level=logging.INFO,
+    format="%(asctime)s :: %(message)s",
+)
 
 
 def get_args():

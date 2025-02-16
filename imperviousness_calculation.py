@@ -10,7 +10,6 @@ import logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     filename="calc.log",
-    encoding="utf-8",
     level=logging.INFO,
     format="%(asctime)s :: %(message)s",
 )
@@ -42,16 +41,17 @@ def main():
     imp_results = []
 
     for mask_name in os.listdir(masks):
-        mask_path = os.path.join(masks, mask_name)
-        differences = create_geometries(mask_path, max_width)
-        logger.info(f"Imperviousness for: {mask_name}")
-        mask, raster_data, imp = calculate_imperviousness(mask_path, differences)
-        imp_results.append(imp)
-
-        figure = create_figure(mask, raster_data)
-
-        output_path = os.path.join(output, mask_name)
-        cv2.imwrite(output_path, figure)
+        if mask_name.endswith(".jpg") or mask_name.endswith(".jpeg"):
+            mask_path = os.path.join(masks, mask_name)
+            differences = create_geometries(mask_path, max_width)
+            logger.info(f"Imperviousness for: {mask_name}")
+            mask, raster_data, imp = calculate_imperviousness(mask_path, differences)
+            imp_results.append(imp)
+    
+            figure = create_figure(mask, raster_data)
+    
+            output_path = os.path.join(output, mask_name)
+            cv2.imwrite(output_path, figure)
     avg_imp = sum(imp_results) / len(imp_results)
     logger.info(f"Average imperviousness near trees: {avg_imp}")
 

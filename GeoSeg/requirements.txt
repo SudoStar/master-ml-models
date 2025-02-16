@@ -13,3 +13,4 @@ addict
 ftfy
 regex
 rasterio
+shapely

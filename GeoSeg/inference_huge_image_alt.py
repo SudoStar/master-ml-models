@@ -73,7 +73,6 @@ def get_args():
     arg("-pw", "--patch-width", help="width of patch size", type=int, default=512)
     arg("-b", "--batch-size", help="batch size", type=int, default=2)
     arg("-s", "--stride", help="stride for sliding window", type=int, default=256)
-    arg("-sr", "--scale_ratio", help="image scale ratio", type=float, default=0.25)
     return parser.parse_args()
 
 
@@ -117,12 +116,9 @@ class InferenceDataset(Dataset):
         return len(self.tile_list)
 
 
-def make_dataset_for_one_huge_image(img_path, patch_size, stride, scale_ratio):
+def make_dataset_for_one_huge_image(img_path, patch_size, stride):
     img = cv2.imread(img_path, cv2.IMREAD_COLOR)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    img = cv2.resize(
-        img, None, fx=scale_ratio, fy=scale_ratio, interpolation=cv2.INTER_LINEAR
-    )
 
     tile_list = []
     positions = []
@@ -185,7 +181,6 @@ def main():
     # print(img_paths)
 
     stride = args.stride
-    scale_ratio = args.scale_ratio
 
     for img_path in img_paths:
         img_name = img_path.split("/")[-1]
@@ -198,7 +193,7 @@ def main():
             output_height,
             img_pad,
             img_shape,
-        ) = make_dataset_for_one_huge_image(img_path, patch_size, stride, scale_ratio)
+        ) = make_dataset_for_one_huge_image(img_path, patch_size, stride)
         # print('img_padded', img_pad.shape)
         output_mask = np.zeros(shape=(output_height, output_width), dtype=np.uint8)
 

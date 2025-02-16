@@ -341,3 +341,10 @@ INFO:__main__:Average imperviousness near trees: 37.88779104145064
 2025-02-16 16:09:20,419 :: #949494: 24.51 percent
 2025-02-16 16:09:20,419 :: total: 53.07 percent
 2025-02-16 16:09:20,650 :: Average imperviousness near trees: 57.04100179814566
+2025-02-16 16:52:23,791 :: Imperviousness for: combined_image.jpg
+2025-02-16 16:52:44,635 :: Color contribution for area near trees
+2025-02-16 16:52:44,636 :: #FFFFFF: 9.69 percent
+2025-02-16 16:52:44,636 :: #DE1F07: 19.37 percent
+2025-02-16 16:52:44,636 :: #949494: 21.92 percent
+2025-02-16 16:52:44,636 :: total: 50.98 percent
+2025-02-16 16:52:46,780 :: Average imperviousness near trees: 50.97782296436202

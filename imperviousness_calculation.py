@@ -14,6 +14,9 @@ logging.basicConfig(
     format="%(asctime)s :: %(message)s",
 )
 
+# 1.75
+# 2.24
+# 2.8
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -52,7 +55,7 @@ def main():
         if mask_name.endswith(".jpg") or mask_name.endswith(".jpeg"):
             mask_path = os.path.join(masks, mask_name)
             differences = create_geometries(mask_path, max_width, ratio)
-            logger.info(f"Imperviousness for: {mask_name}")
+            logger.info(f"Imperviousness for: {mask_name} with ratio {str(ratio)}")
             mask, raster_data, imp = calculate_imperviousness(mask_path, differences)
             imp_results.append(imp)
 

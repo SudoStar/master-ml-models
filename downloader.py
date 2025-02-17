@@ -107,6 +107,19 @@ def extract_images(directory):
             os.remove(file_path)
 
 
+def download_images_for_existing_images(directory):
+    for filename in os.listdir(directory):
+        if filename.endswith(".jpg") or filename.endswith(".jpeg"):
+            img_path = os.path.join(directory, filename)
+
+            zip_name = os.path.splitext(img_path)[0] + ".zip"
+            zip_name = zip_name.replace("2024", "2023")
+            url_zip = url + zip_name
+
+            urllib.request.urlretrieve(url=url_zip, filename=("2023" + zip_name))
+            print(f"Downloaded {zip_name}")
+
+
 def download_images(start, end, year_from, year_to):
     for i in range(start, end + 1):
         part_one = str(i) + "_"

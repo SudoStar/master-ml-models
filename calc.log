@@ -4267,3 +4267,1770 @@ INFO:__main__:Average imperviousness near trees: 37.88779104145064
 2025-02-20 08:17:02,944 :: #949494: 2.43 percent
 2025-02-20 08:17:02,944 :: total: 6.70 percent
 2025-02-20 08:17:03,066 :: Average imperviousness near trees: 30.208045271630944
+2025-02-20 17:33:26,804 :: Imperviousness for: masked_43_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:33:27,953 :: Color contribution for area near trees
+2025-02-20 17:33:27,953 :: #FFFFFF: 7.27 percent
+2025-02-20 17:33:27,953 :: #DE1F07: 0.26 percent
+2025-02-20 17:33:27,953 :: #949494: 0.32 percent
+2025-02-20 17:33:27,953 :: total: 7.85 percent
+2025-02-20 17:33:41,878 :: Imperviousness for: masked_43_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:33:44,212 :: Color contribution for area near trees
+2025-02-20 17:33:44,212 :: #FFFFFF: 8.64 percent
+2025-02-20 17:33:44,212 :: #DE1F07: 4.85 percent
+2025-02-20 17:33:44,212 :: #949494: 1.55 percent
+2025-02-20 17:33:44,212 :: total: 15.05 percent
+2025-02-20 17:34:33,068 :: Imperviousness for: masked_44_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:34:36,291 :: Color contribution for area near trees
+2025-02-20 17:34:36,291 :: #FFFFFF: 8.06 percent
+2025-02-20 17:34:36,291 :: #DE1F07: 6.29 percent
+2025-02-20 17:34:36,291 :: #949494: 3.92 percent
+2025-02-20 17:34:36,291 :: total: 18.27 percent
+2025-02-20 17:35:17,594 :: Imperviousness for: masked_44_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:35:20,322 :: Color contribution for area near trees
+2025-02-20 17:35:20,322 :: #FFFFFF: 6.01 percent
+2025-02-20 17:35:20,322 :: #DE1F07: 5.58 percent
+2025-02-20 17:35:20,322 :: #949494: 6.77 percent
+2025-02-20 17:35:20,322 :: total: 18.35 percent
+2025-02-20 17:35:51,889 :: Imperviousness for: masked_45_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:35:54,537 :: Color contribution for area near trees
+2025-02-20 17:35:54,537 :: #FFFFFF: 7.36 percent
+2025-02-20 17:35:54,537 :: #DE1F07: 4.33 percent
+2025-02-20 17:35:54,537 :: #949494: 8.76 percent
+2025-02-20 17:35:54,537 :: total: 20.45 percent
+2025-02-20 17:36:27,243 :: Imperviousness for: masked_45_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:36:29,660 :: Color contribution for area near trees
+2025-02-20 17:36:29,660 :: #FFFFFF: 6.19 percent
+2025-02-20 17:36:29,660 :: #DE1F07: 5.44 percent
+2025-02-20 17:36:29,660 :: #949494: 8.18 percent
+2025-02-20 17:36:29,660 :: total: 19.81 percent
+2025-02-20 17:37:06,062 :: Imperviousness for: masked_46_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:37:08,592 :: Color contribution for area near trees
+2025-02-20 17:37:08,592 :: #FFFFFF: 6.87 percent
+2025-02-20 17:37:08,592 :: #DE1F07: 4.00 percent
+2025-02-20 17:37:08,592 :: #949494: 5.93 percent
+2025-02-20 17:37:08,592 :: total: 16.80 percent
+2025-02-20 17:37:38,088 :: Imperviousness for: masked_46_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:37:40,161 :: Color contribution for area near trees
+2025-02-20 17:37:40,161 :: #FFFFFF: 5.18 percent
+2025-02-20 17:37:40,161 :: #DE1F07: 3.96 percent
+2025-02-20 17:37:40,161 :: #949494: 6.70 percent
+2025-02-20 17:37:40,161 :: total: 15.84 percent
+2025-02-20 17:37:57,889 :: Imperviousness for: masked_47_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:37:59,678 :: Color contribution for area near trees
+2025-02-20 17:37:59,678 :: #FFFFFF: 6.10 percent
+2025-02-20 17:37:59,678 :: #DE1F07: 2.35 percent
+2025-02-20 17:37:59,678 :: #949494: 7.45 percent
+2025-02-20 17:37:59,678 :: total: 15.90 percent
+2025-02-20 17:38:07,451 :: Imperviousness for: masked_47_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:38:08,964 :: Color contribution for area near trees
+2025-02-20 17:38:08,964 :: #FFFFFF: 6.33 percent
+2025-02-20 17:38:08,964 :: #DE1F07: 0.13 percent
+2025-02-20 17:38:08,964 :: #949494: 5.07 percent
+2025-02-20 17:38:08,964 :: total: 11.52 percent
+2025-02-20 17:38:13,226 :: Imperviousness for: masked_48_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:38:14,536 :: Color contribution for area near trees
+2025-02-20 17:38:14,537 :: #FFFFFF: 0.91 percent
+2025-02-20 17:38:14,537 :: #DE1F07: 0.02 percent
+2025-02-20 17:38:14,537 :: #949494: 0.04 percent
+2025-02-20 17:38:14,537 :: total: 0.97 percent
+2025-02-20 17:38:16,463 :: Imperviousness for: masked_48_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:38:17,316 :: Color contribution for area near trees
+2025-02-20 17:38:17,316 :: #FFFFFF: 0.95 percent
+2025-02-20 17:38:17,316 :: #DE1F07: 0.49 percent
+2025-02-20 17:38:17,316 :: #949494: 1.39 percent
+2025-02-20 17:38:17,316 :: total: 2.82 percent
+2025-02-20 17:38:19,785 :: Imperviousness for: masked_53_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:38:20,956 :: Color contribution for area near trees
+2025-02-20 17:38:20,956 :: #FFFFFF: 11.43 percent
+2025-02-20 17:38:20,956 :: #DE1F07: 1.33 percent
+2025-02-20 17:38:20,956 :: #949494: 0.82 percent
+2025-02-20 17:38:20,956 :: total: 13.57 percent
+2025-02-20 17:38:38,230 :: Imperviousness for: masked_53_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:38:40,529 :: Color contribution for area near trees
+2025-02-20 17:38:40,529 :: #FFFFFF: 9.57 percent
+2025-02-20 17:38:40,530 :: #DE1F07: 6.64 percent
+2025-02-20 17:38:40,530 :: #949494: 3.76 percent
+2025-02-20 17:38:40,530 :: total: 19.97 percent
+2025-02-20 17:39:17,704 :: Imperviousness for: masked_54_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:39:20,418 :: Color contribution for area near trees
+2025-02-20 17:39:20,418 :: #FFFFFF: 7.59 percent
+2025-02-20 17:39:20,418 :: #DE1F07: 7.09 percent
+2025-02-20 17:39:20,418 :: #949494: 6.82 percent
+2025-02-20 17:39:20,418 :: total: 21.50 percent
+2025-02-20 17:39:55,503 :: Imperviousness for: masked_54_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:39:57,784 :: Color contribution for area near trees
+2025-02-20 17:39:57,784 :: #FFFFFF: 7.14 percent
+2025-02-20 17:39:57,784 :: #DE1F07: 5.99 percent
+2025-02-20 17:39:57,784 :: #949494: 9.38 percent
+2025-02-20 17:39:57,784 :: total: 22.51 percent
+2025-02-20 17:40:23,359 :: Imperviousness for: masked_55_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:40:25,366 :: Color contribution for area near trees
+2025-02-20 17:40:25,366 :: #FFFFFF: 6.82 percent
+2025-02-20 17:40:25,366 :: #DE1F07: 4.78 percent
+2025-02-20 17:40:25,366 :: #949494: 10.84 percent
+2025-02-20 17:40:25,366 :: total: 22.43 percent
+2025-02-20 17:40:55,014 :: Imperviousness for: masked_55_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:40:57,261 :: Color contribution for area near trees
+2025-02-20 17:40:57,261 :: #FFFFFF: 5.98 percent
+2025-02-20 17:40:57,261 :: #DE1F07: 4.54 percent
+2025-02-20 17:40:57,261 :: #949494: 7.73 percent
+2025-02-20 17:40:57,261 :: total: 18.25 percent
+2025-02-20 17:41:12,948 :: Imperviousness for: masked_56_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:14,797 :: Color contribution for area near trees
+2025-02-20 17:41:14,797 :: #FFFFFF: 6.81 percent
+2025-02-20 17:41:14,797 :: #DE1F07: 2.45 percent
+2025-02-20 17:41:14,797 :: #949494: 5.68 percent
+2025-02-20 17:41:14,797 :: total: 14.95 percent
+2025-02-20 17:41:35,665 :: Imperviousness for: masked_56_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:37,627 :: Color contribution for area near trees
+2025-02-20 17:41:37,627 :: #FFFFFF: 5.19 percent
+2025-02-20 17:41:37,627 :: #DE1F07: 1.16 percent
+2025-02-20 17:41:37,627 :: #949494: 4.93 percent
+2025-02-20 17:41:37,627 :: total: 11.28 percent
+2025-02-20 17:41:40,518 :: Imperviousness for: masked_57_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:41,358 :: Color contribution for area near trees
+2025-02-20 17:41:41,358 :: #FFFFFF: 4.70 percent
+2025-02-20 17:41:41,358 :: #DE1F07: 4.46 percent
+2025-02-20 17:41:41,358 :: #949494: 7.33 percent
+2025-02-20 17:41:41,358 :: total: 16.49 percent
+2025-02-20 17:41:42,324 :: Imperviousness for: masked_57_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:43,086 :: Color contribution for area near trees
+2025-02-20 17:41:43,086 :: #FFFFFF: 0.00 percent
+2025-02-20 17:41:43,086 :: #DE1F07: 0.44 percent
+2025-02-20 17:41:43,087 :: #949494: 0.00 percent
+2025-02-20 17:41:43,087 :: total: 0.44 percent
+2025-02-20 17:41:46,101 :: Imperviousness for: masked_58_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:47,295 :: Color contribution for area near trees
+2025-02-20 17:41:47,296 :: #FFFFFF: 2.00 percent
+2025-02-20 17:41:47,296 :: #DE1F07: 0.06 percent
+2025-02-20 17:41:47,296 :: #949494: 0.39 percent
+2025-02-20 17:41:47,296 :: total: 2.45 percent
+2025-02-20 17:41:50,422 :: Imperviousness for: masked_15_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:51,416 :: Color contribution for area near trees
+2025-02-20 17:41:51,416 :: #FFFFFF: 5.56 percent
+2025-02-20 17:41:51,416 :: #DE1F07: 0.51 percent
+2025-02-20 17:41:51,416 :: #949494: 0.65 percent
+2025-02-20 17:41:51,416 :: total: 6.72 percent
+2025-02-20 17:41:54,755 :: Imperviousness for: masked_16_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:55,650 :: Color contribution for area near trees
+2025-02-20 17:41:55,651 :: #FFFFFF: 8.41 percent
+2025-02-20 17:41:55,651 :: #DE1F07: 0.16 percent
+2025-02-20 17:41:55,651 :: #949494: 1.71 percent
+2025-02-20 17:41:55,651 :: total: 10.28 percent
+2025-02-20 17:41:56,756 :: Imperviousness for: masked_16_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:57,522 :: Color contribution for area near trees
+2025-02-20 17:41:57,522 :: #FFFFFF: 12.74 percent
+2025-02-20 17:41:57,522 :: #DE1F07: 0.00 percent
+2025-02-20 17:41:57,522 :: #949494: 1.07 percent
+2025-02-20 17:41:57,522 :: total: 13.81 percent
+2025-02-20 17:41:58,812 :: Imperviousness for: masked_15_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:41:59,585 :: Color contribution for area near trees
+2025-02-20 17:41:59,585 :: #FFFFFF: 3.09 percent
+2025-02-20 17:41:59,585 :: #DE1F07: 1.49 percent
+2025-02-20 17:41:59,585 :: #949494: 5.85 percent
+2025-02-20 17:41:59,585 :: total: 10.43 percent
+2025-02-20 17:42:19,148 :: Imperviousness for: masked_15_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:42:21,000 :: Color contribution for area near trees
+2025-02-20 17:42:21,000 :: #FFFFFF: 6.39 percent
+2025-02-20 17:42:21,000 :: #DE1F07: 4.09 percent
+2025-02-20 17:42:21,000 :: #949494: 3.92 percent
+2025-02-20 17:42:21,000 :: total: 14.40 percent
+2025-02-20 17:42:48,851 :: Imperviousness for: masked_16_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:42:51,005 :: Color contribution for area near trees
+2025-02-20 17:42:51,006 :: #FFFFFF: 6.95 percent
+2025-02-20 17:42:51,006 :: #DE1F07: 4.25 percent
+2025-02-20 17:42:51,006 :: #949494: 4.79 percent
+2025-02-20 17:42:51,006 :: total: 15.98 percent
+2025-02-20 17:42:56,082 :: Imperviousness for: masked_16_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:42:57,041 :: Color contribution for area near trees
+2025-02-20 17:42:57,041 :: #FFFFFF: 4.81 percent
+2025-02-20 17:42:57,041 :: #DE1F07: 1.69 percent
+2025-02-20 17:42:57,041 :: #949494: 8.07 percent
+2025-02-20 17:42:57,041 :: total: 14.57 percent
+2025-02-20 17:42:59,802 :: Imperviousness for: masked_17_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:43:00,654 :: Color contribution for area near trees
+2025-02-20 17:43:00,654 :: #FFFFFF: 5.44 percent
+2025-02-20 17:43:00,654 :: #DE1F07: 3.34 percent
+2025-02-20 17:43:00,654 :: #949494: 2.53 percent
+2025-02-20 17:43:00,654 :: total: 11.31 percent
+2025-02-20 17:43:01,972 :: Imperviousness for: masked_17_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:43:02,749 :: Color contribution for area near trees
+2025-02-20 17:43:02,749 :: #FFFFFF: 9.54 percent
+2025-02-20 17:43:02,749 :: #DE1F07: 1.39 percent
+2025-02-20 17:43:02,749 :: #949494: 2.80 percent
+2025-02-20 17:43:02,749 :: total: 13.73 percent
+2025-02-20 17:43:03,889 :: Imperviousness for: masked_24_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:43:04,692 :: Color contribution for area near trees
+2025-02-20 17:43:04,692 :: #FFFFFF: 5.87 percent
+2025-02-20 17:43:04,692 :: #DE1F07: 0.04 percent
+2025-02-20 17:43:04,692 :: #949494: 0.60 percent
+2025-02-20 17:43:04,692 :: total: 6.51 percent
+2025-02-20 17:43:06,725 :: Imperviousness for: masked_24_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:43:07,842 :: Color contribution for area near trees
+2025-02-20 17:43:07,843 :: #FFFFFF: 25.78 percent
+2025-02-20 17:43:07,843 :: #DE1F07: 0.25 percent
+2025-02-20 17:43:07,843 :: #949494: 3.28 percent
+2025-02-20 17:43:07,843 :: total: 29.30 percent
+2025-02-20 17:43:17,282 :: Imperviousness for: masked_25_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:43:19,213 :: Color contribution for area near trees
+2025-02-20 17:43:19,213 :: #FFFFFF: 11.30 percent
+2025-02-20 17:43:19,213 :: #DE1F07: 1.85 percent
+2025-02-20 17:43:19,213 :: #949494: 4.90 percent
+2025-02-20 17:43:19,213 :: total: 18.05 percent
+2025-02-20 17:43:56,413 :: Imperviousness for: masked_25_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:43:59,049 :: Color contribution for area near trees
+2025-02-20 17:43:59,049 :: #FFFFFF: 7.64 percent
+2025-02-20 17:43:59,049 :: #DE1F07: 5.38 percent
+2025-02-20 17:43:59,049 :: #949494: 7.22 percent
+2025-02-20 17:43:59,049 :: total: 20.24 percent
+2025-02-20 17:44:43,694 :: Imperviousness for: masked_26_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:44:46,336 :: Color contribution for area near trees
+2025-02-20 17:44:46,336 :: #FFFFFF: 6.65 percent
+2025-02-20 17:44:46,336 :: #DE1F07: 5.64 percent
+2025-02-20 17:44:46,336 :: #949494: 8.20 percent
+2025-02-20 17:44:46,336 :: total: 20.48 percent
+2025-02-20 17:45:28,201 :: Imperviousness for: masked_26_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:45:30,676 :: Color contribution for area near trees
+2025-02-20 17:45:30,676 :: #FFFFFF: 6.38 percent
+2025-02-20 17:45:30,676 :: #DE1F07: 5.19 percent
+2025-02-20 17:45:30,676 :: #949494: 6.50 percent
+2025-02-20 17:45:30,676 :: total: 18.07 percent
+2025-02-20 17:45:46,976 :: Imperviousness for: masked_27_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:45:48,628 :: Color contribution for area near trees
+2025-02-20 17:45:48,629 :: #FFFFFF: 8.32 percent
+2025-02-20 17:45:48,629 :: #DE1F07: 2.63 percent
+2025-02-20 17:45:48,629 :: #949494: 5.14 percent
+2025-02-20 17:45:48,629 :: total: 16.09 percent
+2025-02-20 17:45:54,882 :: Imperviousness for: masked_27_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:45:55,852 :: Color contribution for area near trees
+2025-02-20 17:45:55,852 :: #FFFFFF: 2.89 percent
+2025-02-20 17:45:55,853 :: #DE1F07: 1.74 percent
+2025-02-20 17:45:55,853 :: #949494: 1.98 percent
+2025-02-20 17:45:55,853 :: total: 6.61 percent
+2025-02-20 17:45:57,314 :: Imperviousness for: masked_22_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:45:58,121 :: Color contribution for area near trees
+2025-02-20 17:45:58,121 :: #FFFFFF: 6.59 percent
+2025-02-20 17:45:58,121 :: #DE1F07: 4.26 percent
+2025-02-20 17:45:58,121 :: #949494: 1.08 percent
+2025-02-20 17:45:58,121 :: total: 11.93 percent
+2025-02-20 17:46:00,088 :: Imperviousness for: masked_23_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:46:01,390 :: Color contribution for area near trees
+2025-02-20 17:46:01,390 :: #FFFFFF: 16.42 percent
+2025-02-20 17:46:01,390 :: #DE1F07: 0.62 percent
+2025-02-20 17:46:01,390 :: #949494: 1.16 percent
+2025-02-20 17:46:01,390 :: total: 18.20 percent
+2025-02-20 17:46:03,277 :: Imperviousness for: masked_23_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:46:04,141 :: Color contribution for area near trees
+2025-02-20 17:46:04,141 :: #FFFFFF: 8.94 percent
+2025-02-20 17:46:04,142 :: #DE1F07: 1.27 percent
+2025-02-20 17:46:04,142 :: #949494: 0.88 percent
+2025-02-20 17:46:04,142 :: total: 11.09 percent
+2025-02-20 17:46:14,413 :: Imperviousness for: masked_24_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:46:16,738 :: Color contribution for area near trees
+2025-02-20 17:46:16,738 :: #FFFFFF: 12.23 percent
+2025-02-20 17:46:16,738 :: #DE1F07: 5.50 percent
+2025-02-20 17:46:16,738 :: #949494: 3.96 percent
+2025-02-20 17:46:16,738 :: total: 21.69 percent
+2025-02-20 17:46:43,107 :: Imperviousness for: masked_24_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:46:46,185 :: Color contribution for area near trees
+2025-02-20 17:46:46,185 :: #FFFFFF: 7.62 percent
+2025-02-20 17:46:46,185 :: #DE1F07: 6.59 percent
+2025-02-20 17:46:46,185 :: #949494: 4.48 percent
+2025-02-20 17:46:46,185 :: total: 18.70 percent
+2025-02-20 17:47:20,300 :: Imperviousness for: masked_25_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:47:23,456 :: Color contribution for area near trees
+2025-02-20 17:47:23,457 :: #FFFFFF: 8.19 percent
+2025-02-20 17:47:23,457 :: #DE1F07: 8.54 percent
+2025-02-20 17:47:23,457 :: #949494: 6.91 percent
+2025-02-20 17:47:23,457 :: total: 23.64 percent
+2025-02-20 17:47:51,236 :: Imperviousness for: masked_25_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:47:53,394 :: Color contribution for area near trees
+2025-02-20 17:47:53,394 :: #FFFFFF: 7.64 percent
+2025-02-20 17:47:53,394 :: #DE1F07: 4.07 percent
+2025-02-20 17:47:53,394 :: #949494: 10.45 percent
+2025-02-20 17:47:53,394 :: total: 22.16 percent
+2025-02-20 17:48:32,743 :: Imperviousness for: masked_26_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:48:35,195 :: Color contribution for area near trees
+2025-02-20 17:48:35,195 :: #FFFFFF: 6.72 percent
+2025-02-20 17:48:35,195 :: #DE1F07: 6.12 percent
+2025-02-20 17:48:35,195 :: #949494: 8.48 percent
+2025-02-20 17:48:35,196 :: total: 21.33 percent
+2025-02-20 17:49:16,718 :: Imperviousness for: masked_26_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:49:19,198 :: Color contribution for area near trees
+2025-02-20 17:49:19,198 :: #FFFFFF: 5.29 percent
+2025-02-20 17:49:19,198 :: #DE1F07: 5.67 percent
+2025-02-20 17:49:19,198 :: #949494: 10.00 percent
+2025-02-20 17:49:19,198 :: total: 20.96 percent
+2025-02-20 17:49:49,390 :: Imperviousness for: masked_27_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:49:51,480 :: Color contribution for area near trees
+2025-02-20 17:49:51,480 :: #FFFFFF: 7.09 percent
+2025-02-20 17:49:51,480 :: #DE1F07: 4.71 percent
+2025-02-20 17:49:51,480 :: #949494: 5.41 percent
+2025-02-20 17:49:51,480 :: total: 17.20 percent
+2025-02-20 17:50:01,375 :: Imperviousness for: masked_27_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:50:02,606 :: Color contribution for area near trees
+2025-02-20 17:50:02,606 :: #FFFFFF: 8.69 percent
+2025-02-20 17:50:02,606 :: #DE1F07: 4.03 percent
+2025-02-20 17:50:02,606 :: #949494: 2.79 percent
+2025-02-20 17:50:02,606 :: total: 15.51 percent
+2025-02-20 17:50:07,871 :: Imperviousness for: masked_28_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:50:08,818 :: Color contribution for area near trees
+2025-02-20 17:50:08,818 :: #FFFFFF: 7.30 percent
+2025-02-20 17:50:08,818 :: #DE1F07: 5.17 percent
+2025-02-20 17:50:08,818 :: #949494: 1.21 percent
+2025-02-20 17:50:08,818 :: total: 13.69 percent
+2025-02-20 17:50:11,301 :: Imperviousness for: masked_32_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:50:12,269 :: Color contribution for area near trees
+2025-02-20 17:50:12,269 :: #FFFFFF: 11.02 percent
+2025-02-20 17:50:12,269 :: #DE1F07: 2.92 percent
+2025-02-20 17:50:12,269 :: #949494: 0.97 percent
+2025-02-20 17:50:12,269 :: total: 14.91 percent
+2025-02-20 17:50:16,050 :: Imperviousness for: masked_33_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:50:17,607 :: Color contribution for area near trees
+2025-02-20 17:50:17,608 :: #FFFFFF: 11.18 percent
+2025-02-20 17:50:17,608 :: #DE1F07: 1.70 percent
+2025-02-20 17:50:17,608 :: #949494: 1.64 percent
+2025-02-20 17:50:17,608 :: total: 14.52 percent
+2025-02-20 17:50:21,922 :: Imperviousness for: masked_33_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:50:23,188 :: Color contribution for area near trees
+2025-02-20 17:50:23,189 :: #FFFFFF: 11.06 percent
+2025-02-20 17:50:23,189 :: #DE1F07: 3.91 percent
+2025-02-20 17:50:23,189 :: #949494: 1.21 percent
+2025-02-20 17:50:23,189 :: total: 16.17 percent
+2025-02-20 17:50:39,323 :: Imperviousness for: masked_34_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:50:42,251 :: Color contribution for area near trees
+2025-02-20 17:50:42,251 :: #FFFFFF: 10.25 percent
+2025-02-20 17:50:42,251 :: #DE1F07: 7.00 percent
+2025-02-20 17:50:42,251 :: #949494: 3.54 percent
+2025-02-20 17:50:42,251 :: total: 20.79 percent
+2025-02-20 17:51:23,677 :: Imperviousness for: masked_34_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:51:26,723 :: Color contribution for area near trees
+2025-02-20 17:51:26,723 :: #FFFFFF: 7.95 percent
+2025-02-20 17:51:26,723 :: #DE1F07: 8.33 percent
+2025-02-20 17:51:26,723 :: #949494: 6.79 percent
+2025-02-20 17:51:26,723 :: total: 23.06 percent
+2025-02-20 17:51:54,507 :: Imperviousness for: masked_35_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:51:56,826 :: Color contribution for area near trees
+2025-02-20 17:51:56,826 :: #FFFFFF: 8.24 percent
+2025-02-20 17:51:56,826 :: #DE1F07: 10.25 percent
+2025-02-20 17:51:56,826 :: #949494: 9.59 percent
+2025-02-20 17:51:56,826 :: total: 28.08 percent
+2025-02-20 17:52:26,185 :: Imperviousness for: masked_35_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:52:28,303 :: Color contribution for area near trees
+2025-02-20 17:52:28,303 :: #FFFFFF: 8.13 percent
+2025-02-20 17:52:28,303 :: #DE1F07: 5.28 percent
+2025-02-20 17:52:28,303 :: #949494: 16.02 percent
+2025-02-20 17:52:28,303 :: total: 29.43 percent
+2025-02-20 17:52:56,645 :: Imperviousness for: masked_36_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:52:58,875 :: Color contribution for area near trees
+2025-02-20 17:52:58,875 :: #FFFFFF: 6.63 percent
+2025-02-20 17:52:58,875 :: #DE1F07: 3.32 percent
+2025-02-20 17:52:58,875 :: #949494: 9.70 percent
+2025-02-20 17:52:58,875 :: total: 19.65 percent
+2025-02-20 17:53:40,995 :: Imperviousness for: masked_36_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:53:43,652 :: Color contribution for area near trees
+2025-02-20 17:53:43,652 :: #FFFFFF: 6.58 percent
+2025-02-20 17:53:43,653 :: #DE1F07: 6.02 percent
+2025-02-20 17:53:43,653 :: #949494: 7.44 percent
+2025-02-20 17:53:43,653 :: total: 20.04 percent
+2025-02-20 17:54:22,020 :: Imperviousness for: masked_37_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:54:24,409 :: Color contribution for area near trees
+2025-02-20 17:54:24,410 :: #FFFFFF: 6.26 percent
+2025-02-20 17:54:24,410 :: #DE1F07: 5.57 percent
+2025-02-20 17:54:24,410 :: #949494: 5.82 percent
+2025-02-20 17:54:24,410 :: total: 17.65 percent
+2025-02-20 17:54:42,586 :: Imperviousness for: masked_37_2_op_2023.jpg with ratio 1.75
+2025-02-20 17:54:44,169 :: Color contribution for area near trees
+2025-02-20 17:54:44,169 :: #FFFFFF: 10.64 percent
+2025-02-20 17:54:44,169 :: #DE1F07: 3.85 percent
+2025-02-20 17:54:44,169 :: #949494: 3.09 percent
+2025-02-20 17:54:44,169 :: total: 17.57 percent
+2025-02-20 17:54:51,126 :: Imperviousness for: masked_38_1_op_2023.jpg with ratio 1.75
+2025-02-20 17:54:52,195 :: Color contribution for area near trees
+2025-02-20 17:54:52,195 :: #FFFFFF: 8.80 percent
+2025-02-20 17:54:52,195 :: #DE1F07: 3.85 percent
+2025-02-20 17:54:52,195 :: #949494: 3.50 percent
+2025-02-20 17:54:52,195 :: total: 16.15 percent
+2025-02-20 17:54:53,152 :: Imperviousness for: masked_32_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:54:53,918 :: Color contribution for area near trees
+2025-02-20 17:54:53,918 :: #FFFFFF: 0.00 percent
+2025-02-20 17:54:53,918 :: #DE1F07: 0.00 percent
+2025-02-20 17:54:53,918 :: #949494: 0.00 percent
+2025-02-20 17:54:53,918 :: total: 0.00 percent
+2025-02-20 17:55:08,138 :: Imperviousness for: masked_33_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:55:10,120 :: Color contribution for area near trees
+2025-02-20 17:55:10,120 :: #FFFFFF: 8.99 percent
+2025-02-20 17:55:10,120 :: #DE1F07: 4.99 percent
+2025-02-20 17:55:10,120 :: #949494: 5.49 percent
+2025-02-20 17:55:10,120 :: total: 19.48 percent
+2025-02-20 17:55:47,986 :: Imperviousness for: masked_33_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:55:51,083 :: Color contribution for area near trees
+2025-02-20 17:55:51,084 :: #FFFFFF: 10.44 percent
+2025-02-20 17:55:51,084 :: #DE1F07: 6.66 percent
+2025-02-20 17:55:51,084 :: #949494: 3.83 percent
+2025-02-20 17:55:51,084 :: total: 20.93 percent
+2025-02-20 17:56:33,193 :: Imperviousness for: masked_34_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:56:36,988 :: Color contribution for area near trees
+2025-02-20 17:56:36,988 :: #FFFFFF: 9.16 percent
+2025-02-20 17:56:36,988 :: #DE1F07: 6.58 percent
+2025-02-20 17:56:36,988 :: #949494: 4.78 percent
+2025-02-20 17:56:36,988 :: total: 20.53 percent
+2025-02-20 17:57:12,697 :: Imperviousness for: masked_34_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:57:15,025 :: Color contribution for area near trees
+2025-02-20 17:57:15,025 :: #FFFFFF: 6.90 percent
+2025-02-20 17:57:15,025 :: #DE1F07: 9.81 percent
+2025-02-20 17:57:15,025 :: #949494: 10.84 percent
+2025-02-20 17:57:15,025 :: total: 27.55 percent
+2025-02-20 17:57:37,322 :: Imperviousness for: masked_35_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:57:39,067 :: Color contribution for area near trees
+2025-02-20 17:57:39,068 :: #FFFFFF: 6.52 percent
+2025-02-20 17:57:39,068 :: #DE1F07: 12.46 percent
+2025-02-20 17:57:39,068 :: #949494: 15.37 percent
+2025-02-20 17:57:39,068 :: total: 34.35 percent
+2025-02-20 17:57:58,969 :: Imperviousness for: masked_35_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:58:00,738 :: Color contribution for area near trees
+2025-02-20 17:58:00,738 :: #FFFFFF: 11.59 percent
+2025-02-20 17:58:00,738 :: #DE1F07: 7.76 percent
+2025-02-20 17:58:00,738 :: #949494: 15.45 percent
+2025-02-20 17:58:00,738 :: total: 34.80 percent
+2025-02-20 17:58:23,188 :: Imperviousness for: masked_36_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:58:25,643 :: Color contribution for area near trees
+2025-02-20 17:58:25,643 :: #FFFFFF: 8.09 percent
+2025-02-20 17:58:25,643 :: #DE1F07: 3.56 percent
+2025-02-20 17:58:25,643 :: #949494: 12.04 percent
+2025-02-20 17:58:25,643 :: total: 23.68 percent
+2025-02-20 17:58:58,027 :: Imperviousness for: masked_36_4_op_2023.jpg with ratio 1.75
+2025-02-20 17:59:00,752 :: Color contribution for area near trees
+2025-02-20 17:59:00,753 :: #FFFFFF: 9.67 percent
+2025-02-20 17:59:00,753 :: #DE1F07: 4.28 percent
+2025-02-20 17:59:00,753 :: #949494: 5.11 percent
+2025-02-20 17:59:00,753 :: total: 19.07 percent
+2025-02-20 17:59:36,143 :: Imperviousness for: masked_37_3_op_2023.jpg with ratio 1.75
+2025-02-20 17:59:38,610 :: Color contribution for area near trees
+2025-02-20 17:59:38,610 :: #FFFFFF: 8.29 percent
+2025-02-20 17:59:38,610 :: #DE1F07: 5.68 percent
+2025-02-20 17:59:38,610 :: #949494: 4.67 percent
+2025-02-20 17:59:38,610 :: total: 18.64 percent
+2025-02-20 18:00:12,899 :: Imperviousness for: masked_37_4_op_2023.jpg with ratio 1.75
+2025-02-20 18:00:15,112 :: Color contribution for area near trees
+2025-02-20 18:00:15,112 :: #FFFFFF: 8.33 percent
+2025-02-20 18:00:15,112 :: #DE1F07: 6.05 percent
+2025-02-20 18:00:15,112 :: #949494: 4.51 percent
+2025-02-20 18:00:15,112 :: total: 18.89 percent
+2025-02-20 18:00:28,233 :: Imperviousness for: masked_38_3_op_2023.jpg with ratio 1.75
+2025-02-20 18:00:29,492 :: Color contribution for area near trees
+2025-02-20 18:00:29,492 :: #FFFFFF: 8.30 percent
+2025-02-20 18:00:29,492 :: #DE1F07: 7.15 percent
+2025-02-20 18:00:29,493 :: #949494: 2.52 percent
+2025-02-20 18:00:29,493 :: total: 17.97 percent
+2025-02-20 18:00:30,499 :: Imperviousness for: masked_42_2_op_2023.jpg with ratio 1.75
+2025-02-20 18:00:31,290 :: Color contribution for area near trees
+2025-02-20 18:00:31,291 :: #FFFFFF: 4.77 percent
+2025-02-20 18:00:31,291 :: #DE1F07: 0.22 percent
+2025-02-20 18:00:31,291 :: #949494: 0.00 percent
+2025-02-20 18:00:31,291 :: total: 4.99 percent
+2025-02-20 18:00:33,082 :: Imperviousness for: masked_43_1_op_2023.jpg with ratio 1.75
+2025-02-20 18:00:34,222 :: Color contribution for area near trees
+2025-02-20 18:00:34,222 :: #FFFFFF: 3.89 percent
+2025-02-20 18:00:34,222 :: #DE1F07: 0.16 percent
+2025-02-20 18:00:34,222 :: #949494: 0.41 percent
+2025-02-20 18:00:34,222 :: total: 4.47 percent
+2025-02-20 18:00:45,887 :: Imperviousness for: masked_43_2_op_2023.jpg with ratio 1.75
+2025-02-20 18:00:48,545 :: Color contribution for area near trees
+2025-02-20 18:00:48,546 :: #FFFFFF: 9.88 percent
+2025-02-20 18:00:48,546 :: #DE1F07: 5.60 percent
+2025-02-20 18:00:48,546 :: #949494: 3.12 percent
+2025-02-20 18:00:48,546 :: total: 18.61 percent
+2025-02-20 18:01:25,619 :: Imperviousness for: masked_44_1_op_2023.jpg with ratio 1.75
+2025-02-20 18:01:28,621 :: Color contribution for area near trees
+2025-02-20 18:01:28,621 :: #FFFFFF: 8.56 percent
+2025-02-20 18:01:28,622 :: #DE1F07: 8.32 percent
+2025-02-20 18:01:28,622 :: #949494: 5.98 percent
+2025-02-20 18:01:28,622 :: total: 22.86 percent
+2025-02-20 18:01:53,684 :: Imperviousness for: masked_44_2_op_2023.jpg with ratio 1.75
+2025-02-20 18:01:55,990 :: Color contribution for area near trees
+2025-02-20 18:01:55,990 :: #FFFFFF: 8.03 percent
+2025-02-20 18:01:55,991 :: #DE1F07: 7.35 percent
+2025-02-20 18:01:55,991 :: #949494: 10.63 percent
+2025-02-20 18:01:55,991 :: total: 26.01 percent
+2025-02-20 18:02:19,812 :: Imperviousness for: masked_45_1_op_2023.jpg with ratio 1.75
+2025-02-20 18:02:21,635 :: Color contribution for area near trees
+2025-02-20 18:02:21,635 :: #FFFFFF: 8.00 percent
+2025-02-20 18:02:21,635 :: #DE1F07: 10.28 percent
+2025-02-20 18:02:21,635 :: #949494: 13.16 percent
+2025-02-20 18:02:21,635 :: total: 31.43 percent
+2025-02-20 18:02:44,524 :: Imperviousness for: masked_45_2_op_2023.jpg with ratio 1.75
+2025-02-20 18:02:46,355 :: Color contribution for area near trees
+2025-02-20 18:02:46,355 :: #FFFFFF: 5.24 percent
+2025-02-20 18:02:46,355 :: #DE1F07: 7.00 percent
+2025-02-20 18:02:46,355 :: #949494: 11.58 percent
+2025-02-20 18:02:46,355 :: total: 23.82 percent
+2025-02-20 18:03:09,051 :: Imperviousness for: masked_46_1_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:10,976 :: Color contribution for area near trees
+2025-02-20 18:03:10,976 :: #FFFFFF: 6.18 percent
+2025-02-20 18:03:10,976 :: #DE1F07: 4.52 percent
+2025-02-20 18:03:10,976 :: #949494: 11.47 percent
+2025-02-20 18:03:10,976 :: total: 22.16 percent
+2025-02-20 18:03:25,262 :: Imperviousness for: masked_46_2_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:27,166 :: Color contribution for area near trees
+2025-02-20 18:03:27,166 :: #FFFFFF: 7.99 percent
+2025-02-20 18:03:27,166 :: #DE1F07: 1.44 percent
+2025-02-20 18:03:27,166 :: #949494: 7.57 percent
+2025-02-20 18:03:27,166 :: total: 17.00 percent
+2025-02-20 18:03:36,055 :: Imperviousness for: masked_47_1_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:38,133 :: Color contribution for area near trees
+2025-02-20 18:03:38,134 :: #FFFFFF: 8.56 percent
+2025-02-20 18:03:38,134 :: #DE1F07: 0.84 percent
+2025-02-20 18:03:38,134 :: #949494: 4.47 percent
+2025-02-20 18:03:38,134 :: total: 13.87 percent
+2025-02-20 18:03:40,293 :: Imperviousness for: masked_47_2_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:41,445 :: Color contribution for area near trees
+2025-02-20 18:03:41,445 :: #FFFFFF: 6.38 percent
+2025-02-20 18:03:41,445 :: #DE1F07: 0.01 percent
+2025-02-20 18:03:41,445 :: #949494: 2.10 percent
+2025-02-20 18:03:41,445 :: total: 8.48 percent
+2025-02-20 18:03:42,882 :: Imperviousness for: masked_48_1_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:43,798 :: Color contribution for area near trees
+2025-02-20 18:03:43,798 :: #FFFFFF: 1.66 percent
+2025-02-20 18:03:43,798 :: #DE1F07: 0.70 percent
+2025-02-20 18:03:43,798 :: #949494: 0.28 percent
+2025-02-20 18:03:43,798 :: total: 2.64 percent
+2025-02-20 18:03:45,146 :: Imperviousness for: masked_42_4_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:45,986 :: Color contribution for area near trees
+2025-02-20 18:03:45,986 :: #FFFFFF: 1.16 percent
+2025-02-20 18:03:45,986 :: #DE1F07: 0.23 percent
+2025-02-20 18:03:45,986 :: #949494: 0.44 percent
+2025-02-20 18:03:45,986 :: total: 1.83 percent
+2025-02-20 18:03:48,733 :: Imperviousness for: masked_58_2_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:49,694 :: Color contribution for area near trees
+2025-02-20 18:03:49,694 :: #FFFFFF: 6.11 percent
+2025-02-20 18:03:49,694 :: #DE1F07: 0.00 percent
+2025-02-20 18:03:49,694 :: #949494: 0.26 percent
+2025-02-20 18:03:49,694 :: total: 6.37 percent
+2025-02-20 18:03:51,094 :: Imperviousness for: masked_53_3_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:51,921 :: Color contribution for area near trees
+2025-02-20 18:03:51,921 :: #FFFFFF: 16.17 percent
+2025-02-20 18:03:51,921 :: #DE1F07: 1.08 percent
+2025-02-20 18:03:51,921 :: #949494: 2.46 percent
+2025-02-20 18:03:51,921 :: total: 19.71 percent
+2025-02-20 18:03:53,490 :: Imperviousness for: masked_53_4_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:54,292 :: Color contribution for area near trees
+2025-02-20 18:03:54,292 :: #FFFFFF: 10.50 percent
+2025-02-20 18:03:54,292 :: #DE1F07: 4.20 percent
+2025-02-20 18:03:54,292 :: #949494: 4.26 percent
+2025-02-20 18:03:54,292 :: total: 18.96 percent
+2025-02-20 18:03:56,017 :: Imperviousness for: masked_54_3_op_2023.jpg with ratio 1.75
+2025-02-20 18:03:56,804 :: Color contribution for area near trees
+2025-02-20 18:03:56,804 :: #FFFFFF: 5.42 percent
+2025-02-20 18:03:56,804 :: #DE1F07: 5.24 percent
+2025-02-20 18:03:56,804 :: #949494: 8.92 percent
+2025-02-20 18:03:56,804 :: total: 19.57 percent
+2025-02-20 18:04:05,197 :: Imperviousness for: masked_54_4_op_2023.jpg with ratio 1.75
+2025-02-20 18:04:06,366 :: Color contribution for area near trees
+2025-02-20 18:04:06,366 :: #FFFFFF: 5.97 percent
+2025-02-20 18:04:06,366 :: #DE1F07: 5.79 percent
+2025-02-20 18:04:06,366 :: #949494: 5.64 percent
+2025-02-20 18:04:06,366 :: total: 17.40 percent
+2025-02-20 18:04:07,550 :: Imperviousness for: masked_55_3_op_2023.jpg with ratio 1.75
+2025-02-20 18:04:08,319 :: Color contribution for area near trees
+2025-02-20 18:04:08,319 :: #FFFFFF: 0.70 percent
+2025-02-20 18:04:08,320 :: #DE1F07: 0.00 percent
+2025-02-20 18:04:08,320 :: #949494: 15.81 percent
+2025-02-20 18:04:08,320 :: total: 16.51 percent
+2025-02-20 18:04:11,229 :: Imperviousness for: masked_55_4_op_2023.jpg with ratio 1.75
+2025-02-20 18:04:12,093 :: Color contribution for area near trees
+2025-02-20 18:04:12,093 :: #FFFFFF: 6.59 percent
+2025-02-20 18:04:12,093 :: #DE1F07: 0.99 percent
+2025-02-20 18:04:12,093 :: #949494: 4.13 percent
+2025-02-20 18:04:12,093 :: total: 11.71 percent
+2025-02-20 18:04:15,607 :: Imperviousness for: masked_56_3_op_2023.jpg with ratio 1.75
+2025-02-20 18:04:16,531 :: Color contribution for area near trees
+2025-02-20 18:04:16,531 :: #FFFFFF: 9.98 percent
+2025-02-20 18:04:16,531 :: #DE1F07: 0.59 percent
+2025-02-20 18:04:16,531 :: #949494: 2.78 percent
+2025-02-20 18:04:16,531 :: total: 13.35 percent
+2025-02-20 18:04:17,543 :: Imperviousness for: masked_56_4_op_2023.jpg with ratio 1.75
+2025-02-20 18:04:18,307 :: Color contribution for area near trees
+2025-02-20 18:04:18,307 :: #FFFFFF: 11.86 percent
+2025-02-20 18:04:18,307 :: #DE1F07: 0.00 percent
+2025-02-20 18:04:18,307 :: #949494: 3.57 percent
+2025-02-20 18:04:18,307 :: total: 15.42 percent
+2025-02-20 18:04:18,469 :: Average imperviousness near trees: 16.54347936771918
+2025-02-20 19:57:57,414 :: Imperviousness for: masked_43_3_op_2023.jpg with ratio 2.24
+2025-02-20 19:57:58,487 :: Color contribution for area near trees
+2025-02-20 19:57:58,487 :: #FFFFFF: 8.42 percent
+2025-02-20 19:57:58,487 :: #DE1F07: 0.36 percent
+2025-02-20 19:57:58,487 :: #949494: 0.46 percent
+2025-02-20 19:57:58,487 :: total: 9.23 percent
+2025-02-20 19:58:13,365 :: Imperviousness for: masked_43_4_op_2023.jpg with ratio 2.24
+2025-02-20 19:58:15,372 :: Color contribution for area near trees
+2025-02-20 19:58:15,372 :: #FFFFFF: 10.51 percent
+2025-02-20 19:58:15,372 :: #DE1F07: 8.01 percent
+2025-02-20 19:58:15,372 :: #949494: 2.04 percent
+2025-02-20 19:58:15,372 :: total: 20.57 percent
+2025-02-20 19:59:07,398 :: Imperviousness for: masked_44_3_op_2023.jpg with ratio 2.24
+2025-02-20 19:59:10,368 :: Color contribution for area near trees
+2025-02-20 19:59:10,368 :: #FFFFFF: 10.06 percent
+2025-02-20 19:59:10,368 :: #DE1F07: 10.47 percent
+2025-02-20 19:59:10,368 :: #949494: 5.26 percent
+2025-02-20 19:59:10,368 :: total: 25.80 percent
+2025-02-20 19:59:54,036 :: Imperviousness for: masked_44_4_op_2023.jpg with ratio 2.24
+2025-02-20 19:59:56,597 :: Color contribution for area near trees
+2025-02-20 19:59:56,597 :: #FFFFFF: 7.71 percent
+2025-02-20 19:59:56,597 :: #DE1F07: 9.29 percent
+2025-02-20 19:59:56,597 :: #949494: 9.04 percent
+2025-02-20 19:59:56,597 :: total: 26.04 percent
+2025-02-20 20:00:30,095 :: Imperviousness for: masked_45_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:00:32,518 :: Color contribution for area near trees
+2025-02-20 20:00:32,518 :: #FFFFFF: 8.91 percent
+2025-02-20 20:00:32,518 :: #DE1F07: 7.29 percent
+2025-02-20 20:00:32,518 :: #949494: 11.55 percent
+2025-02-20 20:00:32,518 :: total: 27.75 percent
+2025-02-20 20:01:07,176 :: Imperviousness for: masked_45_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:01:09,450 :: Color contribution for area near trees
+2025-02-20 20:01:09,450 :: #FFFFFF: 7.55 percent
+2025-02-20 20:01:09,450 :: #DE1F07: 9.13 percent
+2025-02-20 20:01:09,450 :: #949494: 10.68 percent
+2025-02-20 20:01:09,450 :: total: 27.36 percent
+2025-02-20 20:01:47,988 :: Imperviousness for: masked_46_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:01:50,380 :: Color contribution for area near trees
+2025-02-20 20:01:50,380 :: #FFFFFF: 8.69 percent
+2025-02-20 20:01:50,381 :: #DE1F07: 6.84 percent
+2025-02-20 20:01:50,381 :: #949494: 8.01 percent
+2025-02-20 20:01:50,381 :: total: 23.54 percent
+2025-02-20 20:02:21,561 :: Imperviousness for: masked_46_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:02:23,540 :: Color contribution for area near trees
+2025-02-20 20:02:23,540 :: #FFFFFF: 6.51 percent
+2025-02-20 20:02:23,540 :: #DE1F07: 6.64 percent
+2025-02-20 20:02:23,540 :: #949494: 8.96 percent
+2025-02-20 20:02:23,540 :: total: 22.12 percent
+2025-02-20 20:02:42,347 :: Imperviousness for: masked_47_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:02:44,035 :: Color contribution for area near trees
+2025-02-20 20:02:44,035 :: #FFFFFF: 7.70 percent
+2025-02-20 20:02:44,035 :: #DE1F07: 3.96 percent
+2025-02-20 20:02:44,035 :: #949494: 9.98 percent
+2025-02-20 20:02:44,035 :: total: 21.64 percent
+2025-02-20 20:02:52,255 :: Imperviousness for: masked_47_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:02:53,627 :: Color contribution for area near trees
+2025-02-20 20:02:53,628 :: #FFFFFF: 7.44 percent
+2025-02-20 20:02:53,628 :: #DE1F07: 0.25 percent
+2025-02-20 20:02:53,628 :: #949494: 6.60 percent
+2025-02-20 20:02:53,628 :: total: 14.29 percent
+2025-02-20 20:02:58,144 :: Imperviousness for: masked_48_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:02:59,354 :: Color contribution for area near trees
+2025-02-20 20:02:59,354 :: #FFFFFF: 0.83 percent
+2025-02-20 20:02:59,354 :: #DE1F07: 0.03 percent
+2025-02-20 20:02:59,354 :: #949494: 0.05 percent
+2025-02-20 20:02:59,354 :: total: 0.91 percent
+2025-02-20 20:03:01,360 :: Imperviousness for: masked_48_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:03:02,196 :: Color contribution for area near trees
+2025-02-20 20:03:02,196 :: #FFFFFF: 1.03 percent
+2025-02-20 20:03:02,196 :: #DE1F07: 0.77 percent
+2025-02-20 20:03:02,196 :: #949494: 1.92 percent
+2025-02-20 20:03:02,196 :: total: 3.73 percent
+2025-02-20 20:03:04,839 :: Imperviousness for: masked_53_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:03:05,943 :: Color contribution for area near trees
+2025-02-20 20:03:05,944 :: #FFFFFF: 11.85 percent
+2025-02-20 20:03:05,944 :: #DE1F07: 2.18 percent
+2025-02-20 20:03:05,944 :: #949494: 1.02 percent
+2025-02-20 20:03:05,944 :: total: 15.05 percent
+2025-02-20 20:03:24,541 :: Imperviousness for: masked_53_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:03:26,602 :: Color contribution for area near trees
+2025-02-20 20:03:26,602 :: #FFFFFF: 11.39 percent
+2025-02-20 20:03:26,602 :: #DE1F07: 10.70 percent
+2025-02-20 20:03:26,602 :: #949494: 4.80 percent
+2025-02-20 20:03:26,602 :: total: 26.89 percent
+2025-02-20 20:04:06,245 :: Imperviousness for: masked_54_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:04:08,771 :: Color contribution for area near trees
+2025-02-20 20:04:08,771 :: #FFFFFF: 9.47 percent
+2025-02-20 20:04:08,771 :: #DE1F07: 11.37 percent
+2025-02-20 20:04:08,771 :: #949494: 8.81 percent
+2025-02-20 20:04:08,771 :: total: 29.65 percent
+2025-02-20 20:04:45,892 :: Imperviousness for: masked_54_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:04:48,062 :: Color contribution for area near trees
+2025-02-20 20:04:48,062 :: #FFFFFF: 8.89 percent
+2025-02-20 20:04:48,062 :: #DE1F07: 9.77 percent
+2025-02-20 20:04:48,062 :: #949494: 12.04 percent
+2025-02-20 20:04:48,062 :: total: 30.70 percent
+2025-02-20 20:05:15,095 :: Imperviousness for: masked_55_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:05:17,001 :: Color contribution for area near trees
+2025-02-20 20:05:17,002 :: #FFFFFF: 8.68 percent
+2025-02-20 20:05:17,002 :: #DE1F07: 7.68 percent
+2025-02-20 20:05:17,002 :: #949494: 13.94 percent
+2025-02-20 20:05:17,002 :: total: 30.29 percent
+2025-02-20 20:05:48,356 :: Imperviousness for: masked_55_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:05:50,469 :: Color contribution for area near trees
+2025-02-20 20:05:50,469 :: #FFFFFF: 7.53 percent
+2025-02-20 20:05:50,469 :: #DE1F07: 7.54 percent
+2025-02-20 20:05:50,469 :: #949494: 10.01 percent
+2025-02-20 20:05:50,469 :: total: 25.08 percent
+2025-02-20 20:06:07,065 :: Imperviousness for: masked_56_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:08,767 :: Color contribution for area near trees
+2025-02-20 20:06:08,767 :: #FFFFFF: 8.46 percent
+2025-02-20 20:06:08,767 :: #DE1F07: 4.05 percent
+2025-02-20 20:06:08,767 :: #949494: 7.37 percent
+2025-02-20 20:06:08,767 :: total: 19.88 percent
+2025-02-20 20:06:30,918 :: Imperviousness for: masked_56_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:32,730 :: Color contribution for area near trees
+2025-02-20 20:06:32,731 :: #FFFFFF: 6.38 percent
+2025-02-20 20:06:32,731 :: #DE1F07: 1.98 percent
+2025-02-20 20:06:32,731 :: #949494: 6.65 percent
+2025-02-20 20:06:32,731 :: total: 15.01 percent
+2025-02-20 20:06:35,727 :: Imperviousness for: masked_57_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:36,560 :: Color contribution for area near trees
+2025-02-20 20:06:36,560 :: #FFFFFF: 6.67 percent
+2025-02-20 20:06:36,560 :: #DE1F07: 7.43 percent
+2025-02-20 20:06:36,560 :: #949494: 9.63 percent
+2025-02-20 20:06:36,560 :: total: 23.73 percent
+2025-02-20 20:06:37,531 :: Imperviousness for: masked_57_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:38,292 :: Color contribution for area near trees
+2025-02-20 20:06:38,292 :: #FFFFFF: 0.00 percent
+2025-02-20 20:06:38,292 :: #DE1F07: 0.89 percent
+2025-02-20 20:06:38,292 :: #949494: 0.07 percent
+2025-02-20 20:06:38,292 :: total: 0.96 percent
+2025-02-20 20:06:41,115 :: Imperviousness for: masked_58_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:42,236 :: Color contribution for area near trees
+2025-02-20 20:06:42,236 :: #FFFFFF: 2.11 percent
+2025-02-20 20:06:42,236 :: #DE1F07: 0.10 percent
+2025-02-20 20:06:42,236 :: #949494: 0.54 percent
+2025-02-20 20:06:42,236 :: total: 2.74 percent
+2025-02-20 20:06:45,534 :: Imperviousness for: masked_15_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:46,486 :: Color contribution for area near trees
+2025-02-20 20:06:46,487 :: #FFFFFF: 5.58 percent
+2025-02-20 20:06:46,487 :: #DE1F07: 0.85 percent
+2025-02-20 20:06:46,487 :: #949494: 0.89 percent
+2025-02-20 20:06:46,487 :: total: 7.32 percent
+2025-02-20 20:06:49,958 :: Imperviousness for: masked_16_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:50,839 :: Color contribution for area near trees
+2025-02-20 20:06:50,839 :: #FFFFFF: 9.14 percent
+2025-02-20 20:06:50,839 :: #DE1F07: 0.23 percent
+2025-02-20 20:06:50,839 :: #949494: 2.30 percent
+2025-02-20 20:06:50,839 :: total: 11.67 percent
+2025-02-20 20:06:51,962 :: Imperviousness for: masked_16_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:52,724 :: Color contribution for area near trees
+2025-02-20 20:06:52,724 :: #FFFFFF: 14.67 percent
+2025-02-20 20:06:52,724 :: #DE1F07: 0.00 percent
+2025-02-20 20:06:52,724 :: #949494: 1.66 percent
+2025-02-20 20:06:52,724 :: total: 16.33 percent
+2025-02-20 20:06:54,042 :: Imperviousness for: masked_15_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:06:54,813 :: Color contribution for area near trees
+2025-02-20 20:06:54,813 :: #FFFFFF: 3.85 percent
+2025-02-20 20:06:54,813 :: #DE1F07: 2.10 percent
+2025-02-20 20:06:54,813 :: #949494: 7.90 percent
+2025-02-20 20:06:54,813 :: total: 13.84 percent
+2025-02-20 20:07:15,443 :: Imperviousness for: masked_15_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:07:17,169 :: Color contribution for area near trees
+2025-02-20 20:07:17,169 :: #FFFFFF: 7.65 percent
+2025-02-20 20:07:17,169 :: #DE1F07: 6.65 percent
+2025-02-20 20:07:17,169 :: #949494: 5.10 percent
+2025-02-20 20:07:17,169 :: total: 19.41 percent
+2025-02-20 20:07:46,575 :: Imperviousness for: masked_16_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:07:48,598 :: Color contribution for area near trees
+2025-02-20 20:07:48,598 :: #FFFFFF: 8.29 percent
+2025-02-20 20:07:48,598 :: #DE1F07: 7.03 percent
+2025-02-20 20:07:48,598 :: #949494: 6.19 percent
+2025-02-20 20:07:48,598 :: total: 21.51 percent
+2025-02-20 20:07:53,891 :: Imperviousness for: masked_16_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:07:54,831 :: Color contribution for area near trees
+2025-02-20 20:07:54,831 :: #FFFFFF: 5.70 percent
+2025-02-20 20:07:54,832 :: #DE1F07: 2.83 percent
+2025-02-20 20:07:54,832 :: #949494: 10.70 percent
+2025-02-20 20:07:54,832 :: total: 19.23 percent
+2025-02-20 20:07:57,719 :: Imperviousness for: masked_17_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:07:58,561 :: Color contribution for area near trees
+2025-02-20 20:07:58,561 :: #FFFFFF: 6.83 percent
+2025-02-20 20:07:58,561 :: #DE1F07: 5.52 percent
+2025-02-20 20:07:58,561 :: #949494: 3.49 percent
+2025-02-20 20:07:58,561 :: total: 15.83 percent
+2025-02-20 20:07:59,904 :: Imperviousness for: masked_17_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:08:00,677 :: Color contribution for area near trees
+2025-02-20 20:08:00,677 :: #FFFFFF: 10.19 percent
+2025-02-20 20:08:00,677 :: #DE1F07: 1.91 percent
+2025-02-20 20:08:00,677 :: #949494: 3.73 percent
+2025-02-20 20:08:00,677 :: total: 15.83 percent
+2025-02-20 20:08:01,840 :: Imperviousness for: masked_24_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:08:02,632 :: Color contribution for area near trees
+2025-02-20 20:08:02,632 :: #FFFFFF: 7.28 percent
+2025-02-20 20:08:02,632 :: #DE1F07: 0.08 percent
+2025-02-20 20:08:02,632 :: #949494: 0.73 percent
+2025-02-20 20:08:02,632 :: total: 8.09 percent
+2025-02-20 20:08:04,804 :: Imperviousness for: masked_24_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:08:05,844 :: Color contribution for area near trees
+2025-02-20 20:08:05,844 :: #FFFFFF: 28.57 percent
+2025-02-20 20:08:05,845 :: #DE1F07: 0.42 percent
+2025-02-20 20:08:05,845 :: #949494: 3.94 percent
+2025-02-20 20:08:05,845 :: total: 32.92 percent
+2025-02-20 20:08:15,934 :: Imperviousness for: masked_25_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:08:17,630 :: Color contribution for area near trees
+2025-02-20 20:08:17,630 :: #FFFFFF: 13.11 percent
+2025-02-20 20:08:17,631 :: #DE1F07: 2.89 percent
+2025-02-20 20:08:17,631 :: #949494: 6.23 percent
+2025-02-20 20:08:17,631 :: total: 22.23 percent
+2025-02-20 20:08:57,087 :: Imperviousness for: masked_25_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:08:59,539 :: Color contribution for area near trees
+2025-02-20 20:08:59,539 :: #FFFFFF: 9.43 percent
+2025-02-20 20:08:59,539 :: #DE1F07: 8.84 percent
+2025-02-20 20:08:59,539 :: #949494: 9.26 percent
+2025-02-20 20:08:59,539 :: total: 27.52 percent
+2025-02-20 20:09:46,669 :: Imperviousness for: masked_26_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:09:49,167 :: Color contribution for area near trees
+2025-02-20 20:09:49,167 :: #FFFFFF: 8.41 percent
+2025-02-20 20:09:49,167 :: #DE1F07: 9.18 percent
+2025-02-20 20:09:49,167 :: #949494: 10.69 percent
+2025-02-20 20:09:49,167 :: total: 28.29 percent
+2025-02-20 20:10:33,339 :: Imperviousness for: masked_26_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:10:35,687 :: Color contribution for area near trees
+2025-02-20 20:10:35,687 :: #FFFFFF: 7.98 percent
+2025-02-20 20:10:35,687 :: #DE1F07: 8.52 percent
+2025-02-20 20:10:35,687 :: #949494: 8.53 percent
+2025-02-20 20:10:35,687 :: total: 25.04 percent
+2025-02-20 20:10:52,965 :: Imperviousness for: masked_27_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:10:54,505 :: Color contribution for area near trees
+2025-02-20 20:10:54,506 :: #FFFFFF: 9.67 percent
+2025-02-20 20:10:54,506 :: #DE1F07: 4.32 percent
+2025-02-20 20:10:54,506 :: #949494: 6.64 percent
+2025-02-20 20:10:54,506 :: total: 20.64 percent
+2025-02-20 20:11:01,056 :: Imperviousness for: masked_27_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:11:02,018 :: Color contribution for area near trees
+2025-02-20 20:11:02,018 :: #FFFFFF: 3.62 percent
+2025-02-20 20:11:02,018 :: #DE1F07: 2.83 percent
+2025-02-20 20:11:02,018 :: #949494: 2.71 percent
+2025-02-20 20:11:02,018 :: total: 9.16 percent
+2025-02-20 20:11:03,521 :: Imperviousness for: masked_22_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:11:04,326 :: Color contribution for area near trees
+2025-02-20 20:11:04,326 :: #FFFFFF: 7.14 percent
+2025-02-20 20:11:04,326 :: #DE1F07: 6.80 percent
+2025-02-20 20:11:04,326 :: #949494: 1.51 percent
+2025-02-20 20:11:04,326 :: total: 15.44 percent
+2025-02-20 20:11:06,435 :: Imperviousness for: masked_23_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:11:07,619 :: Color contribution for area near trees
+2025-02-20 20:11:07,619 :: #FFFFFF: 17.60 percent
+2025-02-20 20:11:07,619 :: #DE1F07: 0.97 percent
+2025-02-20 20:11:07,619 :: #949494: 1.63 percent
+2025-02-20 20:11:07,619 :: total: 20.20 percent
+2025-02-20 20:11:09,579 :: Imperviousness for: masked_23_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:11:10,426 :: Color contribution for area near trees
+2025-02-20 20:11:10,426 :: #FFFFFF: 9.94 percent
+2025-02-20 20:11:10,427 :: #DE1F07: 2.18 percent
+2025-02-20 20:11:10,427 :: #949494: 1.09 percent
+2025-02-20 20:11:10,427 :: total: 13.21 percent
+2025-02-20 20:11:21,472 :: Imperviousness for: masked_24_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:11:23,484 :: Color contribution for area near trees
+2025-02-20 20:11:23,485 :: #FFFFFF: 13.96 percent
+2025-02-20 20:11:23,485 :: #DE1F07: 8.82 percent
+2025-02-20 20:11:23,485 :: #949494: 5.05 percent
+2025-02-20 20:11:23,485 :: total: 27.82 percent
+2025-02-20 20:11:51,597 :: Imperviousness for: masked_24_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:11:54,274 :: Color contribution for area near trees
+2025-02-20 20:11:54,274 :: #FFFFFF: 8.94 percent
+2025-02-20 20:11:54,274 :: #DE1F07: 10.46 percent
+2025-02-20 20:11:54,274 :: #949494: 5.73 percent
+2025-02-20 20:11:54,274 :: total: 25.12 percent
+2025-02-20 20:12:30,752 :: Imperviousness for: masked_25_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:12:33,565 :: Color contribution for area near trees
+2025-02-20 20:12:33,565 :: #FFFFFF: 9.78 percent
+2025-02-20 20:12:33,565 :: #DE1F07: 13.31 percent
+2025-02-20 20:12:33,565 :: #949494: 8.69 percent
+2025-02-20 20:12:33,565 :: total: 31.77 percent
+2025-02-20 20:13:02,961 :: Imperviousness for: masked_25_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:13:04,985 :: Color contribution for area near trees
+2025-02-20 20:13:04,985 :: #FFFFFF: 9.72 percent
+2025-02-20 20:13:04,985 :: #DE1F07: 6.69 percent
+2025-02-20 20:13:04,985 :: #949494: 13.33 percent
+2025-02-20 20:13:04,985 :: total: 29.74 percent
+2025-02-20 20:13:46,490 :: Imperviousness for: masked_26_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:13:48,810 :: Color contribution for area near trees
+2025-02-20 20:13:48,810 :: #FFFFFF: 8.41 percent
+2025-02-20 20:13:48,810 :: #DE1F07: 9.86 percent
+2025-02-20 20:13:48,810 :: #949494: 10.96 percent
+2025-02-20 20:13:48,810 :: total: 29.22 percent
+2025-02-20 20:14:32,559 :: Imperviousness for: masked_26_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:14:34,936 :: Color contribution for area near trees
+2025-02-20 20:14:34,936 :: #FFFFFF: 6.84 percent
+2025-02-20 20:14:34,936 :: #DE1F07: 9.27 percent
+2025-02-20 20:14:34,936 :: #949494: 13.01 percent
+2025-02-20 20:14:34,936 :: total: 29.12 percent
+2025-02-20 20:15:06,705 :: Imperviousness for: masked_27_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:15:08,697 :: Color contribution for area near trees
+2025-02-20 20:15:08,697 :: #FFFFFF: 8.65 percent
+2025-02-20 20:15:08,697 :: #DE1F07: 7.75 percent
+2025-02-20 20:15:08,697 :: #949494: 7.12 percent
+2025-02-20 20:15:08,697 :: total: 23.52 percent
+2025-02-20 20:15:19,077 :: Imperviousness for: masked_27_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:15:20,259 :: Color contribution for area near trees
+2025-02-20 20:15:20,259 :: #FFFFFF: 10.16 percent
+2025-02-20 20:15:20,259 :: #DE1F07: 6.52 percent
+2025-02-20 20:15:20,260 :: #949494: 3.63 percent
+2025-02-20 20:15:20,260 :: total: 20.31 percent
+2025-02-20 20:15:25,751 :: Imperviousness for: masked_28_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:15:26,682 :: Color contribution for area near trees
+2025-02-20 20:15:26,682 :: #FFFFFF: 8.98 percent
+2025-02-20 20:15:26,682 :: #DE1F07: 8.60 percent
+2025-02-20 20:15:26,682 :: #949494: 1.66 percent
+2025-02-20 20:15:26,682 :: total: 19.24 percent
+2025-02-20 20:15:29,281 :: Imperviousness for: masked_32_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:15:30,205 :: Color contribution for area near trees
+2025-02-20 20:15:30,205 :: #FFFFFF: 11.75 percent
+2025-02-20 20:15:30,205 :: #DE1F07: 4.88 percent
+2025-02-20 20:15:30,205 :: #949494: 1.25 percent
+2025-02-20 20:15:30,205 :: total: 17.88 percent
+2025-02-20 20:15:33,895 :: Imperviousness for: masked_33_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:15:35,267 :: Color contribution for area near trees
+2025-02-20 20:15:35,267 :: #FFFFFF: 11.91 percent
+2025-02-20 20:15:35,267 :: #DE1F07: 2.85 percent
+2025-02-20 20:15:35,267 :: #949494: 2.25 percent
+2025-02-20 20:15:35,267 :: total: 17.01 percent
+2025-02-20 20:15:39,808 :: Imperviousness for: masked_33_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:15:40,966 :: Color contribution for area near trees
+2025-02-20 20:15:40,966 :: #FFFFFF: 12.37 percent
+2025-02-20 20:15:40,966 :: #DE1F07: 6.66 percent
+2025-02-20 20:15:40,966 :: #949494: 1.61 percent
+2025-02-20 20:15:40,966 :: total: 20.64 percent
+2025-02-20 20:15:58,218 :: Imperviousness for: masked_34_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:16:00,705 :: Color contribution for area near trees
+2025-02-20 20:16:00,706 :: #FFFFFF: 12.03 percent
+2025-02-20 20:16:00,706 :: #DE1F07: 11.46 percent
+2025-02-20 20:16:00,706 :: #949494: 4.57 percent
+2025-02-20 20:16:00,706 :: total: 28.06 percent
+2025-02-20 20:16:44,854 :: Imperviousness for: masked_34_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:16:47,643 :: Color contribution for area near trees
+2025-02-20 20:16:47,643 :: #FFFFFF: 9.70 percent
+2025-02-20 20:16:47,643 :: #DE1F07: 13.27 percent
+2025-02-20 20:16:47,643 :: #949494: 8.53 percent
+2025-02-20 20:16:47,643 :: total: 31.50 percent
+2025-02-20 20:17:17,034 :: Imperviousness for: masked_35_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:17:19,193 :: Color contribution for area near trees
+2025-02-20 20:17:19,194 :: #FFFFFF: 10.03 percent
+2025-02-20 20:17:19,194 :: #DE1F07: 16.16 percent
+2025-02-20 20:17:19,194 :: #949494: 11.86 percent
+2025-02-20 20:17:19,194 :: total: 38.04 percent
+2025-02-20 20:17:50,147 :: Imperviousness for: masked_35_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:17:52,153 :: Color contribution for area near trees
+2025-02-20 20:17:52,154 :: #FFFFFF: 9.86 percent
+2025-02-20 20:17:52,154 :: #DE1F07: 8.63 percent
+2025-02-20 20:17:52,154 :: #949494: 20.14 percent
+2025-02-20 20:17:52,154 :: total: 38.63 percent
+2025-02-20 20:18:22,163 :: Imperviousness for: masked_36_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:18:24,251 :: Color contribution for area near trees
+2025-02-20 20:18:24,251 :: #FFFFFF: 8.19 percent
+2025-02-20 20:18:24,251 :: #DE1F07: 5.43 percent
+2025-02-20 20:18:24,251 :: #949494: 12.39 percent
+2025-02-20 20:18:24,251 :: total: 26.01 percent
+2025-02-20 20:19:08,746 :: Imperviousness for: masked_36_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:19:11,250 :: Color contribution for area near trees
+2025-02-20 20:19:11,250 :: #FFFFFF: 8.11 percent
+2025-02-20 20:19:11,250 :: #DE1F07: 9.78 percent
+2025-02-20 20:19:11,250 :: #949494: 9.59 percent
+2025-02-20 20:19:11,250 :: total: 27.47 percent
+2025-02-20 20:19:51,673 :: Imperviousness for: masked_37_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:19:53,949 :: Color contribution for area near trees
+2025-02-20 20:19:53,949 :: #FFFFFF: 7.69 percent
+2025-02-20 20:19:53,949 :: #DE1F07: 9.13 percent
+2025-02-20 20:19:53,949 :: #949494: 7.62 percent
+2025-02-20 20:19:53,949 :: total: 24.44 percent
+2025-02-20 20:20:13,183 :: Imperviousness for: masked_37_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:20:14,692 :: Color contribution for area near trees
+2025-02-20 20:20:14,693 :: #FFFFFF: 12.21 percent
+2025-02-20 20:20:14,693 :: #DE1F07: 6.55 percent
+2025-02-20 20:20:14,693 :: #949494: 4.13 percent
+2025-02-20 20:20:14,693 :: total: 22.88 percent
+2025-02-20 20:20:22,012 :: Imperviousness for: masked_38_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:20:23,050 :: Color contribution for area near trees
+2025-02-20 20:20:23,050 :: #FFFFFF: 10.76 percent
+2025-02-20 20:20:23,050 :: #DE1F07: 6.12 percent
+2025-02-20 20:20:23,050 :: #949494: 4.59 percent
+2025-02-20 20:20:23,050 :: total: 21.46 percent
+2025-02-20 20:20:24,010 :: Imperviousness for: masked_32_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:20:24,778 :: Color contribution for area near trees
+2025-02-20 20:20:24,778 :: #FFFFFF: 0.00 percent
+2025-02-20 20:20:24,778 :: #DE1F07: 0.00 percent
+2025-02-20 20:20:24,778 :: #949494: 0.00 percent
+2025-02-20 20:20:24,778 :: total: 0.00 percent
+2025-02-20 20:20:40,048 :: Imperviousness for: masked_33_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:20:41,833 :: Color contribution for area near trees
+2025-02-20 20:20:41,833 :: #FFFFFF: 10.99 percent
+2025-02-20 20:20:41,833 :: #DE1F07: 8.04 percent
+2025-02-20 20:20:41,833 :: #949494: 6.93 percent
+2025-02-20 20:20:41,833 :: total: 25.96 percent
+2025-02-20 20:21:22,017 :: Imperviousness for: masked_33_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:21:24,819 :: Color contribution for area near trees
+2025-02-20 20:21:24,819 :: #FFFFFF: 12.49 percent
+2025-02-20 20:21:24,819 :: #DE1F07: 10.74 percent
+2025-02-20 20:21:24,819 :: #949494: 4.93 percent
+2025-02-20 20:21:24,819 :: total: 28.17 percent
+2025-02-20 20:22:09,581 :: Imperviousness for: masked_34_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:22:12,920 :: Color contribution for area near trees
+2025-02-20 20:22:12,920 :: #FFFFFF: 10.95 percent
+2025-02-20 20:22:12,920 :: #DE1F07: 10.70 percent
+2025-02-20 20:22:12,920 :: #949494: 6.19 percent
+2025-02-20 20:22:12,920 :: total: 27.84 percent
+2025-02-20 20:22:50,602 :: Imperviousness for: masked_34_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:22:52,813 :: Color contribution for area near trees
+2025-02-20 20:22:52,813 :: #FFFFFF: 8.39 percent
+2025-02-20 20:22:52,813 :: #DE1F07: 15.64 percent
+2025-02-20 20:22:52,813 :: #949494: 13.57 percent
+2025-02-20 20:22:52,813 :: total: 37.60 percent
+2025-02-20 20:23:16,300 :: Imperviousness for: masked_35_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:23:18,005 :: Color contribution for area near trees
+2025-02-20 20:23:18,006 :: #FFFFFF: 7.88 percent
+2025-02-20 20:23:18,006 :: #DE1F07: 19.45 percent
+2025-02-20 20:23:18,006 :: #949494: 18.71 percent
+2025-02-20 20:23:18,006 :: total: 46.04 percent
+2025-02-20 20:23:39,032 :: Imperviousness for: masked_35_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:23:40,731 :: Color contribution for area near trees
+2025-02-20 20:23:40,731 :: #FFFFFF: 13.44 percent
+2025-02-20 20:23:40,731 :: #DE1F07: 12.49 percent
+2025-02-20 20:23:40,732 :: #949494: 19.17 percent
+2025-02-20 20:23:40,732 :: total: 45.10 percent
+2025-02-20 20:24:04,477 :: Imperviousness for: masked_36_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:24:06,668 :: Color contribution for area near trees
+2025-02-20 20:24:06,668 :: #FFFFFF: 9.55 percent
+2025-02-20 20:24:06,668 :: #DE1F07: 5.91 percent
+2025-02-20 20:24:06,668 :: #949494: 15.62 percent
+2025-02-20 20:24:06,668 :: total: 31.09 percent
+2025-02-20 20:24:41,254 :: Imperviousness for: masked_36_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:24:43,739 :: Color contribution for area near trees
+2025-02-20 20:24:43,739 :: #FFFFFF: 11.85 percent
+2025-02-20 20:24:43,739 :: #DE1F07: 7.08 percent
+2025-02-20 20:24:43,740 :: #949494: 6.53 percent
+2025-02-20 20:24:43,740 :: total: 25.46 percent
+2025-02-20 20:25:21,035 :: Imperviousness for: masked_37_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:25:23,349 :: Color contribution for area near trees
+2025-02-20 20:25:23,349 :: #FFFFFF: 9.86 percent
+2025-02-20 20:25:23,349 :: #DE1F07: 9.28 percent
+2025-02-20 20:25:23,349 :: #949494: 6.16 percent
+2025-02-20 20:25:23,349 :: total: 25.30 percent
+2025-02-20 20:25:59,578 :: Imperviousness for: masked_37_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:26:01,686 :: Color contribution for area near trees
+2025-02-20 20:26:01,686 :: #FFFFFF: 10.22 percent
+2025-02-20 20:26:01,686 :: #DE1F07: 9.96 percent
+2025-02-20 20:26:01,686 :: #949494: 5.78 percent
+2025-02-20 20:26:01,686 :: total: 25.96 percent
+2025-02-20 20:26:15,470 :: Imperviousness for: masked_38_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:26:16,699 :: Color contribution for area near trees
+2025-02-20 20:26:16,699 :: #FFFFFF: 10.27 percent
+2025-02-20 20:26:16,699 :: #DE1F07: 11.69 percent
+2025-02-20 20:26:16,699 :: #949494: 3.32 percent
+2025-02-20 20:26:16,699 :: total: 25.27 percent
+2025-02-20 20:26:17,717 :: Imperviousness for: masked_42_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:26:18,496 :: Color contribution for area near trees
+2025-02-20 20:26:18,496 :: #FFFFFF: 4.28 percent
+2025-02-20 20:26:18,496 :: #DE1F07: 0.29 percent
+2025-02-20 20:26:18,496 :: #949494: 0.00 percent
+2025-02-20 20:26:18,496 :: total: 4.57 percent
+2025-02-20 20:26:20,343 :: Imperviousness for: masked_43_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:26:21,412 :: Color contribution for area near trees
+2025-02-20 20:26:21,412 :: #FFFFFF: 4.85 percent
+2025-02-20 20:26:21,412 :: #DE1F07: 0.22 percent
+2025-02-20 20:26:21,412 :: #949494: 0.53 percent
+2025-02-20 20:26:21,412 :: total: 5.60 percent
+2025-02-20 20:26:33,982 :: Imperviousness for: masked_43_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:26:36,249 :: Color contribution for area near trees
+2025-02-20 20:26:36,249 :: #FFFFFF: 11.74 percent
+2025-02-20 20:26:36,249 :: #DE1F07: 9.16 percent
+2025-02-20 20:26:36,249 :: #949494: 4.02 percent
+2025-02-20 20:26:36,250 :: total: 24.92 percent
+2025-02-20 20:27:15,829 :: Imperviousness for: masked_44_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:27:18,564 :: Color contribution for area near trees
+2025-02-20 20:27:18,564 :: #FFFFFF: 10.44 percent
+2025-02-20 20:27:18,564 :: #DE1F07: 13.42 percent
+2025-02-20 20:27:18,564 :: #949494: 7.64 percent
+2025-02-20 20:27:18,564 :: total: 31.51 percent
+2025-02-20 20:27:45,297 :: Imperviousness for: masked_44_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:27:47,418 :: Color contribution for area near trees
+2025-02-20 20:27:47,418 :: #FFFFFF: 9.54 percent
+2025-02-20 20:27:47,418 :: #DE1F07: 12.00 percent
+2025-02-20 20:27:47,418 :: #949494: 13.69 percent
+2025-02-20 20:27:47,418 :: total: 35.23 percent
+2025-02-20 20:28:12,603 :: Imperviousness for: masked_45_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:28:14,356 :: Color contribution for area near trees
+2025-02-20 20:28:14,357 :: #FFFFFF: 9.37 percent
+2025-02-20 20:28:14,357 :: #DE1F07: 16.69 percent
+2025-02-20 20:28:14,357 :: #949494: 16.49 percent
+2025-02-20 20:28:14,357 :: total: 42.55 percent
+2025-02-20 20:28:38,417 :: Imperviousness for: masked_45_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:28:40,195 :: Color contribution for area near trees
+2025-02-20 20:28:40,195 :: #FFFFFF: 6.63 percent
+2025-02-20 20:28:40,195 :: #DE1F07: 11.39 percent
+2025-02-20 20:28:40,195 :: #949494: 15.05 percent
+2025-02-20 20:28:40,195 :: total: 33.07 percent
+2025-02-20 20:29:04,082 :: Imperviousness for: masked_46_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:05,898 :: Color contribution for area near trees
+2025-02-20 20:29:05,898 :: #FFFFFF: 7.85 percent
+2025-02-20 20:29:05,898 :: #DE1F07: 7.56 percent
+2025-02-20 20:29:05,898 :: #949494: 15.00 percent
+2025-02-20 20:29:05,898 :: total: 30.40 percent
+2025-02-20 20:29:21,095 :: Imperviousness for: masked_46_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:22,843 :: Color contribution for area near trees
+2025-02-20 20:29:22,843 :: #FFFFFF: 9.82 percent
+2025-02-20 20:29:22,843 :: #DE1F07: 2.38 percent
+2025-02-20 20:29:22,843 :: #949494: 10.03 percent
+2025-02-20 20:29:22,843 :: total: 22.23 percent
+2025-02-20 20:29:32,300 :: Imperviousness for: masked_47_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:34,103 :: Color contribution for area near trees
+2025-02-20 20:29:34,103 :: #FFFFFF: 9.33 percent
+2025-02-20 20:29:34,103 :: #DE1F07: 1.43 percent
+2025-02-20 20:29:34,103 :: #949494: 5.72 percent
+2025-02-20 20:29:34,103 :: total: 16.47 percent
+2025-02-20 20:29:36,392 :: Imperviousness for: masked_47_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:37,466 :: Color contribution for area near trees
+2025-02-20 20:29:37,466 :: #FFFFFF: 7.12 percent
+2025-02-20 20:29:37,466 :: #DE1F07: 0.01 percent
+2025-02-20 20:29:37,466 :: #949494: 2.74 percent
+2025-02-20 20:29:37,466 :: total: 9.86 percent
+2025-02-20 20:29:38,945 :: Imperviousness for: masked_48_1_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:39,831 :: Color contribution for area near trees
+2025-02-20 20:29:39,831 :: #FFFFFF: 1.64 percent
+2025-02-20 20:29:39,831 :: #DE1F07: 1.02 percent
+2025-02-20 20:29:39,831 :: #949494: 0.32 percent
+2025-02-20 20:29:39,831 :: total: 2.98 percent
+2025-02-20 20:29:41,213 :: Imperviousness for: masked_42_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:42,037 :: Color contribution for area near trees
+2025-02-20 20:29:42,037 :: #FFFFFF: 1.35 percent
+2025-02-20 20:29:42,037 :: #DE1F07: 0.33 percent
+2025-02-20 20:29:42,037 :: #949494: 0.57 percent
+2025-02-20 20:29:42,037 :: total: 2.25 percent
+2025-02-20 20:29:44,924 :: Imperviousness for: masked_58_2_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:45,848 :: Color contribution for area near trees
+2025-02-20 20:29:45,848 :: #FFFFFF: 6.46 percent
+2025-02-20 20:29:45,848 :: #DE1F07: 0.01 percent
+2025-02-20 20:29:45,848 :: #949494: 0.32 percent
+2025-02-20 20:29:45,848 :: total: 6.79 percent
+2025-02-20 20:29:47,267 :: Imperviousness for: masked_53_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:48,081 :: Color contribution for area near trees
+2025-02-20 20:29:48,082 :: #FFFFFF: 18.44 percent
+2025-02-20 20:29:48,082 :: #DE1F07: 1.63 percent
+2025-02-20 20:29:48,082 :: #949494: 2.90 percent
+2025-02-20 20:29:48,082 :: total: 22.97 percent
+2025-02-20 20:29:49,703 :: Imperviousness for: masked_53_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:50,498 :: Color contribution for area near trees
+2025-02-20 20:29:50,498 :: #FFFFFF: 12.49 percent
+2025-02-20 20:29:50,499 :: #DE1F07: 6.79 percent
+2025-02-20 20:29:50,499 :: #949494: 5.27 percent
+2025-02-20 20:29:50,499 :: total: 24.55 percent
+2025-02-20 20:29:52,276 :: Imperviousness for: masked_54_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:29:53,061 :: Color contribution for area near trees
+2025-02-20 20:29:53,061 :: #FFFFFF: 7.33 percent
+2025-02-20 20:29:53,061 :: #DE1F07: 8.34 percent
+2025-02-20 20:29:53,061 :: #949494: 12.05 percent
+2025-02-20 20:29:53,061 :: total: 27.72 percent
+2025-02-20 20:30:01,938 :: Imperviousness for: masked_54_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:30:03,063 :: Color contribution for area near trees
+2025-02-20 20:30:03,064 :: #FFFFFF: 7.39 percent
+2025-02-20 20:30:03,064 :: #DE1F07: 9.40 percent
+2025-02-20 20:30:03,064 :: #949494: 7.23 percent
+2025-02-20 20:30:03,064 :: total: 24.02 percent
+2025-02-20 20:30:04,259 :: Imperviousness for: masked_55_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:30:05,025 :: Color contribution for area near trees
+2025-02-20 20:30:05,025 :: #FFFFFF: 1.64 percent
+2025-02-20 20:30:05,025 :: #DE1F07: 0.00 percent
+2025-02-20 20:30:05,025 :: #949494: 20.89 percent
+2025-02-20 20:30:05,025 :: total: 22.54 percent
+2025-02-20 20:30:08,046 :: Imperviousness for: masked_55_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:30:08,899 :: Color contribution for area near trees
+2025-02-20 20:30:08,899 :: #FFFFFF: 8.07 percent
+2025-02-20 20:30:08,899 :: #DE1F07: 1.65 percent
+2025-02-20 20:30:08,899 :: #949494: 5.13 percent
+2025-02-20 20:30:08,899 :: total: 14.85 percent
+2025-02-20 20:30:12,543 :: Imperviousness for: masked_56_3_op_2023.jpg with ratio 2.24
+2025-02-20 20:30:13,453 :: Color contribution for area near trees
+2025-02-20 20:30:13,453 :: #FFFFFF: 10.96 percent
+2025-02-20 20:30:13,453 :: #DE1F07: 0.99 percent
+2025-02-20 20:30:13,453 :: #949494: 3.49 percent
+2025-02-20 20:30:13,453 :: total: 15.44 percent
+2025-02-20 20:30:14,474 :: Imperviousness for: masked_56_4_op_2023.jpg with ratio 2.24
+2025-02-20 20:30:15,236 :: Color contribution for area near trees
+2025-02-20 20:30:15,236 :: #FFFFFF: 14.85 percent
+2025-02-20 20:30:15,236 :: #DE1F07: 0.00 percent
+2025-02-20 20:30:15,236 :: #949494: 4.10 percent
+2025-02-20 20:30:15,236 :: total: 18.96 percent
+2025-02-20 20:30:15,400 :: Average imperviousness near trees: 21.83481001943857
+2025-02-20 21:01:46,831 :: Imperviousness for: masked_43_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:01:47,859 :: Color contribution for area near trees
+2025-02-20 21:01:47,859 :: #FFFFFF: 8.97 percent
+2025-02-20 21:01:47,859 :: #DE1F07: 0.35 percent
+2025-02-20 21:01:47,859 :: #949494: 0.62 percent
+2025-02-20 21:01:47,859 :: total: 9.94 percent
+2025-02-20 21:02:02,644 :: Imperviousness for: masked_43_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:02:04,518 :: Color contribution for area near trees
+2025-02-20 21:02:04,518 :: #FFFFFF: 11.55 percent
+2025-02-20 21:02:04,518 :: #DE1F07: 10.76 percent
+2025-02-20 21:02:04,518 :: #949494: 2.42 percent
+2025-02-20 21:02:04,518 :: total: 24.73 percent
+2025-02-20 21:02:55,297 :: Imperviousness for: masked_44_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:02:58,155 :: Color contribution for area near trees
+2025-02-20 21:02:58,155 :: #FFFFFF: 11.57 percent
+2025-02-20 21:02:58,155 :: #DE1F07: 14.23 percent
+2025-02-20 21:02:58,155 :: #949494: 6.09 percent
+2025-02-20 21:02:58,155 :: total: 31.89 percent
+2025-02-20 21:03:40,938 :: Imperviousness for: masked_44_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:03:43,442 :: Color contribution for area near trees
+2025-02-20 21:03:43,443 :: #FFFFFF: 9.17 percent
+2025-02-20 21:03:43,443 :: #DE1F07: 12.71 percent
+2025-02-20 21:03:43,443 :: #949494: 10.38 percent
+2025-02-20 21:03:43,443 :: total: 32.25 percent
+2025-02-20 21:04:16,257 :: Imperviousness for: masked_45_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:04:18,573 :: Color contribution for area near trees
+2025-02-20 21:04:18,573 :: #FFFFFF: 10.13 percent
+2025-02-20 21:04:18,573 :: #DE1F07: 10.11 percent
+2025-02-20 21:04:18,573 :: #949494: 12.98 percent
+2025-02-20 21:04:18,573 :: total: 33.23 percent
+2025-02-20 21:04:52,255 :: Imperviousness for: masked_45_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:04:54,438 :: Color contribution for area near trees
+2025-02-20 21:04:54,438 :: #FFFFFF: 8.64 percent
+2025-02-20 21:04:54,438 :: #DE1F07: 12.52 percent
+2025-02-20 21:04:54,438 :: #949494: 11.98 percent
+2025-02-20 21:04:54,438 :: total: 33.14 percent
+2025-02-20 21:05:32,193 :: Imperviousness for: masked_46_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:05:34,510 :: Color contribution for area near trees
+2025-02-20 21:05:34,510 :: #FFFFFF: 10.17 percent
+2025-02-20 21:05:34,510 :: #DE1F07: 9.55 percent
+2025-02-20 21:05:34,510 :: #949494: 9.34 percent
+2025-02-20 21:05:34,510 :: total: 29.06 percent
+2025-02-20 21:06:04,720 :: Imperviousness for: masked_46_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:06:06,643 :: Color contribution for area near trees
+2025-02-20 21:06:06,643 :: #FFFFFF: 7.54 percent
+2025-02-20 21:06:06,643 :: #DE1F07: 9.10 percent
+2025-02-20 21:06:06,643 :: #949494: 10.24 percent
+2025-02-20 21:06:06,643 :: total: 26.88 percent
+2025-02-20 21:06:25,072 :: Imperviousness for: masked_47_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:06:26,686 :: Color contribution for area near trees
+2025-02-20 21:06:26,686 :: #FFFFFF: 8.98 percent
+2025-02-20 21:06:26,686 :: #DE1F07: 5.43 percent
+2025-02-20 21:06:26,686 :: #949494: 11.46 percent
+2025-02-20 21:06:26,686 :: total: 25.87 percent
+2025-02-20 21:06:34,835 :: Imperviousness for: masked_47_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:06:36,145 :: Color contribution for area near trees
+2025-02-20 21:06:36,145 :: #FFFFFF: 8.09 percent
+2025-02-20 21:06:36,145 :: #DE1F07: 0.37 percent
+2025-02-20 21:06:36,145 :: #949494: 7.52 percent
+2025-02-20 21:06:36,145 :: total: 15.99 percent
+2025-02-20 21:06:40,615 :: Imperviousness for: masked_48_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:06:41,763 :: Color contribution for area near trees
+2025-02-20 21:06:41,763 :: #FFFFFF: 0.70 percent
+2025-02-20 21:06:41,763 :: #DE1F07: 0.02 percent
+2025-02-20 21:06:41,763 :: #949494: 0.05 percent
+2025-02-20 21:06:41,763 :: total: 0.77 percent
+2025-02-20 21:06:43,736 :: Imperviousness for: masked_48_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:06:44,563 :: Color contribution for area near trees
+2025-02-20 21:06:44,563 :: #FFFFFF: 1.05 percent
+2025-02-20 21:06:44,563 :: #DE1F07: 1.03 percent
+2025-02-20 21:06:44,563 :: #949494: 2.08 percent
+2025-02-20 21:06:44,563 :: total: 4.16 percent
+2025-02-20 21:06:47,210 :: Imperviousness for: masked_53_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:06:48,234 :: Color contribution for area near trees
+2025-02-20 21:06:48,234 :: #FFFFFF: 11.11 percent
+2025-02-20 21:06:48,234 :: #DE1F07: 2.84 percent
+2025-02-20 21:06:48,234 :: #949494: 1.12 percent
+2025-02-20 21:06:48,234 :: total: 15.07 percent
+2025-02-20 21:07:07,158 :: Imperviousness for: masked_53_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:07:09,070 :: Color contribution for area near trees
+2025-02-20 21:07:09,070 :: #FFFFFF: 12.40 percent
+2025-02-20 21:07:09,070 :: #DE1F07: 14.17 percent
+2025-02-20 21:07:09,070 :: #949494: 5.30 percent
+2025-02-20 21:07:09,070 :: total: 31.87 percent
+2025-02-20 21:07:47,773 :: Imperviousness for: masked_54_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:07:50,192 :: Color contribution for area near trees
+2025-02-20 21:07:50,193 :: #FFFFFF: 10.93 percent
+2025-02-20 21:07:50,193 :: #DE1F07: 15.07 percent
+2025-02-20 21:07:50,193 :: #949494: 9.88 percent
+2025-02-20 21:07:50,193 :: total: 35.88 percent
+2025-02-20 21:08:26,250 :: Imperviousness for: masked_54_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:08:28,374 :: Color contribution for area near trees
+2025-02-20 21:08:28,374 :: #FFFFFF: 10.27 percent
+2025-02-20 21:08:28,374 :: #DE1F07: 13.04 percent
+2025-02-20 21:08:28,374 :: #949494: 13.52 percent
+2025-02-20 21:08:28,374 :: total: 36.83 percent
+2025-02-20 21:08:54,704 :: Imperviousness for: masked_55_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:08:56,548 :: Color contribution for area near trees
+2025-02-20 21:08:56,548 :: #FFFFFF: 10.19 percent
+2025-02-20 21:08:56,548 :: #DE1F07: 10.34 percent
+2025-02-20 21:08:56,548 :: #949494: 15.54 percent
+2025-02-20 21:08:56,548 :: total: 36.07 percent
+2025-02-20 21:09:27,172 :: Imperviousness for: masked_55_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:09:29,205 :: Color contribution for area near trees
+2025-02-20 21:09:29,205 :: #FFFFFF: 8.90 percent
+2025-02-20 21:09:29,205 :: #DE1F07: 10.29 percent
+2025-02-20 21:09:29,205 :: #949494: 11.12 percent
+2025-02-20 21:09:29,205 :: total: 30.31 percent
+2025-02-20 21:09:45,508 :: Imperviousness for: masked_56_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:09:47,114 :: Color contribution for area near trees
+2025-02-20 21:09:47,114 :: #FFFFFF: 9.60 percent
+2025-02-20 21:09:47,114 :: #DE1F07: 5.51 percent
+2025-02-20 21:09:47,114 :: #949494: 8.24 percent
+2025-02-20 21:09:47,114 :: total: 23.36 percent
+2025-02-20 21:10:08,766 :: Imperviousness for: masked_56_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:10,513 :: Color contribution for area near trees
+2025-02-20 21:10:10,513 :: #FFFFFF: 7.23 percent
+2025-02-20 21:10:10,513 :: #DE1F07: 2.78 percent
+2025-02-20 21:10:10,513 :: #949494: 7.68 percent
+2025-02-20 21:10:10,513 :: total: 17.69 percent
+2025-02-20 21:10:13,447 :: Imperviousness for: masked_57_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:14,278 :: Color contribution for area near trees
+2025-02-20 21:10:14,278 :: #FFFFFF: 8.39 percent
+2025-02-20 21:10:14,278 :: #DE1F07: 10.09 percent
+2025-02-20 21:10:14,278 :: #949494: 10.79 percent
+2025-02-20 21:10:14,278 :: total: 29.27 percent
+2025-02-20 21:10:15,248 :: Imperviousness for: masked_57_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:16,007 :: Color contribution for area near trees
+2025-02-20 21:10:16,007 :: #FFFFFF: 0.00 percent
+2025-02-20 21:10:16,007 :: #DE1F07: 1.06 percent
+2025-02-20 21:10:16,007 :: #949494: 0.12 percent
+2025-02-20 21:10:16,007 :: total: 1.19 percent
+2025-02-20 21:10:18,889 :: Imperviousness for: masked_58_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:19,951 :: Color contribution for area near trees
+2025-02-20 21:10:19,951 :: #FFFFFF: 2.00 percent
+2025-02-20 21:10:19,951 :: #DE1F07: 0.11 percent
+2025-02-20 21:10:19,951 :: #949494: 0.59 percent
+2025-02-20 21:10:19,951 :: total: 2.70 percent
+2025-02-20 21:10:23,223 :: Imperviousness for: masked_15_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:24,165 :: Color contribution for area near trees
+2025-02-20 21:10:24,165 :: #FFFFFF: 5.02 percent
+2025-02-20 21:10:24,165 :: #DE1F07: 1.01 percent
+2025-02-20 21:10:24,165 :: #949494: 1.02 percent
+2025-02-20 21:10:24,165 :: total: 7.06 percent
+2025-02-20 21:10:27,574 :: Imperviousness for: masked_16_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:28,488 :: Color contribution for area near trees
+2025-02-20 21:10:28,488 :: #FFFFFF: 9.21 percent
+2025-02-20 21:10:28,488 :: #DE1F07: 0.27 percent
+2025-02-20 21:10:28,488 :: #949494: 2.64 percent
+2025-02-20 21:10:28,488 :: total: 12.12 percent
+2025-02-20 21:10:29,605 :: Imperviousness for: masked_16_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:30,388 :: Color contribution for area near trees
+2025-02-20 21:10:30,389 :: #FFFFFF: 15.54 percent
+2025-02-20 21:10:30,389 :: #DE1F07: 0.00 percent
+2025-02-20 21:10:30,389 :: #949494: 2.27 percent
+2025-02-20 21:10:30,389 :: total: 17.80 percent
+2025-02-20 21:10:31,694 :: Imperviousness for: masked_15_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:32,485 :: Color contribution for area near trees
+2025-02-20 21:10:32,485 :: #FFFFFF: 4.12 percent
+2025-02-20 21:10:32,485 :: #DE1F07: 2.63 percent
+2025-02-20 21:10:32,485 :: #949494: 9.33 percent
+2025-02-20 21:10:32,485 :: total: 16.08 percent
+2025-02-20 21:10:53,133 :: Imperviousness for: masked_15_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:10:54,822 :: Color contribution for area near trees
+2025-02-20 21:10:54,822 :: #FFFFFF: 8.54 percent
+2025-02-20 21:10:54,822 :: #DE1F07: 8.84 percent
+2025-02-20 21:10:54,822 :: #949494: 5.64 percent
+2025-02-20 21:10:54,822 :: total: 23.02 percent
+2025-02-20 21:11:23,528 :: Imperviousness for: masked_16_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:11:25,469 :: Color contribution for area near trees
+2025-02-20 21:11:25,469 :: #FFFFFF: 9.08 percent
+2025-02-20 21:11:25,469 :: #DE1F07: 9.46 percent
+2025-02-20 21:11:25,469 :: #949494: 6.86 percent
+2025-02-20 21:11:25,469 :: total: 25.40 percent
+2025-02-20 21:11:30,697 :: Imperviousness for: masked_16_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:11:31,634 :: Color contribution for area near trees
+2025-02-20 21:11:31,634 :: #FFFFFF: 6.25 percent
+2025-02-20 21:11:31,634 :: #DE1F07: 3.84 percent
+2025-02-20 21:11:31,634 :: #949494: 12.24 percent
+2025-02-20 21:11:31,634 :: total: 22.33 percent
+2025-02-20 21:11:34,471 :: Imperviousness for: masked_17_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:11:35,308 :: Color contribution for area near trees
+2025-02-20 21:11:35,308 :: #FFFFFF: 7.82 percent
+2025-02-20 21:11:35,308 :: #DE1F07: 7.39 percent
+2025-02-20 21:11:35,308 :: #949494: 3.91 percent
+2025-02-20 21:11:35,308 :: total: 19.12 percent
+2025-02-20 21:11:36,637 :: Imperviousness for: masked_17_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:11:37,408 :: Color contribution for area near trees
+2025-02-20 21:11:37,408 :: #FFFFFF: 10.52 percent
+2025-02-20 21:11:37,409 :: #DE1F07: 2.30 percent
+2025-02-20 21:11:37,409 :: #949494: 4.01 percent
+2025-02-20 21:11:37,409 :: total: 16.83 percent
+2025-02-20 21:11:38,572 :: Imperviousness for: masked_24_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:11:39,361 :: Color contribution for area near trees
+2025-02-20 21:11:39,362 :: #FFFFFF: 8.27 percent
+2025-02-20 21:11:39,362 :: #DE1F07: 0.08 percent
+2025-02-20 21:11:39,362 :: #949494: 0.73 percent
+2025-02-20 21:11:39,362 :: total: 9.08 percent
+2025-02-20 21:11:41,577 :: Imperviousness for: masked_24_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:11:42,561 :: Color contribution for area near trees
+2025-02-20 21:11:42,561 :: #FFFFFF: 29.29 percent
+2025-02-20 21:11:42,561 :: #DE1F07: 0.56 percent
+2025-02-20 21:11:42,561 :: #949494: 4.10 percent
+2025-02-20 21:11:42,561 :: total: 33.94 percent
+2025-02-20 21:11:52,576 :: Imperviousness for: masked_25_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:11:54,140 :: Color contribution for area near trees
+2025-02-20 21:11:54,140 :: #FFFFFF: 13.88 percent
+2025-02-20 21:11:54,140 :: #DE1F07: 3.63 percent
+2025-02-20 21:11:54,140 :: #949494: 6.71 percent
+2025-02-20 21:11:54,140 :: total: 24.22 percent
+2025-02-20 21:12:32,518 :: Imperviousness for: masked_25_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:12:34,868 :: Color contribution for area near trees
+2025-02-20 21:12:34,868 :: #FFFFFF: 10.83 percent
+2025-02-20 21:12:34,868 :: #DE1F07: 11.80 percent
+2025-02-20 21:12:34,868 :: #949494: 10.29 percent
+2025-02-20 21:12:34,868 :: total: 32.91 percent
+2025-02-20 21:13:20,613 :: Imperviousness for: masked_26_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:13:23,064 :: Color contribution for area near trees
+2025-02-20 21:13:23,064 :: #FFFFFF: 9.74 percent
+2025-02-20 21:13:23,064 :: #DE1F07: 12.28 percent
+2025-02-20 21:13:23,064 :: #949494: 12.07 percent
+2025-02-20 21:13:23,064 :: total: 34.09 percent
+2025-02-20 21:14:05,728 :: Imperviousness for: masked_26_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:14:08,020 :: Color contribution for area near trees
+2025-02-20 21:14:08,020 :: #FFFFFF: 9.30 percent
+2025-02-20 21:14:08,020 :: #DE1F07: 11.37 percent
+2025-02-20 21:14:08,020 :: #949494: 9.57 percent
+2025-02-20 21:14:08,020 :: total: 30.24 percent
+2025-02-20 21:14:24,865 :: Imperviousness for: masked_27_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:14:26,358 :: Color contribution for area near trees
+2025-02-20 21:14:26,358 :: #FFFFFF: 10.50 percent
+2025-02-20 21:14:26,358 :: #DE1F07: 5.79 percent
+2025-02-20 21:14:26,358 :: #949494: 7.34 percent
+2025-02-20 21:14:26,358 :: total: 23.62 percent
+2025-02-20 21:14:32,735 :: Imperviousness for: masked_27_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:14:33,687 :: Color contribution for area near trees
+2025-02-20 21:14:33,687 :: #FFFFFF: 4.21 percent
+2025-02-20 21:14:33,687 :: #DE1F07: 3.72 percent
+2025-02-20 21:14:33,687 :: #949494: 3.02 percent
+2025-02-20 21:14:33,687 :: total: 10.96 percent
+2025-02-20 21:14:35,198 :: Imperviousness for: masked_22_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:14:35,991 :: Color contribution for area near trees
+2025-02-20 21:14:35,992 :: #FFFFFF: 6.91 percent
+2025-02-20 21:14:35,992 :: #DE1F07: 8.74 percent
+2025-02-20 21:14:35,992 :: #949494: 1.63 percent
+2025-02-20 21:14:35,992 :: total: 17.28 percent
+2025-02-20 21:14:38,110 :: Imperviousness for: masked_23_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:14:39,197 :: Color contribution for area near trees
+2025-02-20 21:14:39,197 :: #FFFFFF: 16.23 percent
+2025-02-20 21:14:39,197 :: #DE1F07: 1.27 percent
+2025-02-20 21:14:39,197 :: #949494: 2.04 percent
+2025-02-20 21:14:39,197 :: total: 19.55 percent
+2025-02-20 21:14:41,151 :: Imperviousness for: masked_23_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:14:41,989 :: Color contribution for area near trees
+2025-02-20 21:14:41,989 :: #FFFFFF: 9.35 percent
+2025-02-20 21:14:41,989 :: #DE1F07: 2.97 percent
+2025-02-20 21:14:41,989 :: #949494: 1.29 percent
+2025-02-20 21:14:41,989 :: total: 13.61 percent
+2025-02-20 21:14:52,876 :: Imperviousness for: masked_24_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:14:54,673 :: Color contribution for area near trees
+2025-02-20 21:14:54,673 :: #FFFFFF: 14.55 percent
+2025-02-20 21:14:54,673 :: #DE1F07: 11.48 percent
+2025-02-20 21:14:54,673 :: #949494: 5.55 percent
+2025-02-20 21:14:54,673 :: total: 31.58 percent
+2025-02-20 21:15:22,376 :: Imperviousness for: masked_24_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:15:24,844 :: Color contribution for area near trees
+2025-02-20 21:15:24,844 :: #FFFFFF: 9.63 percent
+2025-02-20 21:15:24,844 :: #DE1F07: 13.58 percent
+2025-02-20 21:15:24,844 :: #949494: 6.35 percent
+2025-02-20 21:15:24,844 :: total: 29.56 percent
+2025-02-20 21:16:01,061 :: Imperviousness for: masked_25_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:16:03,689 :: Color contribution for area near trees
+2025-02-20 21:16:03,689 :: #FFFFFF: 10.75 percent
+2025-02-20 21:16:03,689 :: #DE1F07: 17.26 percent
+2025-02-20 21:16:03,689 :: #949494: 9.38 percent
+2025-02-20 21:16:03,689 :: total: 37.39 percent
+2025-02-20 21:16:32,405 :: Imperviousness for: masked_25_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:16:34,370 :: Color contribution for area near trees
+2025-02-20 21:16:34,371 :: #FFFFFF: 11.26 percent
+2025-02-20 21:16:34,371 :: #DE1F07: 9.09 percent
+2025-02-20 21:16:34,371 :: #949494: 14.52 percent
+2025-02-20 21:16:34,371 :: total: 34.87 percent
+2025-02-20 21:17:14,714 :: Imperviousness for: masked_26_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:17:16,977 :: Color contribution for area near trees
+2025-02-20 21:17:16,977 :: #FFFFFF: 9.83 percent
+2025-02-20 21:17:16,977 :: #DE1F07: 13.10 percent
+2025-02-20 21:17:16,977 :: #949494: 12.17 percent
+2025-02-20 21:17:16,977 :: total: 35.10 percent
+2025-02-20 21:17:59,496 :: Imperviousness for: masked_26_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:18:01,839 :: Color contribution for area near trees
+2025-02-20 21:18:01,839 :: #FFFFFF: 8.25 percent
+2025-02-20 21:18:01,839 :: #DE1F07: 12.46 percent
+2025-02-20 21:18:01,839 :: #949494: 14.59 percent
+2025-02-20 21:18:01,839 :: total: 35.31 percent
+2025-02-20 21:18:32,584 :: Imperviousness for: masked_27_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:18:34,512 :: Color contribution for area near trees
+2025-02-20 21:18:34,512 :: #FFFFFF: 9.82 percent
+2025-02-20 21:18:34,512 :: #DE1F07: 10.39 percent
+2025-02-20 21:18:34,512 :: #949494: 8.07 percent
+2025-02-20 21:18:34,512 :: total: 28.28 percent
+2025-02-20 21:18:44,651 :: Imperviousness for: masked_27_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:18:45,810 :: Color contribution for area near trees
+2025-02-20 21:18:45,810 :: #FFFFFF: 10.92 percent
+2025-02-20 21:18:45,810 :: #DE1F07: 8.54 percent
+2025-02-20 21:18:45,810 :: #949494: 4.10 percent
+2025-02-20 21:18:45,810 :: total: 23.56 percent
+2025-02-20 21:18:51,144 :: Imperviousness for: masked_28_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:18:52,071 :: Color contribution for area near trees
+2025-02-20 21:18:52,071 :: #FFFFFF: 10.17 percent
+2025-02-20 21:18:52,071 :: #DE1F07: 11.36 percent
+2025-02-20 21:18:52,071 :: #949494: 1.96 percent
+2025-02-20 21:18:52,071 :: total: 23.49 percent
+2025-02-20 21:18:54,676 :: Imperviousness for: masked_32_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:18:55,586 :: Color contribution for area near trees
+2025-02-20 21:18:55,586 :: #FFFFFF: 11.26 percent
+2025-02-20 21:18:55,586 :: #DE1F07: 6.69 percent
+2025-02-20 21:18:55,586 :: #949494: 1.42 percent
+2025-02-20 21:18:55,586 :: total: 19.36 percent
+2025-02-20 21:18:59,291 :: Imperviousness for: masked_33_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:19:00,548 :: Color contribution for area near trees
+2025-02-20 21:19:00,549 :: #FFFFFF: 11.67 percent
+2025-02-20 21:19:00,549 :: #DE1F07: 4.00 percent
+2025-02-20 21:19:00,549 :: #949494: 2.73 percent
+2025-02-20 21:19:00,549 :: total: 18.40 percent
+2025-02-20 21:19:05,040 :: Imperviousness for: masked_33_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:19:06,139 :: Color contribution for area near trees
+2025-02-20 21:19:06,139 :: #FFFFFF: 12.66 percent
+2025-02-20 21:19:06,139 :: #DE1F07: 9.27 percent
+2025-02-20 21:19:06,139 :: #949494: 1.89 percent
+2025-02-20 21:19:06,139 :: total: 23.82 percent
+2025-02-20 21:19:23,852 :: Imperviousness for: masked_34_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:19:26,060 :: Color contribution for area near trees
+2025-02-20 21:19:26,061 :: #FFFFFF: 12.80 percent
+2025-02-20 21:19:26,061 :: #DE1F07: 15.31 percent
+2025-02-20 21:19:26,061 :: #949494: 5.12 percent
+2025-02-20 21:19:26,061 :: total: 33.22 percent
+2025-02-20 21:20:09,593 :: Imperviousness for: masked_34_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:20:12,241 :: Color contribution for area near trees
+2025-02-20 21:20:12,241 :: #FFFFFF: 10.92 percent
+2025-02-20 21:20:12,241 :: #DE1F07: 17.54 percent
+2025-02-20 21:20:12,241 :: #949494: 9.32 percent
+2025-02-20 21:20:12,241 :: total: 37.77 percent
+2025-02-20 21:20:41,025 :: Imperviousness for: masked_35_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:20:43,128 :: Color contribution for area near trees
+2025-02-20 21:20:43,128 :: #FFFFFF: 11.25 percent
+2025-02-20 21:20:43,128 :: #DE1F07: 21.30 percent
+2025-02-20 21:20:43,128 :: #949494: 12.66 percent
+2025-02-20 21:20:43,128 :: total: 45.21 percent
+2025-02-20 21:21:13,215 :: Imperviousness for: masked_35_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:21:15,163 :: Color contribution for area near trees
+2025-02-20 21:21:15,163 :: #FFFFFF: 10.96 percent
+2025-02-20 21:21:15,163 :: #DE1F07: 11.84 percent
+2025-02-20 21:21:15,163 :: #949494: 21.84 percent
+2025-02-20 21:21:15,163 :: total: 44.64 percent
+2025-02-20 21:21:44,512 :: Imperviousness for: masked_36_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:21:46,519 :: Color contribution for area near trees
+2025-02-20 21:21:46,519 :: #FFFFFF: 9.29 percent
+2025-02-20 21:21:46,519 :: #DE1F07: 7.38 percent
+2025-02-20 21:21:46,519 :: #949494: 13.74 percent
+2025-02-20 21:21:46,519 :: total: 30.42 percent
+2025-02-20 21:22:29,884 :: Imperviousness for: masked_36_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:22:32,321 :: Color contribution for area near trees
+2025-02-20 21:22:32,321 :: #FFFFFF: 9.33 percent
+2025-02-20 21:22:32,321 :: #DE1F07: 13.06 percent
+2025-02-20 21:22:32,321 :: #949494: 10.74 percent
+2025-02-20 21:22:32,321 :: total: 33.14 percent
+2025-02-20 21:23:11,661 :: Imperviousness for: masked_37_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:23:13,873 :: Color contribution for area near trees
+2025-02-20 21:23:13,873 :: #FFFFFF: 8.70 percent
+2025-02-20 21:23:13,873 :: #DE1F07: 12.25 percent
+2025-02-20 21:23:13,873 :: #949494: 8.64 percent
+2025-02-20 21:23:13,873 :: total: 29.58 percent
+2025-02-20 21:23:32,430 :: Imperviousness for: masked_37_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:23:33,905 :: Color contribution for area near trees
+2025-02-20 21:23:33,905 :: #FFFFFF: 13.20 percent
+2025-02-20 21:23:33,905 :: #DE1F07: 8.88 percent
+2025-02-20 21:23:33,905 :: #949494: 4.80 percent
+2025-02-20 21:23:33,905 :: total: 26.88 percent
+2025-02-20 21:23:41,028 :: Imperviousness for: masked_38_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:23:42,059 :: Color contribution for area near trees
+2025-02-20 21:23:42,059 :: #FFFFFF: 12.15 percent
+2025-02-20 21:23:42,059 :: #DE1F07: 7.93 percent
+2025-02-20 21:23:42,059 :: #949494: 5.29 percent
+2025-02-20 21:23:42,059 :: total: 25.37 percent
+2025-02-20 21:23:43,027 :: Imperviousness for: masked_32_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:23:43,792 :: Color contribution for area near trees
+2025-02-20 21:23:43,792 :: #FFFFFF: 0.00 percent
+2025-02-20 21:23:43,792 :: #DE1F07: 0.00 percent
+2025-02-20 21:23:43,792 :: #949494: 0.00 percent
+2025-02-20 21:23:43,792 :: total: 0.00 percent
+2025-02-20 21:23:58,795 :: Imperviousness for: masked_33_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:24:00,473 :: Color contribution for area near trees
+2025-02-20 21:24:00,473 :: #FFFFFF: 12.35 percent
+2025-02-20 21:24:00,473 :: #DE1F07: 10.66 percent
+2025-02-20 21:24:00,473 :: #949494: 7.60 percent
+2025-02-20 21:24:00,473 :: total: 30.61 percent
+2025-02-20 21:24:39,896 :: Imperviousness for: masked_33_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:24:42,507 :: Color contribution for area near trees
+2025-02-20 21:24:42,507 :: #FFFFFF: 13.72 percent
+2025-02-20 21:24:42,507 :: #DE1F07: 14.22 percent
+2025-02-20 21:24:42,507 :: #949494: 5.52 percent
+2025-02-20 21:24:42,507 :: total: 33.46 percent
+2025-02-20 21:25:28,804 :: Imperviousness for: masked_34_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:25:31,859 :: Color contribution for area near trees
+2025-02-20 21:25:31,860 :: #FFFFFF: 11.95 percent
+2025-02-20 21:25:31,860 :: #DE1F07: 14.17 percent
+2025-02-20 21:25:31,860 :: #949494: 6.93 percent
+2025-02-20 21:25:31,860 :: total: 33.05 percent
+2025-02-20 21:26:08,508 :: Imperviousness for: masked_34_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:26:10,672 :: Color contribution for area near trees
+2025-02-20 21:26:10,672 :: #FFFFFF: 9.45 percent
+2025-02-20 21:26:10,672 :: #DE1F07: 20.72 percent
+2025-02-20 21:26:10,672 :: #949494: 14.66 percent
+2025-02-20 21:26:10,672 :: total: 44.83 percent
+2025-02-20 21:26:33,429 :: Imperviousness for: masked_35_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:26:35,109 :: Color contribution for area near trees
+2025-02-20 21:26:35,109 :: #FFFFFF: 8.89 percent
+2025-02-20 21:26:35,109 :: #DE1F07: 25.28 percent
+2025-02-20 21:26:35,109 :: #949494: 19.62 percent
+2025-02-20 21:26:35,110 :: total: 53.80 percent
+2025-02-20 21:26:55,565 :: Imperviousness for: masked_35_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:26:57,206 :: Color contribution for area near trees
+2025-02-20 21:26:57,206 :: #FFFFFF: 14.61 percent
+2025-02-20 21:26:57,206 :: #DE1F07: 16.73 percent
+2025-02-20 21:26:57,206 :: #949494: 20.51 percent
+2025-02-20 21:26:57,206 :: total: 51.86 percent
+2025-02-20 21:27:20,533 :: Imperviousness for: masked_36_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:27:22,567 :: Color contribution for area near trees
+2025-02-20 21:27:22,567 :: #FFFFFF: 10.39 percent
+2025-02-20 21:27:22,567 :: #DE1F07: 8.16 percent
+2025-02-20 21:27:22,567 :: #949494: 17.48 percent
+2025-02-20 21:27:22,567 :: total: 36.03 percent
+2025-02-20 21:27:56,381 :: Imperviousness for: masked_36_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:27:58,709 :: Color contribution for area near trees
+2025-02-20 21:27:58,709 :: #FFFFFF: 13.15 percent
+2025-02-20 21:27:58,709 :: #DE1F07: 9.50 percent
+2025-02-20 21:27:58,709 :: #949494: 7.27 percent
+2025-02-20 21:27:58,709 :: total: 29.92 percent
+2025-02-20 21:28:35,061 :: Imperviousness for: masked_37_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:28:37,285 :: Color contribution for area near trees
+2025-02-20 21:28:37,285 :: #FFFFFF: 10.74 percent
+2025-02-20 21:28:37,285 :: #DE1F07: 12.42 percent
+2025-02-20 21:28:37,285 :: #949494: 7.00 percent
+2025-02-20 21:28:37,285 :: total: 30.15 percent
+2025-02-20 21:29:12,493 :: Imperviousness for: masked_37_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:29:14,545 :: Color contribution for area near trees
+2025-02-20 21:29:14,545 :: #FFFFFF: 11.41 percent
+2025-02-20 21:29:14,545 :: #DE1F07: 13.29 percent
+2025-02-20 21:29:14,545 :: #949494: 6.54 percent
+2025-02-20 21:29:14,545 :: total: 31.24 percent
+2025-02-20 21:29:27,977 :: Imperviousness for: masked_38_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:29:29,189 :: Color contribution for area near trees
+2025-02-20 21:29:29,189 :: #FFFFFF: 11.61 percent
+2025-02-20 21:29:29,189 :: #DE1F07: 15.46 percent
+2025-02-20 21:29:29,189 :: #949494: 3.75 percent
+2025-02-20 21:29:29,189 :: total: 30.82 percent
+2025-02-20 21:29:30,201 :: Imperviousness for: masked_42_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:29:30,975 :: Color contribution for area near trees
+2025-02-20 21:29:30,975 :: #FFFFFF: 3.54 percent
+2025-02-20 21:29:30,975 :: #DE1F07: 0.31 percent
+2025-02-20 21:29:30,975 :: #949494: 0.00 percent
+2025-02-20 21:29:30,975 :: total: 3.85 percent
+2025-02-20 21:29:32,856 :: Imperviousness for: masked_43_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:29:33,871 :: Color contribution for area near trees
+2025-02-20 21:29:33,871 :: #FFFFFF: 5.70 percent
+2025-02-20 21:29:33,871 :: #DE1F07: 0.21 percent
+2025-02-20 21:29:33,871 :: #949494: 0.58 percent
+2025-02-20 21:29:33,871 :: total: 6.49 percent
+2025-02-20 21:29:46,295 :: Imperviousness for: masked_43_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:29:48,303 :: Color contribution for area near trees
+2025-02-20 21:29:48,303 :: #FFFFFF: 12.73 percent
+2025-02-20 21:29:48,303 :: #DE1F07: 12.37 percent
+2025-02-20 21:29:48,303 :: #949494: 4.57 percent
+2025-02-20 21:29:48,303 :: total: 29.67 percent
+2025-02-20 21:30:27,017 :: Imperviousness for: masked_44_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:30:29,600 :: Color contribution for area near trees
+2025-02-20 21:30:29,600 :: #FFFFFF: 11.81 percent
+2025-02-20 21:30:29,600 :: #DE1F07: 17.96 percent
+2025-02-20 21:30:29,600 :: #949494: 8.45 percent
+2025-02-20 21:30:29,600 :: total: 38.21 percent
+2025-02-20 21:30:56,455 :: Imperviousness for: masked_44_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:30:58,474 :: Color contribution for area near trees
+2025-02-20 21:30:58,474 :: #FFFFFF: 10.53 percent
+2025-02-20 21:30:58,474 :: #DE1F07: 16.21 percent
+2025-02-20 21:30:58,474 :: #949494: 15.19 percent
+2025-02-20 21:30:58,474 :: total: 41.94 percent
+2025-02-20 21:31:22,838 :: Imperviousness for: masked_45_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:31:24,579 :: Color contribution for area near trees
+2025-02-20 21:31:24,579 :: #FFFFFF: 10.38 percent
+2025-02-20 21:31:24,579 :: #DE1F07: 22.26 percent
+2025-02-20 21:31:24,579 :: #949494: 17.68 percent
+2025-02-20 21:31:24,579 :: total: 50.31 percent
+2025-02-20 21:31:47,921 :: Imperviousness for: masked_45_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:31:49,652 :: Color contribution for area near trees
+2025-02-20 21:31:49,652 :: #FFFFFF: 7.78 percent
+2025-02-20 21:31:49,652 :: #DE1F07: 15.26 percent
+2025-02-20 21:31:49,652 :: #949494: 16.84 percent
+2025-02-20 21:31:49,652 :: total: 39.89 percent
+2025-02-20 21:32:13,245 :: Imperviousness for: masked_46_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:15,019 :: Color contribution for area near trees
+2025-02-20 21:32:15,019 :: #FFFFFF: 9.30 percent
+2025-02-20 21:32:15,019 :: #DE1F07: 10.37 percent
+2025-02-20 21:32:15,019 :: #949494: 16.80 percent
+2025-02-20 21:32:15,019 :: total: 36.48 percent
+2025-02-20 21:32:29,933 :: Imperviousness for: masked_46_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:31,582 :: Color contribution for area near trees
+2025-02-20 21:32:31,582 :: #FFFFFF: 11.10 percent
+2025-02-20 21:32:31,582 :: #DE1F07: 3.22 percent
+2025-02-20 21:32:31,582 :: #949494: 11.39 percent
+2025-02-20 21:32:31,582 :: total: 25.71 percent
+2025-02-20 21:32:42,876 :: Imperviousness for: masked_47_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:44,521 :: Color contribution for area near trees
+2025-02-20 21:32:44,521 :: #FFFFFF: 9.21 percent
+2025-02-20 21:32:44,521 :: #DE1F07: 1.99 percent
+2025-02-20 21:32:44,521 :: #949494: 6.26 percent
+2025-02-20 21:32:44,521 :: total: 17.45 percent
+2025-02-20 21:32:46,793 :: Imperviousness for: masked_47_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:47,820 :: Color contribution for area near trees
+2025-02-20 21:32:47,820 :: #FFFFFF: 7.77 percent
+2025-02-20 21:32:47,820 :: #DE1F07: 0.02 percent
+2025-02-20 21:32:47,820 :: #949494: 3.07 percent
+2025-02-20 21:32:47,820 :: total: 10.86 percent
+2025-02-20 21:32:49,300 :: Imperviousness for: masked_48_1_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:50,165 :: Color contribution for area near trees
+2025-02-20 21:32:50,166 :: #FFFFFF: 1.56 percent
+2025-02-20 21:32:50,166 :: #DE1F07: 1.25 percent
+2025-02-20 21:32:50,166 :: #949494: 0.28 percent
+2025-02-20 21:32:50,166 :: total: 3.09 percent
+2025-02-20 21:32:51,545 :: Imperviousness for: masked_42_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:52,360 :: Color contribution for area near trees
+2025-02-20 21:32:52,360 :: #FFFFFF: 1.41 percent
+2025-02-20 21:32:52,360 :: #DE1F07: 0.36 percent
+2025-02-20 21:32:52,360 :: #949494: 0.60 percent
+2025-02-20 21:32:52,360 :: total: 2.38 percent
+2025-02-20 21:32:55,370 :: Imperviousness for: masked_58_2_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:56,272 :: Color contribution for area near trees
+2025-02-20 21:32:56,272 :: #FFFFFF: 5.82 percent
+2025-02-20 21:32:56,272 :: #DE1F07: 0.01 percent
+2025-02-20 21:32:56,272 :: #949494: 0.33 percent
+2025-02-20 21:32:56,272 :: total: 6.16 percent
+2025-02-20 21:32:57,681 :: Imperviousness for: masked_53_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:32:58,488 :: Color contribution for area near trees
+2025-02-20 21:32:58,488 :: #FFFFFF: 19.77 percent
+2025-02-20 21:32:58,488 :: #DE1F07: 2.29 percent
+2025-02-20 21:32:58,489 :: #949494: 2.96 percent
+2025-02-20 21:32:58,489 :: total: 25.02 percent
+2025-02-20 21:33:00,109 :: Imperviousness for: masked_53_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:33:00,901 :: Color contribution for area near trees
+2025-02-20 21:33:00,901 :: #FFFFFF: 13.63 percent
+2025-02-20 21:33:00,902 :: #DE1F07: 9.27 percent
+2025-02-20 21:33:00,902 :: #949494: 5.63 percent
+2025-02-20 21:33:00,902 :: total: 28.53 percent
+2025-02-20 21:33:02,654 :: Imperviousness for: masked_54_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:33:03,440 :: Color contribution for area near trees
+2025-02-20 21:33:03,440 :: #FFFFFF: 9.37 percent
+2025-02-20 21:33:03,440 :: #DE1F07: 10.88 percent
+2025-02-20 21:33:03,440 :: #949494: 13.55 percent
+2025-02-20 21:33:03,440 :: total: 33.80 percent
+2025-02-20 21:33:12,089 :: Imperviousness for: masked_54_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:33:13,195 :: Color contribution for area near trees
+2025-02-20 21:33:13,196 :: #FFFFFF: 8.50 percent
+2025-02-20 21:33:13,196 :: #DE1F07: 12.69 percent
+2025-02-20 21:33:13,196 :: #949494: 8.02 percent
+2025-02-20 21:33:13,196 :: total: 29.21 percent
+2025-02-20 21:33:14,378 :: Imperviousness for: masked_55_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:33:15,144 :: Color contribution for area near trees
+2025-02-20 21:33:15,144 :: #FFFFFF: 2.50 percent
+2025-02-20 21:33:15,144 :: #DE1F07: 0.00 percent
+2025-02-20 21:33:15,144 :: #949494: 24.87 percent
+2025-02-20 21:33:15,144 :: total: 27.37 percent
+2025-02-20 21:33:18,114 :: Imperviousness for: masked_55_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:33:18,974 :: Color contribution for area near trees
+2025-02-20 21:33:18,974 :: #FFFFFF: 8.87 percent
+2025-02-20 21:33:18,974 :: #DE1F07: 2.21 percent
+2025-02-20 21:33:18,974 :: #949494: 5.48 percent
+2025-02-20 21:33:18,974 :: total: 16.56 percent
+2025-02-20 21:33:22,557 :: Imperviousness for: masked_56_3_op_2023.jpg with ratio 2.8
+2025-02-20 21:33:23,463 :: Color contribution for area near trees
+2025-02-20 21:33:23,463 :: #FFFFFF: 11.10 percent
+2025-02-20 21:33:23,463 :: #DE1F07: 1.30 percent
+2025-02-20 21:33:23,463 :: #949494: 3.64 percent
+2025-02-20 21:33:23,463 :: total: 16.05 percent
+2025-02-20 21:33:24,484 :: Imperviousness for: masked_56_4_op_2023.jpg with ratio 2.8
+2025-02-20 21:33:25,252 :: Color contribution for area near trees
+2025-02-20 21:33:25,253 :: #FFFFFF: 16.54 percent
+2025-02-20 21:33:25,253 :: #DE1F07: 0.00 percent
+2025-02-20 21:33:25,253 :: #949494: 3.54 percent
+2025-02-20 21:33:25,253 :: total: 20.08 percent
+2025-02-20 21:33:25,412 :: Average imperviousness near trees: 25.502399285096434

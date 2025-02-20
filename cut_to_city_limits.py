@@ -14,7 +14,7 @@ in_folder = "2023/images_masks/"
 out_folder = "2023/cut_images_masks/"
 
 # Create city area from borders (assuming borders are polygons)
-city_area = borders.geometry.union_all()
+city_area = borders.geometry.unary_union
 
 for idx, row in tiles.iterrows():
     # Load the corresponding image

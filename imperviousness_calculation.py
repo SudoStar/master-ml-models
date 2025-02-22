@@ -18,6 +18,7 @@ logging.basicConfig(
 # 2.24
 # 2.8
 
+
 def get_args():
     parser = argparse.ArgumentParser()
     arg = parser.add_argument
@@ -50,20 +51,32 @@ def main():
     ratio = args.ratio
 
     imp_results = []
+    tree_areas = []
 
     for mask_name in os.listdir(masks):
         if mask_name.endswith(".jpg") or mask_name.endswith(".jpeg"):
             mask_path = os.path.join(masks, mask_name)
-            differences = create_geometries(mask_path, max_width, ratio)
+            geoms, differences = create_geometries(mask_path, max_width, ratio)
+            tree_area = sum(p.area for p in geoms)
+            tree_areas.append(tree_area)
+
             logger.info(f"Imperviousness for: {mask_name} with ratio {str(ratio)}")
+            logger.info(f"Tree cluster area: {tree_area}")
+
             mask, raster_data, imp = calculate_imperviousness(mask_path, differences)
             imp_results.append(imp)
 
-            figure = create_figure(mask, raster_data)
+            if output == "none":
+                continue
 
+            figure = create_figure(mask, raster_data)
             output_path = os.path.join(output, mask_name)
             cv2.imwrite(output_path, figure)
+
     avg_imp = sum(imp_results) / len(imp_results)
+    total_area = sum(tree_areas)
+
+    logger.info(f"Total tree cluster area: {total_area}")
     logger.info(f"Average imperviousness near trees: {avg_imp}")
 
 
@@ -122,16 +135,19 @@ def create_geometries(image_path, max_width, ratio):
     )
 
     differences = []
+    geoms = []
 
     for contour in contours:
         coords = contour.squeeze().tolist()
         if len(coords) >= 3:
             geom = Polygon(coords)
+            geoms.append(geom)
+
             distance = calculate_buffer_distance(geom, ratio, max_width)
             buffered_geom = geom.buffer(distance)
             differences.append(buffered_geom.difference(geom))
 
-    return differences
+    return geoms, differences
 
 
 def calculate_imperviousness(image_path, differences):

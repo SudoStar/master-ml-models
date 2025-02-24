@@ -8,6 +8,44 @@ import numpy as np
 import seaborn as sns
 
 
+def get_stats(data, name):
+    data = np.array(data)
+    f = plt.figure(1, figsize=(4, 3))
+    sns.set_palette("Blues_d")
+
+    sns.histplot(data=data)
+    f.savefig(f"hist-{name}.pdf", bbox_inches="tight")
+
+    g = plt.figure(2, figsize=(4, 3))
+
+    g = sm.qqplot(data=data, line="s", fit=True)
+
+    g.savefig(f"qq-{name}.pdf", bbox_inches="tight")
+
+    print(f"Statistics for: {name}")
+
+    stat, p = shapiro(data)
+    print("Shapiro Statistics=%.3f, p=%.3f" % (stat, p))
+    # interpret
+    alpha = 0.05
+    if p > alpha:
+        print("Sample looks Gaussian (fail to reject H0)")
+    else:
+        print("Sample does not look Gaussian (reject H0)")
+
+    stat, p = normaltest(data)
+    print("Normal Statistics=%.3f, p=%.3f" % (stat, p))
+    # interpret
+    alpha = 0.05
+    if p > alpha:
+        print("Sample looks Gaussian (fail to reject H0)")
+    else:
+        print("Sample does not look Gaussian (reject H0)")
+
+    f.clf()
+    g.clf()
+
+
 def imp_nine():
 
     imp_nine_ind = np.array(
@@ -18,36 +56,7 @@ def imp_nine():
 
     print(stats.ttest_1samp(a=imp_nine_ind, popmean=imp_nine_hol))
 
-    f = plt.figure(1, figsize=(4, 3))
-    sns.set_palette("Blues_d")
-
-    sns.histplot(data=imp_nine_ind)
-    f.savefig("hist-imp.pdf", bbox_inches="tight")
-
-    g = plt.figure(2, figsize=(4, 3))
-
-    g = sm.qqplot(data=imp_nine_ind, line="s", fit=True)
-    g.show()
-
-    g.savefig("qq-imp.pdf", bbox_inches="tight")
-
-    stat, p = shapiro(imp_nine_ind)
-    print("Shapiro Statistics=%.3f, p=%.3f" % (stat, p))
-    # interpret
-    alpha = 0.05
-    if p > alpha:
-        print("Sample looks Gaussian (fail to reject H0)")
-    else:
-        print("Sample does not look Gaussian (reject H0)")
-
-    stat, p = normaltest(imp_nine_ind)
-    print("Normal Statistics=%.3f, p=%.3f" % (stat, p))
-    # interpret
-    alpha = 0.05
-    if p > alpha:
-        print("Sample looks Gaussian (fail to reject H0)")
-    else:
-        print("Sample does not look Gaussian (reject H0)")
+    get_stats(imp_nine_ind, "imp_nine")
 
 
 def poc_175():
@@ -66,6 +75,9 @@ def poc_175():
 
     print(stats.ttest_rel(a=a, b=b))
 
+    get_stats(a, "poc_q1_2014")
+    get_stats(b, "poc_q1_2023")
+
 
 def poc_224():
 
@@ -81,6 +93,9 @@ def poc_224():
 
     print(stats.ttest_rel(a=a, b=b))
 
+    get_stats(a, "poc_q2_2014")
+    get_stats(b, "poc_q2_2023")
+
 
 def poc_28():
 
@@ -95,6 +110,9 @@ def poc_28():
     b = [45.54, 54.45, 54.39, 55.84, 65.63, 63.75, 50.87, 62.74, 49.77]
 
     print(stats.ttest_rel(a=a, b=b))
+
+    get_stats(a, "poc_q3_2014")
+    get_stats(b, "poc_q3_2023")
 
 
 def cw_175():
@@ -726,4 +744,4 @@ def cw_28():
     print(stats.ttest_rel(a=a, b=b))
 
 
-imp_nine()
+poc_224()

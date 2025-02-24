@@ -325,6 +325,9 @@ def cw_175():
 
     print(stats.ttest_rel(a=a, b=b))
 
+    get_stats(a, "cw_q1_2014")
+    get_stats(b, "cw_q1_2023")
+
 
 def cw_224():
 
@@ -533,6 +536,9 @@ def cw_224():
     ]
 
     print(stats.ttest_rel(a=a, b=b))
+
+    get_stats(a, "cw_q2_2014")
+    get_stats(b, "cw_q2_2023")
 
 
 def cw_28():
@@ -743,5 +749,8 @@ def cw_28():
 
     print(stats.ttest_rel(a=a, b=b))
 
+    get_stats(a, "cw_q3_2014")
+    get_stats(b, "cw_q3_2023")
 
-poc_28()
+
+cw_28()

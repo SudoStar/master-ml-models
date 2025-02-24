@@ -744,4 +744,4 @@ def cw_28():
     print(stats.ttest_rel(a=a, b=b))
 
 
-poc_224()
+poc_28()

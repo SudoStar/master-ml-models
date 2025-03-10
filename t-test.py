@@ -26,7 +26,7 @@ def get_stats(data, name):
 
     stat, p = shapiro(data)
     print("Shapiro Statistics=%.3f, p=%.3f" % (stat, p))
-    # interpret
+
     alpha = 0.05
     if p > alpha:
         print("Sample looks Gaussian (fail to reject H0)")
@@ -35,7 +35,7 @@ def get_stats(data, name):
 
     stat, p = normaltest(data)
     print("Normal Statistics=%.3f, p=%.3f" % (stat, p))
-    # interpret
+
     alpha = 0.05
     if p > alpha:
         print("Sample looks Gaussian (fail to reject H0)")
@@ -45,13 +45,14 @@ def get_stats(data, name):
     f.clf()
     g.clf()
 
+    print(f"Average imp: {np.average(data)}")
+
 
 def imp_nine():
 
     imp_nine_ind = np.array(
         [39.98, 49.97, 50.56, 50.18, 59.62, 58.74, 51.05, 57.58, 47.59]
     )
-    # imp_nine_ind = [51.7]
     imp_nine_hol = 50.98
 
     print(stats.ttest_1samp(a=imp_nine_ind, popmean=imp_nine_hol))
@@ -751,6 +752,3 @@ def cw_28():
 
     get_stats(a, "cw_q3_2014")
     get_stats(b, "cw_q3_2023")
-
-
-cw_28()

@@ -34,8 +34,8 @@ classes = CLASSES
 img_size = 512
 
 weights_name = "unetformer-lsk_s-512crop-ms-epoch30-rep"
-weights_path = "model_weights/loveda/{}".format(weights_name)
-test_weights_name = "last"
+weights_path = "model_weights/unetformer/{}".format(weights_name)
+test_weights_name = weights_name
 log_name = "unetformer/{}".format(weights_name)
 monitor = "val_mIoU"
 monitor_mode = "max"
@@ -60,91 +60,6 @@ net = UNetFormer_lsk_t(num_classes=num_classes)
 # define the loss
 loss = UnetFormerLoss(ignore_index=ignore_index)
 use_aux_loss = True
-
-# define the dataloader
-
-
-def get_training_transform():
-    train_transform = [
-        albu.Resize(height=img_size, width=img_size),
-        albu.HorizontalFlip(p=0.5),
-        albu.Normalize(),
-    ]
-    return albu.Compose(train_transform)
-
-
-def get_val_transform():
-    val_transform = [
-        albu.Resize(height=img_size, width=img_size),
-        albu.Normalize(),
-    ]
-    return albu.Compose(val_transform)
-
-
-def train_aug(img, mask):
-    crop_aug = Compose(
-        [
-            RandomScale(scale_list=[0.75, 1.0, 1.25, 1.5], mode="value"),
-            SmartCropV1(
-                crop_size=img_size,
-                max_ratio=0.75,
-                ignore_index=ignore_index,
-                nopad=False,
-            ),
-        ]
-    )
-    img, mask = crop_aug(img, mask)
-    img, mask = np.array(img), np.array(mask)
-    aug = get_training_transform()(image=img.copy(), mask=mask.copy())
-    img, mask = aug["image"], aug["mask"]
-    return img, mask
-
-
-def val_aug(img, mask):
-    img, mask = np.array(img), np.array(mask)
-    aug = get_val_transform()(image=img.copy(), mask=mask.copy())
-    img, mask = aug["image"], aug["mask"]
-    return img, mask
-
-
-img_pths = [f for f in Path(OEM_DATA_DIR).rglob("*.tif") if "/labels/" in str(f)]
-
-training_pths = [
-    str(f) for f in img_pths if f.name in np.loadtxt(TRAIN_LIST, dtype=str)
-]
-val_pths = [str(f) for f in img_pths if f.name in np.loadtxt(VAL_LIST, dtype=str)]
-test_pths = [str(f) for f in img_pths if f.name in np.loadtxt(TEST_LIST, dtype=str)]
-
-train_set = OpenEarthMapDataset(
-    msk_list=training_pths,
-    augm=train_aug,
-)
-valid_set = OpenEarthMapDataset(
-    msk_list=val_pths,
-    augm=val_aug,
-)
-test_set = OpenEarthMapDataset(
-    msk_list=test_pths,
-    augm=val_aug,
-)
-
-train_loader = DataLoader(
-    dataset=train_set,
-    batch_size=train_batch_size,
-    num_workers=4,
-    pin_memory=True,
-    shuffle=True,
-    drop_last=True,
-)
-
-val_loader = DataLoader(
-    dataset=valid_set,
-    batch_size=val_batch_size,
-    num_workers=4,
-    shuffle=False,
-    pin_memory=True,
-    drop_last=False,
-)
 
 # define the optimizer
 layerwise_params = {

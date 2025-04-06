@@ -33,14 +33,14 @@ def label2rgb(mask):
     mask_rgb = np.zeros(shape=(h, w, 3), dtype=np.uint8)
     mask_convert = mask[np.newaxis, :, :]
     mask_rgb[np.all(mask_convert == 0, axis=0)] = [0, 0, 0]
-    mask_rgb[np.all(mask_convert == 1, axis=0)] = [128, 0, 0]
-    mask_rgb[np.all(mask_convert == 2, axis=0)] = [0, 255, 36]
+    mask_rgb[np.all(mask_convert == 1, axis=0)] = [0, 0, 128]
+    mask_rgb[np.all(mask_convert == 2, axis=0)] = [36, 255, 0]
     mask_rgb[np.all(mask_convert == 3, axis=0)] = [148, 148, 148]
     mask_rgb[np.all(mask_convert == 4, axis=0)] = [255, 255, 255]
-    mask_rgb[np.all(mask_convert == 5, axis=0)] = [34, 97, 38]
-    mask_rgb[np.all(mask_convert == 6, axis=0)] = [222, 31, 7]
-    mask_rgb[np.all(mask_convert == 7, axis=0)] = [75, 181, 73]
-    mask_rgb[np.all(mask_convert == 8, axis=0)] = [0, 69, 255]
+    mask_rgb[np.all(mask_convert == 5, axis=0)] = [38, 97, 34]
+    mask_rgb[np.all(mask_convert == 6, axis=0)] = [255, 69, 0]
+    mask_rgb[np.all(mask_convert == 7, axis=0)] = [73, 181, 75]
+    mask_rgb[np.all(mask_convert == 8, axis=0)] = [7, 31, 222]
     return mask_rgb
 
 

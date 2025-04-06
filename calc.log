@@ -7410,3 +7410,99 @@ INFO:__main__:Average imperviousness near trees: 37.88779104145064
 2025-02-22 15:38:44,133 :: total: 24.55 percent
 2025-02-22 15:38:44,133 :: Total tree cluster area: 418849551.0
 2025-02-22 15:38:44,133 :: Average imperviousness near trees: 21.83481001943857
+2025-04-06 07:55:17,282 :: Imperviousness for: s_2020.tif with ratio 2.24
+2025-04-06 07:55:17,282 :: Tree cluster area: 3120000.0
+2025-04-06 07:55:18,544 :: Color contribution for area near trees
+2025-04-06 07:55:18,544 :: #FFFFFF: 22.52 percent
+2025-04-06 07:55:18,544 :: #DE1F07: 0.00 percent
+2025-04-06 07:55:18,544 :: #949494: 44.14 percent
+2025-04-06 07:55:18,544 :: total: 66.66 percent
+2025-04-06 07:55:42,289 :: Imperviousness for: s_2024.tif with ratio 2.24
+2025-04-06 07:55:42,289 :: Tree cluster area: 3318470.0
+2025-04-06 07:55:43,528 :: Color contribution for area near trees
+2025-04-06 07:55:43,528 :: #FFFFFF: 21.64 percent
+2025-04-06 07:55:43,528 :: #DE1F07: 0.00 percent
+2025-04-06 07:55:43,528 :: #949494: 49.98 percent
+2025-04-06 07:55:43,528 :: total: 71.62 percent
+2025-04-06 07:55:44,098 :: Total tree cluster area: 6438470.0
+2025-04-06 07:55:44,098 :: Average imperviousness near trees: 69.13718898890559
+2025-04-06 08:04:55,959 :: Imperviousness for: s_2020.tif with ratio 2.24
+2025-04-06 08:04:55,959 :: Tree cluster area: 3120000.0
+2025-04-06 08:04:57,225 :: Color contribution for area near trees
+2025-04-06 08:04:57,225 :: #FFFFFF: 22.52 percent
+2025-04-06 08:04:57,225 :: #DE1F07: 0.08 percent
+2025-04-06 08:04:57,225 :: #949494: 44.14 percent
+2025-04-06 08:04:57,225 :: total: 66.74 percent
+2025-04-06 08:05:21,075 :: Imperviousness for: s_2024.tif with ratio 2.24
+2025-04-06 08:05:21,076 :: Tree cluster area: 3318470.0
+2025-04-06 08:05:22,315 :: Color contribution for area near trees
+2025-04-06 08:05:22,315 :: #FFFFFF: 21.64 percent
+2025-04-06 08:05:22,315 :: #DE1F07: 0.15 percent
+2025-04-06 08:05:22,315 :: #949494: 49.98 percent
+2025-04-06 08:05:22,315 :: total: 71.77 percent
+2025-04-06 08:05:22,884 :: Total tree cluster area: 6438470.0
+2025-04-06 08:05:22,884 :: Average imperviousness near trees: 69.25381042580915
+2025-04-06 08:07:14,777 :: Imperviousness for: s_2020.tif with ratio 2.24
+2025-04-06 08:07:14,778 :: Tree cluster area: 3120000.0
+2025-04-06 08:07:16,050 :: Color contribution for area near trees
+2025-04-06 08:07:16,050 :: #FFFFFF: 22.52 percent
+2025-04-06 08:07:16,050 :: #DE1F07: 0.08 percent
+2025-04-06 08:07:16,050 :: #949494: 44.14 percent
+2025-04-06 08:07:16,050 :: total: 66.74 percent
+2025-04-06 08:07:39,632 :: Imperviousness for: s_2024.tif with ratio 2.24
+2025-04-06 08:07:39,632 :: Tree cluster area: 3318470.0
+2025-04-06 08:07:40,883 :: Color contribution for area near trees
+2025-04-06 08:07:40,883 :: #FFFFFF: 21.64 percent
+2025-04-06 08:07:40,883 :: #DE1F07: 0.15 percent
+2025-04-06 08:07:40,883 :: #949494: 49.98 percent
+2025-04-06 08:07:40,883 :: total: 71.77 percent
+2025-04-06 08:07:41,451 :: Total tree cluster area: 6438470.0
+2025-04-06 08:07:41,451 :: Average imperviousness near trees: 69.25381042580915
+2025-04-06 08:10:45,813 :: Imperviousness for: s_2020.tif with ratio 2.24
+2025-04-06 08:10:45,813 :: Tree cluster area: 3120000.0
+2025-04-06 08:10:47,074 :: Color contribution for area near trees
+2025-04-06 08:10:47,074 :: #FFFFFF: 22.52 percent
+2025-04-06 08:10:47,074 :: #DE1F07: 0.00 percent
+2025-04-06 08:10:47,074 :: #949494: 44.14 percent
+2025-04-06 08:10:47,074 :: total: 66.66 percent
+2025-04-06 08:11:10,603 :: Imperviousness for: s_2024.tif with ratio 2.24
+2025-04-06 08:11:10,604 :: Tree cluster area: 3318470.0
+2025-04-06 08:11:11,841 :: Color contribution for area near trees
+2025-04-06 08:11:11,841 :: #FFFFFF: 21.64 percent
+2025-04-06 08:11:11,841 :: #DE1F07: 0.00 percent
+2025-04-06 08:11:11,841 :: #949494: 49.98 percent
+2025-04-06 08:11:11,841 :: total: 71.62 percent
+2025-04-06 08:11:12,414 :: Total tree cluster area: 6438470.0
+2025-04-06 08:11:12,414 :: Average imperviousness near trees: 69.13718898890559
+2025-04-06 08:13:38,594 :: Imperviousness for: s_2020.tif with ratio 2.24
+2025-04-06 08:13:38,594 :: Tree cluster area: 3120000.0
+2025-04-06 08:13:39,851 :: Color contribution for area near trees
+2025-04-06 08:13:39,851 :: #FFFFFF: 22.52 percent
+2025-04-06 08:13:39,851 :: #DE1F07: 17.16 percent
+2025-04-06 08:13:39,851 :: #949494: 44.14 percent
+2025-04-06 08:13:39,851 :: total: 83.82 percent
+2025-04-06 08:14:03,621 :: Imperviousness for: s_2024.tif with ratio 2.24
+2025-04-06 08:14:03,621 :: Tree cluster area: 3318470.0
+2025-04-06 08:14:04,855 :: Color contribution for area near trees
+2025-04-06 08:14:04,855 :: #FFFFFF: 21.64 percent
+2025-04-06 08:14:04,855 :: #DE1F07: 15.13 percent
+2025-04-06 08:14:04,855 :: #949494: 49.98 percent
+2025-04-06 08:14:04,855 :: total: 86.75 percent
+2025-04-06 08:14:05,430 :: Total tree cluster area: 6438470.0
+2025-04-06 08:14:05,430 :: Average imperviousness near trees: 85.28328279620388
+2025-04-06 08:18:20,673 :: Imperviousness for: s_2020.tif with ratio 2.24
+2025-04-06 08:18:20,673 :: Tree cluster area: 3120000.0
+2025-04-06 08:18:21,949 :: Color contribution for area near trees
+2025-04-06 08:18:21,949 :: #FFFFFF: 22.52 percent
+2025-04-06 08:18:21,949 :: #DE1F07: 17.16 percent
+2025-04-06 08:18:21,949 :: #949494: 44.14 percent
+2025-04-06 08:18:21,949 :: total: 83.82 percent
+2025-04-06 08:18:45,660 :: Imperviousness for: s_2024.tif with ratio 2.24
+2025-04-06 08:18:45,660 :: Tree cluster area: 3318470.0
+2025-04-06 08:18:46,922 :: Color contribution for area near trees
+2025-04-06 08:18:46,922 :: #FFFFFF: 21.64 percent
+2025-04-06 08:18:46,923 :: #DE1F07: 15.13 percent
+2025-04-06 08:18:46,923 :: #949494: 49.98 percent
+2025-04-06 08:18:46,923 :: total: 86.75 percent
+2025-04-06 08:18:47,495 :: Total tree cluster area: 6438470.0
+2025-04-06 08:18:47,495 :: Average imperviousness near trees: 85.28328279620388

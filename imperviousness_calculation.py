@@ -50,7 +50,7 @@ def main():
     tree_areas = []
 
     for mask_name in os.listdir(masks):
-        if mask_name.endswith(".jpg") or mask_name.endswith(".jpeg"):
+        if mask_name.endswith(".jpg") or mask_name.endswith(".jpeg") or mask_name.endswith(".tif"):
             mask_path = os.path.join(masks, mask_name)
             geoms, differences = create_geometries(mask_path, max_width, ratio)
             tree_area = sum(p.area for p in geoms)
@@ -164,16 +164,16 @@ def calculate_imperviousness(image_path, differences):
     # Define color ranges instead of exact matches
     color_ranges = {
         "#FFFFFF": (  # White
-            np.array([210, 210, 210], dtype=np.uint8),  # Lower bound (B, G, R)
+            np.array([255, 255, 255], dtype=np.uint8),  # Lower bound (B, G, R)
             np.array([255, 255, 255], dtype=np.uint8),  # Upper bound (B, G, R)
         ),
         "#DE1F07": (  # Red
-            np.array([0, 60, 200], dtype=np.uint8),  # Lower bound (B, G, R)
-            np.array([50, 100, 255], dtype=np.uint8),  # Upper bound (B, G, R)
+            np.array([7, 31, 222], dtype=np.uint8),  # Lower bound (B, G, R)
+            np.array([7, 31, 222], dtype=np.uint8),  # Upper bound (B, G, R)
         ),
         "#949494": (  # Gray
-            np.array([130, 130, 130], dtype=np.uint8),  # Lower bound (B, G, R)
-            np.array([160, 160, 160], dtype=np.uint8),  # Upper bound (B, G, R)
+            np.array([148, 148, 148], dtype=np.uint8),  # Lower bound (B, G, R)
+            np.array([148, 148, 148], dtype=np.uint8),  # Upper bound (B, G, R)
         ),
     }
 

@@ -53,15 +53,15 @@ def main():
     year_to = args.year_to
     scale_ratio = args.scale_ratio
 
-    #download_images(start, end, year_from, year_to)
+    download_images(start, end, year_from, year_to)
 
-    #extract_images("2023")
-    #extract_images(year_to_folder)
+    extract_images("2023")
+    extract_images(year_to_folder)
 
     downscale_images("2023", scale_ratio)
-    #downscale_images(year_to_folder, scale_ratio)
+    downscale_images(year_to_folder, scale_ratio)
 
-    #download_images_for_existing_images(year_to_folder)
+    download_images_for_existing_images(year_to_folder)
 
 
 def downscale_images(directory, scale_ratio):
@@ -88,41 +88,34 @@ def downscale_images(directory, scale_ratio):
 def extract_images(directory):
     for filename in os.listdir(directory):
         if filename.endswith(".zip"):
-            # Define the full path to the ZIP file
             zip_path = os.path.join(directory, filename)
 
-            # Open the ZIP file
             with zipfile.ZipFile(zip_path, "r") as zip_ref:
-                # Extract all files
                 zip_ref.extractall(directory)
 
-            # Delete the ZIP file
             os.remove(zip_path)
 
     for filename in os.listdir(directory):
-        # Check if the file is not a JPEG and delete it
         if not filename.endswith(".jpg") and not filename.endswith(".jpeg"):
-            # Define the full path to the file
             file_path = os.path.join(directory, filename)
 
-            # Delete the file
             os.remove(file_path)
 
 
 def download_images_for_existing_images(directory):
     for filename in os.listdir(directory):
-        if filename.startswith('s_'):
+        if filename.startswith("s_"):
             continue
-        
+
         if filename.endswith(".jpg") or filename.endswith(".jpeg"):
             img_path = os.path.join(directory, filename)
 
             zip_name = os.path.splitext(img_path)[0] + ".zip"
             zip_name = zip_name.replace("2024", "2023")
-            zip_name = os.path.relpath(zip_name, 'to')
+            zip_name = os.path.relpath(zip_name, "to")
 
             print(zip_name)
-            
+
             url_zip = url + zip_name
 
             print(url_zip)

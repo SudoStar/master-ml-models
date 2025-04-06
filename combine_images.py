@@ -20,24 +20,24 @@ def combine_images_cv2(image_path, output_path):
             path = os.path.join(image_path, filename)
             try:
                 img = cv2.imread(path)
-                if img is None:  # Check if image loaded successfully
+                if img is None:
                     raise ValueError(f"Could not read image: {path}")
                 images.append(img)
-                height, width, _ = img.shape  # Get height and width
+                height, width, _ = img.shape
                 widths.append(width)
                 heights.append(height)
             except FileNotFoundError:
                 raise FileNotFoundError(f"Image not found: {path}")
-            except ValueError as e:  # Re-raise image reading errors
+            except ValueError as e:
                 raise e
             except Exception as e:
                 raise Exception(f"Error processing image {path}: {e}")
 
-    # Ensure all images have the same dimensions (important for a clean grid)
+    # Ensure all images have the same dimensions
     if not all(w == widths[0] for w in widths) or not all(
         h == heights[0] for h in heights
     ):
-        # Resize Images to be the same size
+        # Resize images
         new_width = min(widths)
         new_height = min(heights)
         resized_images = []
@@ -49,8 +49,8 @@ def combine_images_cv2(image_path, output_path):
             "Images were resized to be the same size for a clean grid. Consider using images of the same dimensions for best quality."
         )
 
-    grid_width = 3 * images[0].shape[1]  # Width of one image
-    grid_height = 3 * images[0].shape[0]  # Height of one image
+    grid_width = 3 * images[0].shape[1]
+    grid_height = 3 * images[0].shape[0]
     combined_image = np.zeros(
         (grid_height, grid_width, 3), dtype=np.uint8
     )  # Create an empty image (3 channels for color)
@@ -71,7 +71,6 @@ def combine_images_cv2(image_path, output_path):
     print(f"Combined image saved to: {output_path}")
 
 
-# Example usage:
 image_path = "poc_images"
 output_path = "large_mask/combined_image.jpg"
 

@@ -16,7 +16,7 @@ def convert_to_black_background(directory):
                 mask, connectivity=8, ltype=cv2.CV_32S
             )
 
-            area_threshold = 10000  # Example threshold
+            area_threshold = 10000
 
             for i in range(1, num_labels):  # Skip background (label 0)
                 area = stats[i, cv2.CC_STAT_AREA]

@@ -14,10 +14,6 @@ logging.basicConfig(
     format="%(asctime)s :: %(message)s",
 )
 
-# 1.75
-# 2.24
-# 2.8
-
 
 def get_args():
     parser = argparse.ArgumentParser()

@@ -37,6 +37,7 @@ def get_args():
         help="Second year to get images for",
     )
     arg("-sr", "--scale_ratio", help="image scale ratio", type=float, default=0.25)
+    arg("-o", "--output_folder", help="output folder", type=str)
     return parser.parse_args()
 
 
@@ -52,22 +53,25 @@ def main():
     year_from = args.year_from
     year_to = args.year_to
     scale_ratio = args.scale_ratio
+    output_folder = args.output_folder
 
     download_images(start, end, year_from, year_to)
 
-    extract_images("2023")
     extract_images(year_to_folder)
 
-    downscale_images("2023", scale_ratio)
-    downscale_images(year_to_folder, scale_ratio)
+    downscale_images(output_folder, scale_ratio)
 
     download_images_for_existing_images(year_to_folder)
 
 
 def downscale_images(directory, scale_ratio):
     for filename in os.listdir(directory):
-        if filename.endswith(".jpg") or filename.endswith(".jpeg"):
-
+        if (
+            filename.endswith(".jpg")
+            or filename.endswith(".jpeg")
+            or filename.endswith(".tif")
+        ):
+            print("working on file")
             img_path = os.path.join(directory, filename)
 
             img = cv2.imread(img_path)
@@ -82,7 +86,7 @@ def downscale_images(directory, scale_ratio):
             new_path = os.path.join(directory, "s_" + filename)
             cv2.imwrite(new_path, img)
 
-    print("All JPEG images have been downscaled by 75 percent and saved.")
+    print(f"All images in {directory} have been downscaled by {scale_ratio} and saved.")
 
 
 def extract_images(directory):

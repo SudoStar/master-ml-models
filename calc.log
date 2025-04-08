@@ -7506,3 +7506,19 @@ INFO:__main__:Average imperviousness near trees: 37.88779104145064
 2025-04-06 08:18:46,923 :: total: 86.75 percent
 2025-04-06 08:18:47,495 :: Total tree cluster area: 6438470.0
 2025-04-06 08:18:47,495 :: Average imperviousness near trees: 85.28328279620388
+2025-04-08 19:46:54,458 :: Imperviousness for: 2013_c_s.tif with ratio 2.24
+2025-04-08 19:46:54,458 :: Tree cluster area: 3984098.5
+2025-04-08 19:46:56,370 :: Color contribution for area near trees
+2025-04-08 19:46:56,370 :: #FFFFFF: 10.78 percent
+2025-04-08 19:46:56,370 :: #DE1F07: 14.82 percent
+2025-04-08 19:46:56,370 :: #949494: 16.75 percent
+2025-04-08 19:46:56,370 :: total: 42.34 percent
+2025-04-08 19:47:46,076 :: Imperviousness for: 2020_c_s.tif with ratio 2.24
+2025-04-08 19:47:46,076 :: Tree cluster area: 3935623.5
+2025-04-08 19:47:47,959 :: Color contribution for area near trees
+2025-04-08 19:47:47,959 :: #FFFFFF: 9.49 percent
+2025-04-08 19:47:47,959 :: #DE1F07: 13.30 percent
+2025-04-08 19:47:47,959 :: #949494: 20.16 percent
+2025-04-08 19:47:47,959 :: total: 42.95 percent
+2025-04-08 19:47:48,629 :: Total tree cluster area: 7919722.0
+2025-04-08 19:47:48,629 :: Average imperviousness near trees: 42.64812861472789

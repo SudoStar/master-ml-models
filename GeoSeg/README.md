@@ -1,3 +1,9 @@
+# Machine Learning Models
+
+This folder contains code for the machine learning models AerialFormer, PyramidMamba, SFA-Net and UNetFormer. They were adapted to work with the OpenEarthMap semantic segmentation training set. The repository is based on GeoSeg and installation instructions can be found below.
+
+## Original GeoSeg ReadMe
+
 ## Version 2.0 (stable)
 
 [Welcome to my homepage!](https://WangLibo1995.github.io)

@@ -50,7 +50,11 @@ def main():
     tree_areas = []
 
     for mask_name in os.listdir(masks):
-        if mask_name.endswith(".jpg") or mask_name.endswith(".jpeg") or mask_name.endswith(".tif"):
+        if (
+            mask_name.endswith(".jpg")
+            or mask_name.endswith(".jpeg")
+            or mask_name.endswith(".tif")
+        ):
             mask_path = os.path.join(masks, mask_name)
             geoms, differences = create_geometries(mask_path, max_width, ratio)
             tree_area = sum(p.area for p in geoms)
@@ -161,37 +165,23 @@ def calculate_imperviousness(image_path, differences):
 
         masked_data = raster_data[:, mask]
 
-    # Define color ranges instead of exact matches
-    color_ranges = {
-        "#FFFFFF": (  # White
-            np.array([255, 255, 255], dtype=np.uint8),  # Lower bound (B, G, R)
-            np.array([255, 255, 255], dtype=np.uint8),  # Upper bound (B, G, R)
-        ),
-        "#DE1F07": (  # Red
-            np.array([7, 31, 222], dtype=np.uint8),  # Lower bound (B, G, R)
-            np.array([7, 31, 222], dtype=np.uint8),  # Upper bound (B, G, R)
-        ),
-        "#949494": (  # Gray
-            np.array([148, 148, 148], dtype=np.uint8),  # Lower bound (B, G, R)
-            np.array([148, 148, 148], dtype=np.uint8),  # Upper bound (B, G, R)
-        ),
+    color_values = {
+        "#FFFFFF": np.array([255, 255, 255], dtype=np.uint8),  # White
+        "#DE1F07": np.array([7, 31, 222], dtype=np.uint8),  # Red
+        "#949494": np.array([148, 148, 148], dtype=np.uint8),  # Gray
     }
 
-    color_counts = {color: 0 for color in color_ranges}
+    color_counts = {color: 0 for color in color_values}
 
-    for color, (lower, upper) in color_ranges.items():
-        # Count pixels within the specified range
-        in_range = np.logical_and.reduce(
+    for color, value in color_values.items():
+        matches = np.logical_and.reduce(
             [
-                masked_data[0] >= lower[0],
-                masked_data[0] <= upper[0],
-                masked_data[1] >= lower[1],
-                masked_data[1] <= upper[1],
-                masked_data[2] >= lower[2],
-                masked_data[2] <= upper[2],
+                masked_data[0] == value[0],
+                masked_data[1] == value[1],
+                masked_data[2] == value[2],
             ]
         )
-        color_counts[color] = np.sum(in_range)
+        color_counts[color] = np.sum(matches)
 
     total_pixels = masked_data.shape[1]
     percentages = {

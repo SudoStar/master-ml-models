@@ -22,7 +22,7 @@ def convert_to_black_background(directory):
                 area = stats[i, cv2.CC_STAT_AREA]
                 if area >= area_threshold:
                     component_mask = (labels == i).astype(bool)
-                    img[component_mask] = (0, 0, 0)  # BGR to black
+                    img[component_mask] = (0, 0, 0)  # set to black
 
             new_path = os.path.join(directory, "b_" + filename)
             cv2.imwrite(new_path, img)

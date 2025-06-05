@@ -10,7 +10,7 @@ tif_folder = os.path.dirname(shapefile_path)
 tif_files = glob.glob(os.path.join(tif_folder, "*.tif"))
 
 gdf = gpd.read_file(shapefile_path)
-gdf = gdf.to_crs(epsg=4326)  # Ensure common CRS
+gdf = gdf.to_crs(epsg=4326)
 
 shapes = [feature["geometry"] for feature in gdf.__geo_interface__["features"]]
 
@@ -32,6 +32,8 @@ merged_path = os.path.join(tif_folder, "merged.tif")
 with rasterio.open(merged_path, "w", **out_meta) as dest:
     dest.write(mosaic)
 
+print(f"Merged image saved to: {merged_path}")
+
 with rasterio.open(merged_path) as src:
     clipped_image, clipped_transform = mask(src, shapes, crop=True)
     clipped_meta = src.meta.copy()
@@ -47,5 +49,4 @@ clipped_path = os.path.join(tif_folder, "clipped.tif")
 with rasterio.open(clipped_path, "w", **clipped_meta) as dest:
     dest.write(clipped_image)
 
-print(f"Merged image saved to: {merged_path}")
 print(f"Clipped image saved to: {clipped_path}")

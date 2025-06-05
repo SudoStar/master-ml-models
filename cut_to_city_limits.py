@@ -4,7 +4,6 @@ from PIL import Image
 from rasterio.features import rasterize
 from affine import Affine
 
-# Load GeoJSON files and ensure same CRS
 tiles = gpd.read_file("MZKBLATT5000OGD.json")
 borders = gpd.read_file("LANDESGRENZEOGD.json")
 tiles = tiles.to_crs(borders.crs)

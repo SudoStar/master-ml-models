@@ -4,13 +4,6 @@ import os
 
 
 def combine_images_cv2(image_path, output_path):
-    """Combines 9 images into a 3x3 grid using OpenCV.
-
-    Args:
-        image_paths: A list of 9 image paths.
-        output_path: The path to save the combined image.
-    """
-
     images = []
     widths = []
     heights = []
@@ -37,7 +30,6 @@ def combine_images_cv2(image_path, output_path):
     if not all(w == widths[0] for w in widths) or not all(
         h == heights[0] for h in heights
     ):
-        # Resize images
         new_width = min(widths)
         new_height = min(heights)
         resized_images = []
@@ -51,9 +43,7 @@ def combine_images_cv2(image_path, output_path):
 
     grid_width = 3 * images[0].shape[1]
     grid_height = 3 * images[0].shape[0]
-    combined_image = np.zeros(
-        (grid_height, grid_width, 3), dtype=np.uint8
-    )  # Create an empty image (3 channels for color)
+    combined_image = np.zeros((grid_height, grid_width, 3), dtype=np.uint8)
 
     image_index = 0
     for row in range(3):

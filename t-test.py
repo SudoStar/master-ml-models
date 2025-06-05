@@ -6,21 +6,30 @@ from scipy.stats import normaltest
 import statsmodels.api as sm
 import numpy as np
 import seaborn as sns
+import pandas as pd
 
 
 def get_stats(data, name):
-    data = np.array(data)
+    qq_data = np.array(data)
+    hist_data = pd.DataFrame(data)
     f = plt.figure(1, figsize=(4, 3))
     sns.set_palette("Blues_d")
 
-    sns.histplot(data=data)
-    f.savefig(f"hist-{name}.pdf", bbox_inches="tight")
+    ax = sns.histplot(data=hist_data, kde=True, legend=False)
+    ax.set_xlabel("Imperviousness in percent", fontsize=14)
+    ax.set_ylabel("Count", fontsize=14)
+    ax.tick_params(labelsize=14)
+    f.savefig(f"hist/hist-{name}.pdf", bbox_inches="tight")
 
     g = plt.figure(2, figsize=(4, 3))
 
-    g = sm.qqplot(data=data, line="s", fit=True)
+    g = sm.qqplot(data=qq_data, line="s", fit=True)
+    plt.xlabel("Theoretical Quantiles", fontsize=14)
+    plt.ylabel("Sample Quantiles", fontsize=14)
+    plt.yticks(fontsize=14)
+    plt.xticks(fontsize=14)
 
-    g.savefig(f"qq-{name}.pdf", bbox_inches="tight")
+    plt.savefig(f"qq/qq-{name}.pdf", bbox_inches="tight")
 
     print(f"Statistics for: {name}")
 
@@ -158,3 +167,12 @@ def cw_28():
 
     get_stats(a, "cw_q3_2014")
     get_stats(b, "cw_q3_2023")
+
+
+imp_nine()
+#poc_175()
+#poc_224()
+#poc_28()
+#cw_175()
+#cw_224()
+#cw_28()
